@@ -247,6 +247,7 @@ fn new() -> anyhow::Result<()> {
 
 	Ok(())
 }
+
 fn clear() -> anyhow::Result<()> {
 	if PathBuf::from("common/cache").exists() {
 		fs::remove_dir_all("common/cache")?;
@@ -307,6 +308,7 @@ fn compile() -> anyhow::Result<()> {
 	let mut files = vec![];
 	process_directory(input_path, &mut files)?;
 
+	let mut dialogue_info_id_counter = 0;
 	let mut json = r"[".to_string();
 	for (index, file) in files.iter().enumerate() {
 		println!("Parsing: {:?}", file);
@@ -318,9 +320,61 @@ fn compile() -> anyhow::Result<()> {
 		validate_single_record(&parsed_json)?;
 
 		// Write the final value
+
+		let mut infos = vec![];
+		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
+			infos = parsed_json
+				.get("dialogue_infos")
+				.unwrap()
+				.as_array()
+				.unwrap()
+				.clone();
+			parsed_json.as_object_mut().unwrap().remove("dialogue_info");
+		}
 		json.push_str(&parsed_json.to_string());
+
+		// Preprocess infos
+		for idx in 0..infos.len() {
+			infos[idx].as_object_mut().unwrap().insert(
+				"id".to_string(),
+				dialogue_info_id_counter.to_string().into(),
+			);
+			if idx == 0 {
+				infos[idx]
+					.as_object_mut()
+					.unwrap()
+					.insert("prev_id".to_string(), "".into());
+			} else {
+				infos[idx].as_object_mut().unwrap().insert(
+					"prev_id".to_string(),
+					(dialogue_info_id_counter - 1).to_string().into(),
+				);
+			}
+			if idx == infos.len() - 1 {
+				infos[idx]
+					.as_object_mut()
+					.unwrap()
+					.insert("next_id".to_string(), "".into());
+			} else {
+				infos[idx].as_object_mut().unwrap().insert(
+					"next_id".to_string(),
+					(dialogue_info_id_counter + 1).to_string().into(),
+				);
+			}
+			dialogue_info_id_counter += 1;
+		}
+
+		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
+			for info in &mut infos {
+				fill_in_single_record(info, 0)?;
+				validate_single_record(info)?;
+
+				json.push_str(",\n");
+				json.push_str(&info.to_string());
+			}
+		}
 		if index != files.len() - 1 {
-			json.push(',');
+			json.push_str(",\n");
 		}
 	}
 	json.push(']');
