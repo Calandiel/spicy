@@ -3,7 +3,7 @@ use clap::Parser;
 use serde_json::{from_str, Value};
 use std::{
 	env,
-	fs::{self, set_permissions, OpenOptions},
+	fs::{self, OpenOptions},
 	io::Write,
 	path::PathBuf,
 	process::{Command, Stdio},
@@ -207,13 +207,17 @@ fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
 	let metadata = std::fs::metadata(linux_path.clone())?;
 	let mut permissions = metadata.permissions();
 	permissions.set_mode(0o775);
-	set_permissions(linux_path, permissions)?;
+	fs::set_permissions(linux_path, permissions)?;
 
 	Ok(())
 }
 
 #[cfg(target_os = "windows")]
 fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
+	println!(
+		"not on linux so we're not setting permissions on {:?}",
+		linux_path
+	);
 	Ok(())
 }
 
