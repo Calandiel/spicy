@@ -89,7 +89,7 @@ fn main() -> anyhow::Result<()> {
 
 	match args.action {
 		Action::New => {
-			let json = r###"
+			let _json = r###"
 {
   "author": "Author",
   "description": "Data",
