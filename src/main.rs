@@ -54,7 +54,7 @@ fn get_record_types() -> Vec<String> {
 		"Landscape".to_string(),
 		"PathGrid".to_string(),
 		"Dialogue".to_string(),
-		"DialogueInfo".to_string(),
+		//"DialogueInfo".to_string(), // handled differently...
 	]
 }
 
@@ -399,11 +399,48 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 
 	// Create files for invividual record types and fill them with json
 	println!("Creating record files...");
-	let records = parsed_json.as_array().unwrap();
+	let mut records = parsed_json.as_array().unwrap().clone();
+
+	// Update dialogue infos on dialogues
+	let mut last_dialogue = 0;
+	for idx in 0..records.len() {
+		let record_type = records[idx]
+			.get("type")
+			.unwrap()
+			.as_str()
+			.unwrap()
+			.to_string();
+		if record_type == "Dialogue" {
+			let infos: Vec<Value> = vec![];
+			records[idx]
+				.as_object_mut()
+				.unwrap()
+				.insert("dialogue_infos".to_string(), infos.into());
+			last_dialogue = idx;
+		}
+		if record_type == "DialogueInfo" {
+			let mut rec = records[idx].clone();
+			rec.as_object_mut().unwrap().remove("id").unwrap();
+			rec.as_object_mut().unwrap().remove("next_id").unwrap();
+			rec.as_object_mut().unwrap().remove("prev_id").unwrap();
+
+			records[last_dialogue]
+				.get_mut("dialogue_infos")
+				.unwrap()
+				.as_array_mut()
+				.unwrap()
+				.push(rec);
+		}
+	}
+
 	let mut counter = 0;
 	let mut all_file_names = vec![];
-	for record in records {
+	for record in &records {
 		let record_type = record.get("type").unwrap().as_str().unwrap().to_string();
+
+		if record_type == "DialogueInfo" {
+			continue; // skip dialogue infos
+		}
 		let mut file_name = counter.to_string();
 		if let Some(id) = record.get("id") {
 			file_name = id.as_str().unwrap().to_string();
@@ -482,7 +519,11 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 		let record_type = record.get("type");
 		if let Some(record_type) = record_type {
 			if !record_types.contains(&record_type.as_str().unwrap().to_string()) {
-				return Err(anyhow!("Unknown record type: {}", record_type));
+				if record_type.as_str().unwrap() == "DialogueInfo" {
+					// Dialogue infos need to be handled differently...
+				} else {
+					return Err(anyhow!("Unknown record type: {}", record_type));
+				}
 			}
 		} else {
 			return Err(anyhow!("A record has no type!"));
