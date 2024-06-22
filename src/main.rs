@@ -5,7 +5,6 @@ use std::{
 	env,
 	fs::{self, set_permissions, OpenOptions},
 	io::Write,
-	os::unix::fs::PermissionsExt,
 	path::PathBuf,
 	process::{Command, Stdio},
 };
@@ -198,6 +197,7 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 
 		if cfg!(target_os = "windows") {
 		} else if cfg!(target_os = "linux") {
+			use std::os::unix::fs::PermissionsExt;
 			let metadata = std::fs::metadata(linux_path.clone())?;
 			let mut permissions = metadata.permissions();
 			permissions.set_mode(0o775);
