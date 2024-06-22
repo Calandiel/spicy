@@ -85,9 +85,26 @@ fn main() -> anyhow::Result<()> {
 	let args = Args::parse();
 	println!("{:?}", args);
 
+	let _ = ensure_common_exists()?;
+
 	match args.action {
-		Action::New => todo!(),
-		Action::Clear => todo!(),
+		Action::New => {
+			let json = r###"
+{
+  "author": "Author",
+  "description": "Data",
+  "file_type": "Esm",
+  "masters": [],
+  "type": "Header",
+  "version": 1.3
+}
+"###;
+			//  "num_objects": 0,
+			//  "flags": "",
+		}
+		Action::Clear => {
+			clear()?;
+		}
 		Action::Compile => {
 			compile()?;
 		}
@@ -96,7 +113,7 @@ fn main() -> anyhow::Result<()> {
 		}
 	}
 
-	return Ok(());
+	Ok(())
 }
 
 fn get_tes3conv_path() -> PathBuf {
@@ -139,6 +156,96 @@ fn process_directory(input_path: PathBuf, outputs: &mut Vec<PathBuf>) -> anyhow:
 			}
 		}
 	}
+	Ok(())
+}
+
+fn ensure_common_exists() -> anyhow::Result<()> {
+	if !PathBuf::from("common/cache").exists()
+		|| !PathBuf::from("common/build").exists()
+		|| !PathBuf::from("common/data").exists()
+	{
+		clear()?;
+	}
+
+	let _ =ensure_tes3conv_exists();
+
+	Ok(())
+}
+
+fn ensure_tes3conv_exists() -> anyhow::Result<()> {
+		if !PathBuf::from("common/tes3conv").exists() {
+		// Get raw data
+		let tes3conv_windows = include_bytes!("tes3conv/windows/tes3conv.exe");
+		let tes3conv_linux = include_bytes!("tes3conv/ubuntu/tes3conv");
+
+		// Create dirs
+		let mut path = env::current_dir().unwrap();
+		path.push("common/tes3conv/windows");
+		fs::create_dir_all(path.clone())?;
+
+		let mut path = env::current_dir().unwrap();
+		path.push("common/tes3conv/ubuntu");
+		fs::create_dir_all(path.clone())?;
+
+		// Create and write files
+		let mut path = env::current_dir().unwrap();
+		path.push("common/tes3conv/windows/tes3conv.exe");
+		let mut file = OpenOptions::new()
+			.write(true)
+			.create(true)
+			.truncate(true)
+			.open(path.clone())?;
+		file.write(tes3conv_windows)?;
+
+		let mut path = env::current_dir().unwrap();
+		path.push("common/tes3conv/ubuntu/tes3conv");
+		let mut file = OpenOptions::new()
+			.write(true)
+			.create(true)
+			.truncate(true)
+			.open(path.clone())?;
+		file.write(tes3conv_linux)?;
+	}
+
+	Ok(())
+}
+
+fn clear() -> anyhow::Result<()> {
+	if PathBuf::from("common/cache").exists() {
+		fs::remove_dir_all("common/cache")?;
+	}
+	if PathBuf::from("common/build").exists() {
+		fs::remove_dir_all("common/build")?;
+	}
+	if PathBuf::from("common/data").exists() {
+		fs::remove_dir_all("common/data")?;
+	}
+	if PathBuf::from("common/tes3conv").exists() {
+		fs::remove_dir_all("common/tes3conv")?;
+	}
+
+	let create_gitkeep = |subpath: &str, file: &str| -> anyhow::Result<()> {
+		let mut path = env::current_dir().unwrap();
+		path.push(subpath);
+
+		fs::create_dir_all(path.clone())?;
+
+		path.push(file);
+
+		let _ = OpenOptions::new()
+			.write(true)
+			.create(true)
+			.truncate(true)
+			.open(path.clone())?;
+
+		Ok(())
+	};
+
+	let _ = create_gitkeep("common/cache", ".gitkeep")?;
+	let _ = create_gitkeep("common/build", ".gitkeep")?;
+	let _ = create_gitkeep("common/data", ".gitkeep")?;
+	let _ = ensure_tes3conv_exists()?;
+
 	Ok(())
 }
 
@@ -199,7 +306,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	let tes3conv_path = get_tes3conv_path();
 
 	// Parse paths
-	let input_path = PathBuf::from(
+	let mut input_path = PathBuf::from(
 		args.input_path
 			.expect("Missing input path for the decompilation step"),
 	);
@@ -208,6 +315,25 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
 	println!("Input path: {}", input_path.to_string_lossy());
 	println!("Output path: {}", output_path.to_string_lossy());
+
+	if input_path.extension().unwrap_or_default() == "omwgame"
+		|| input_path.extension().unwrap_or_default() == "omwaddon"
+	{
+		println!("Working with openmw... Converting extension...");
+		let data = fs::read(input_path.clone())?;
+
+		let mut new_input_path = env::current_dir().unwrap();
+		new_input_path.push("common/cache/temp.esm");
+
+		let mut file = OpenOptions::new()
+			.write(true)
+			.create(true)
+			.truncate(true)
+			.open(new_input_path.clone())?;
+		file.write(&data)?;
+
+		input_path = new_input_path;
+	}
 
 	if !input_path.exists() {
 		panic!(
@@ -328,5 +454,5 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 		}
 	}
 
-	return Ok(());
+	Ok(())
 }
