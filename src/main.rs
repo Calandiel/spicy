@@ -67,11 +67,7 @@ struct Args {
 
 	/// Path to the file to (de-)compile
 	#[arg(short, long)]
-	input_path: String,
-
-	/// Path to save outputs at
-	#[arg(short, long)]
-	output_path: String,
+	input_path: Option<String>,
 }
 
 #[derive(clap::ValueEnum, Clone, Default, Debug)]
@@ -92,7 +88,9 @@ fn main() -> anyhow::Result<()> {
 	match args.action {
 		Action::New => todo!(),
 		Action::Clear => todo!(),
-		Action::Compile => todo!(),
+		Action::Compile => {
+			compile()?;
+		}
 		Action::Decompile => {
 			decompile(args)?;
 		}
@@ -101,7 +99,7 @@ fn main() -> anyhow::Result<()> {
 	return Ok(());
 }
 
-fn decompile(args: Args) -> anyhow::Result<()> {
+fn get_tes3conv_path() -> PathBuf {
 	// Parse tes3conv path
 	let mut tes3conv_path = env::current_dir().unwrap();
 	println!("Current dir: {:?}", tes3conv_path);
@@ -119,10 +117,94 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		)
 	}
 
+	tes3conv_path
+}
+
+fn process_directory(input_path: PathBuf, outputs: &mut Vec<PathBuf>) -> anyhow::Result<()> {
+	let directories = fs::read_dir(input_path).unwrap();
+	for directory in directories {
+		let directory_entry = directory?;
+		let directory_path = directory_entry.path();
+
+		if directory_path.is_dir() {
+			process_directory(directory_path.clone(), outputs)?;
+		}
+
+		if directory_path.is_file() {
+			if let Some(ext) = directory_path.extension() {
+				if ext == "json" {
+					outputs.push(directory_path.clone());
+					println!("{:?}", directory_path);
+				}
+			}
+		}
+	}
+	Ok(())
+}
+
+fn compile() -> anyhow::Result<()> {
+	let tes3conv_path = get_tes3conv_path();
+
 	// Parse paths
-	let input_path = PathBuf::from(args.input_path);
+	let mut input_path = env::current_dir().unwrap();
+	input_path.push("common/data");
 	let mut output_path = env::current_dir().unwrap();
-	output_path.push(args.output_path);
+	output_path.push("common/build/out.esm");
+	let mut temporary_json_path = env::current_dir().unwrap();
+	temporary_json_path.push("common/cache/temp.json");
+	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
+	println!("Output path: {}", output_path.to_string_lossy());
+
+	// Remove the old file if it exists...
+	if output_path.clone().exists() {
+		fs::remove_file(output_path.clone()).unwrap();
+	}
+
+	let mut files = vec![];
+	process_directory(input_path, &mut files)?;
+
+	let mut json = r"[".to_string();
+	for (index, file) in files.iter().enumerate() {
+		let json_data = fs::read_to_string(file).unwrap();
+		json.push_str(&json_data);
+		if index != files.len() - 1 {
+			json.push_str(",");
+		}
+	}
+	json.push_str("]");
+
+	println!("Saving final json...");
+	let mut file = OpenOptions::new()
+		.write(true)
+		.create(true)
+		.truncate(true)
+		.open(temporary_json_path.clone())?;
+	file.write(json.as_bytes())?;
+
+	println!("Running: {:?}\n", tes3conv_path);
+	let output = Command::new(tes3conv_path)
+		.arg(temporary_json_path.to_string_lossy().to_string())
+		.arg(output_path.to_string_lossy().to_string())
+		.stdout(Stdio::inherit())
+		.stderr(Stdio::inherit())
+		.output()
+		.expect("Failed to tes3conv");
+
+	println!("{:?}", output);
+
+	Ok(())
+}
+
+fn decompile(args: Args) -> anyhow::Result<()> {
+	let tes3conv_path = get_tes3conv_path();
+
+	// Parse paths
+	let input_path = PathBuf::from(
+		args.input_path
+			.expect("Missing input path for the decompilation step"),
+	);
+	let mut output_path = env::current_dir().unwrap();
+	output_path.push("common/cache/temp.json");
 	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
 	println!("Input path: {}", input_path.to_string_lossy());
 	println!("Output path: {}", output_path.to_string_lossy());
@@ -223,7 +305,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		fs::remove_file(output_path.clone()).unwrap();
 	}
 
-	return Ok(());
+	Ok(())
 }
 
 fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
