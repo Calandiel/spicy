@@ -3,8 +3,9 @@ use clap::Parser;
 use serde_json::{from_str, Value};
 use std::{
 	env,
-	fs::{self, OpenOptions},
+	fs::{self, set_permissions, OpenOptions},
 	io::Write,
+	os::unix::fs::PermissionsExt,
 	path::PathBuf,
 	process::{Command, Stdio},
 };
@@ -89,18 +90,7 @@ fn main() -> anyhow::Result<()> {
 
 	match args.action {
 		Action::New => {
-			let _json = r###"
-{
-  "author": "Author",
-  "description": "Data",
-  "file_type": "Esm",
-  "masters": [],
-  "type": "Header",
-  "version": 1.3
-}
-"###;
-			//  "num_objects": 0,
-			//  "flags": "",
+			new()?;
 		}
 		Action::Clear => {
 			clear()?;
@@ -188,28 +178,62 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 		fs::create_dir_all(path.clone())?;
 
 		// Create and write files
-		let mut path = env::current_dir().unwrap();
-		path.push("common/tes3conv/windows/tes3conv.exe");
+		let mut windows_path = env::current_dir().unwrap();
+		windows_path.push("common/tes3conv/windows/tes3conv.exe");
 		let mut file = OpenOptions::new()
 			.write(true)
 			.create(true)
 			.truncate(true)
-			.open(path.clone())?;
+			.open(windows_path.clone())?;
 		file.write_all(tes3conv_windows)?;
 
-		let mut path = env::current_dir().unwrap();
-		path.push("common/tes3conv/ubuntu/tes3conv");
+		let mut linux_path = env::current_dir().unwrap();
+		linux_path.push("common/tes3conv/ubuntu/tes3conv");
 		let mut file = OpenOptions::new()
 			.write(true)
 			.create(true)
 			.truncate(true)
-			.open(path.clone())?;
+			.open(linux_path.clone())?;
 		file.write_all(tes3conv_linux)?;
+
+		if cfg!(target_os = "windows") {
+		} else if cfg!(target_os = "linux") {
+			let metadata = std::fs::metadata(linux_path.clone())?;
+			let mut permissions = metadata.permissions();
+			permissions.set_mode(0o775);
+			set_permissions(linux_path, permissions)?;
+		}
 	}
 
 	Ok(())
 }
 
+fn new() -> anyhow::Result<()> {
+	clear()?;
+	create_record_dirs()?;
+
+	let json = r###"{
+  "author": "Author",
+  "description": "Spicy plugin for OpenMW",
+  "file_type": "Esm",
+  "flags": "",
+  "masters": [],
+  "type": "Header",
+  "version": 1.3
+}
+"###;
+
+	let mut path = env::current_dir().unwrap();
+	path.push("common/data/Header/header.json");
+	let mut file = OpenOptions::new()
+		.write(true)
+		.create(true)
+		.truncate(true)
+		.open(path)?;
+	file.write_all(json.as_bytes())?;
+
+	Ok(())
+}
 fn clear() -> anyhow::Result<()> {
 	if PathBuf::from("common/cache").exists() {
 		fs::remove_dir_all("common/cache")?;
@@ -272,8 +296,16 @@ fn compile() -> anyhow::Result<()> {
 
 	let mut json = r"[".to_string();
 	for (index, file) in files.iter().enumerate() {
+		println!("Parsing: {:?}", file);
 		let json_data = fs::read_to_string(file).unwrap();
-		json.push_str(&json_data);
+		let mut parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
+
+		// Validate individual records...
+		fill_in_single_record(&mut parsed_json, files.len())?;
+		validate_single_record(&parsed_json)?;
+
+		// Write the final value
+		json.push_str(&parsed_json.to_string());
 		if index != files.len() - 1 {
 			json.push(',');
 		}
@@ -363,18 +395,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	let parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
 	validate_json(&parsed_json)?;
 
-	// Once the json is validated, we can write it to individual directories
-	// Create directories for record types
-	let record_types = get_record_types();
-	for record_type in record_types {
-		let mut base_dir = env::current_dir().unwrap();
-		base_dir.push("common/data");
-		base_dir.push(record_type);
-		if base_dir.exists() {
-			fs::remove_dir_all(base_dir.clone())?;
-		}
-		fs::create_dir_all(base_dir)?;
-	}
+	create_record_dirs()?;
 
 	// Create files for invividual record types and fill them with json
 	println!("Creating record files...");
@@ -431,6 +452,23 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	Ok(())
 }
 
+fn create_record_dirs() -> anyhow::Result<()> {
+	// Once the json is validated, we can write it to individual directories
+	// Create directories for record types
+	let record_types = get_record_types();
+	for record_type in record_types {
+		let mut base_dir = env::current_dir().unwrap();
+		base_dir.push("common/data");
+		base_dir.push(record_type);
+		if base_dir.exists() {
+			fs::remove_dir_all(base_dir.clone())?;
+		}
+		fs::create_dir_all(base_dir)?;
+	}
+
+	Ok(())
+}
+
 fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 	if !parsed_json.is_array() {
 		return Err(anyhow!("The outtermost json object must be an array!"));
@@ -449,7 +487,57 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 		} else {
 			return Err(anyhow!("A record has no type!"));
 		}
+
+		validate_single_record(record)?;
 	}
 
+	Ok(())
+}
+
+fn read_string_from_record(record: &Value, attribute: &str) -> anyhow::Result<String> {
+	let attribute_value = record.get(attribute);
+
+	if let Some(attribute_value) = attribute_value {
+		if let Some(attribute_value) = attribute_value.as_str() {
+			return Ok(attribute_value.to_string());
+		}
+	}
+
+	Err(anyhow!("Record has no string attribute {}", attribute))
+}
+
+// Validates a single record upon reading
+fn validate_single_record(record: &Value) -> anyhow::Result<()> {
+	let record_type = read_string_from_record(record, "type")?;
+	match record_type.as_str() {
+		"Header" => {
+			let description = read_string_from_record(record, "description")?;
+			if description.len() > 256 {
+				return Err(anyhow!("Description too long! Must be under 256 bytes!"));
+			}
+
+			let author = read_string_from_record(record, "author")?;
+			if author.len() > 32 {
+				return Err(anyhow!("Author name too long! Must be under 32 bytes!"));
+			}
+		}
+		_ => {}
+	}
+	Ok(())
+}
+
+// Post-process a record by filling in values that we don't export to our specific json format
+fn fill_in_single_record(record: &mut Value, record_count: usize) -> anyhow::Result<()> {
+	let record_type = read_string_from_record(record, "type")?;
+
+	match record_type.as_str() {
+		"Header" => {
+			if let Err(_) = read_string_from_record(record, "num_objects") {
+				let obj = record.as_object_mut().unwrap(); //("num_objects");
+				obj.insert("num_objects".into(), record_count.into());
+			}
+		}
+		_ => {}
+	}
 	Ok(())
 }
