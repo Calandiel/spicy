@@ -195,16 +195,25 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 			.open(linux_path.clone())?;
 		file.write_all(tes3conv_linux)?;
 
-		if cfg!(target_os = "windows") {
-		} else if cfg!(target_os = "unix") {
-			use std::os::unix::fs::PermissionsExt;
-			let metadata = std::fs::metadata(linux_path.clone())?;
-			let mut permissions = metadata.permissions();
-			permissions.set_mode(0o775);
-			set_permissions(linux_path, permissions)?;
-		}
+		set_exe_permissions(linux_path.clone())?;
 	}
 
+	Ok(())
+}
+
+#[cfg(target_os = "linux")]
+fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
+	use std::os::unix::fs::PermissionsExt;
+	let metadata = std::fs::metadata(linux_path.clone())?;
+	let mut permissions = metadata.permissions();
+	permissions.set_mode(0o775);
+	set_permissions(linux_path, permissions)?;
+
+	Ok(())
+}
+
+#[cfg(target_os = "windows")]
+fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
 	Ok(())
 }
 
