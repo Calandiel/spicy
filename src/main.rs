@@ -1,16 +1,16 @@
 use anyhow::{anyhow, Ok};
 use clap::Parser;
 use serde_json::{from_str, Value};
-use std::io::Write;
 use std::{
 	env,
 	fs::{self, OpenOptions},
+	io::Write,
 	path::PathBuf,
 	process::{Command, Stdio},
 };
 
 fn get_record_types() -> Vec<String> {
-	return vec![
+	vec![
 		"Header".to_string(),
 		"GameSetting".to_string(),
 		"GlobalVariable".to_string(),
@@ -54,7 +54,7 @@ fn get_record_types() -> Vec<String> {
 		"PathGrid".to_string(),
 		"Dialogue".to_string(),
 		"DialogueInfo".to_string(),
-	];
+	]
 }
 
 /// A project management tool for OpenMW.
@@ -85,7 +85,7 @@ fn main() -> anyhow::Result<()> {
 	let args = Args::parse();
 	println!("{:?}", args);
 
-	let _ = ensure_common_exists()?;
+	ensure_common_exists()?;
 
 	match args.action {
 		Action::New => {
@@ -167,13 +167,13 @@ fn ensure_common_exists() -> anyhow::Result<()> {
 		clear()?;
 	}
 
-	let _ =ensure_tes3conv_exists();
+	let _ = ensure_tes3conv_exists();
 
 	Ok(())
 }
 
 fn ensure_tes3conv_exists() -> anyhow::Result<()> {
-		if !PathBuf::from("common/tes3conv").exists() {
+	if !PathBuf::from("common/tes3conv").exists() {
 		// Get raw data
 		let tes3conv_windows = include_bytes!("tes3conv/windows/tes3conv.exe");
 		let tes3conv_linux = include_bytes!("tes3conv/ubuntu/tes3conv");
@@ -195,7 +195,7 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 			.create(true)
 			.truncate(true)
 			.open(path.clone())?;
-		file.write(tes3conv_windows)?;
+		file.write_all(tes3conv_windows)?;
 
 		let mut path = env::current_dir().unwrap();
 		path.push("common/tes3conv/ubuntu/tes3conv");
@@ -204,7 +204,7 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 			.create(true)
 			.truncate(true)
 			.open(path.clone())?;
-		file.write(tes3conv_linux)?;
+		file.write_all(tes3conv_linux)?;
 	}
 
 	Ok(())
@@ -241,10 +241,10 @@ fn clear() -> anyhow::Result<()> {
 		Ok(())
 	};
 
-	let _ = create_gitkeep("common/cache", ".gitkeep")?;
-	let _ = create_gitkeep("common/build", ".gitkeep")?;
-	let _ = create_gitkeep("common/data", ".gitkeep")?;
-	let _ = ensure_tes3conv_exists()?;
+	create_gitkeep("common/cache", ".gitkeep")?;
+	create_gitkeep("common/build", ".gitkeep")?;
+	create_gitkeep("common/data", ".gitkeep")?;
+	ensure_tes3conv_exists()?;
 
 	Ok(())
 }
@@ -275,10 +275,10 @@ fn compile() -> anyhow::Result<()> {
 		let json_data = fs::read_to_string(file).unwrap();
 		json.push_str(&json_data);
 		if index != files.len() - 1 {
-			json.push_str(",");
+			json.push(',');
 		}
 	}
-	json.push_str("]");
+	json.push(']');
 
 	println!("Saving final json...");
 	let mut file = OpenOptions::new()
@@ -286,7 +286,7 @@ fn compile() -> anyhow::Result<()> {
 		.create(true)
 		.truncate(true)
 		.open(temporary_json_path.clone())?;
-	file.write(json.as_bytes())?;
+	file.write_all(json.as_bytes())?;
 
 	println!("Running: {:?}\n", tes3conv_path);
 	let output = Command::new(tes3conv_path)
@@ -330,7 +330,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 			.create(true)
 			.truncate(true)
 			.open(new_input_path.clone())?;
-		file.write(&data)?;
+		file.write_all(&data)?;
 
 		input_path = new_input_path;
 	}
@@ -387,7 +387,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		if let Some(id) = record.get("id") {
 			file_name = id.as_str().unwrap().to_string();
 		} else if let Some(name) = record.get("name") {
-			if name.as_str().unwrap().len() > 0 {
+			if !name.as_str().unwrap().is_empty() {
 				file_name = name.as_str().unwrap().to_string();
 			} else {
 				counter += 1;
@@ -397,7 +397,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		}
 		if all_file_names.contains(&file_name) {
 			println!("Duplicate: {}", file_name);
-			file_name.push_str("_");
+			file_name.push('_');
 			file_name.push_str(&counter.to_string());
 			counter += 1;
 		}
@@ -414,16 +414,13 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 			.create(true)
 			.truncate(true)
 			.open(file_path.clone());
-		match file {
-			Err(_) => {
-				println!();
-				return Err(anyhow!("Failed to create a file: {:?}", file_path));
-			}
-			_ => {}
+		if file.is_err() {
+			println!();
+			return Err(anyhow!("Failed to create a file: {:?}", file_path));
 		}
 		let stringified_record = serde_json::to_string_pretty(record)?;
 		let data_to_write = stringified_record.as_bytes();
-		file?.write(data_to_write)?;
+		file?.write_all(data_to_write)?;
 	}
 
 	// At the end, delete the file as we won't need it anymore.
