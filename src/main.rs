@@ -196,7 +196,7 @@ fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 		file.write_all(tes3conv_linux)?;
 
 		if cfg!(target_os = "windows") {
-		} else if cfg!(target_os = "linux") {
+		} else if cfg!(target_os = "unix") {
 			use std::os::unix::fs::PermissionsExt;
 			let metadata = std::fs::metadata(linux_path.clone())?;
 			let mut permissions = metadata.permissions();
