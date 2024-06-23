@@ -306,7 +306,12 @@ fn compile() -> anyhow::Result<()> {
 	temporary_json_path.push("common/cache/temp.json");
 	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
 	println!("Output path: {}", output_path.to_string_lossy());
+	let mut final_path = output_path.clone();
+	final_path.set_extension("omwgame");
 
+	if final_path.exists() {
+		fs::remove_file(final_path.clone()).unwrap();
+	}
 	// Remove the old file if it exists...
 	if output_path.clone().exists() {
 		fs::remove_file(output_path.clone()).unwrap();
@@ -403,6 +408,10 @@ fn compile() -> anyhow::Result<()> {
 		.stderr(Stdio::inherit())
 		.output()
 		.expect("Failed to tes3conv");
+
+	let converted = fs::read(output_path.clone())?;
+	fs::write(final_path, converted)?;
+	fs::remove_file(output_path)?; // remove after copying
 
 	println!("{:?}", output);
 
