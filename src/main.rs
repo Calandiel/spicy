@@ -14,6 +14,7 @@ use std::{
 mod args;
 mod constants;
 mod dae;
+mod record;
 mod records;
 
 fn main() -> anyhow::Result<()> {
@@ -326,6 +327,8 @@ fn compile() -> anyhow::Result<()> {
 	}
 	json.push(']');
 
+	validate_json(&from_str(&json)?)?;
+
 	println!("Saving final json...");
 	let mut file = OpenOptions::new()
 		.write(true)
@@ -582,6 +585,31 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 		validate_single_record(record)?;
 	}
 
+	let mut all_ids = std::collections::HashSet::new();
+
+	// Check for id correctness and duplicates
+	for record in records {
+		let record_type = read_string_from_record(record, "type").unwrap();
+		if let anyhow::Result::Ok(id) = read_string_from_record(record, "id") {
+			println!("ID: |{}| - {}", id, record_type);
+
+			if id.len() == 0 {
+				return Err(anyhow!("A record has an id of length 0!"));
+			}
+			let first = id.chars().next().unwrap();
+			if !first.is_alphabetic() && record_type != "DialogueInfo" {
+				return Err(anyhow!(
+					"Id {} doesn't start with an alphabetic character!",
+					id
+				));
+			}
+
+			if !all_ids.insert(id.clone()) {
+				return Err(anyhow!("Duplicate id: {}", id));
+			}
+		}
+	}
+
 	Ok(())
 }
 
@@ -617,7 +645,7 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 	Ok(())
 }
 
-// Post-process a record by filling in values that we don't export to our specific json format
+// Post-process a record by filling in values that we don't export to our custom json format
 fn fill_in_single_record(
 	record: &mut Value,
 	record_count: usize,

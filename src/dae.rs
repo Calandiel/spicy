@@ -140,8 +140,6 @@ fn convert_obj_list_to_dae_string(objects: &Vec<ObjMesh>) -> anyhow::Result<Stri
 		<author>Spicy</author>
 		<authoring_tool>Spicy converter for OpenMW</authoring_tool>
 	</contributor>
-	<created>2022-01-31T22:16:14Z</created>
-	<modified>2022-01-31T22:16:14Z</modified>
 	<unit meter="1.0" name="meter"/>
 	<up_axis>Z_UP</up_axis>
 </asset>"###,
