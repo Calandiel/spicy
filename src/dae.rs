@@ -1,7 +1,12 @@
 use std::{
+	borrow::BorrowMut,
 	env,
 	fs::{self, DirEntry},
 };
+
+use gltf::{json::extras, mesh::util::weights, Gltf, Node};
+
+use crate::constants::TODD_UNIT;
 
 #[derive(Default, Debug)]
 pub struct ObjScene {
@@ -160,7 +165,7 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 </library_materials>
 <library_geometries>"###,
 	);
-	for (idx, obj) in objects.iter().enumerate() {
+	for (idx, obj) in objects.roots.iter().enumerate() {
 		dae_string.push_str(
 			format!(
 				r###"
@@ -308,7 +313,7 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 <library_visual_scenes>
 	<visual_scene id="id-scene-1" name="scene">"###,
 	);
-	for (idx, obj) in objects.iter().enumerate() {
+	for (idx, obj) in objects.roots.iter().enumerate() {
 		if obj.name == "collisionmesh" {
 			dae_string.push_str(
 				format!(
@@ -388,9 +393,93 @@ pub fn convert_obj_to_dae() -> anyhow::Result<()> {
 	Ok(())
 }
 
-read_meshes_from_glb(dir: &DirEntry) -> anyhow::Result<ObjScene> {
+fn walk_down_gltf(
+	node: &Node,
+	buffers: &Vec<gltf::buffer::Data>,
+	images: &Vec<gltf::image::Data>,
+	parent: Option<&mut ObjMesh>,
+	scene: &mut ObjScene,
+) {
+	println!("{:?}", node.name());
 
-	Ok(())
+	let mut this_node = ObjMesh::default();
+
+	for child in node.children() {
+		walk_down_gltf(&child, buffers, images, Some(&mut this_node), scene);
+	}
+
+	// TODO: transforms, material, name collisions, animations, bones, morph targets, uvs, handle non triangular primitives...
+	// let transform = node.transform();
+	this_node.name = node.name().unwrap().to_string();
+
+	let mut first = true;
+	if let Some(mesh) = node.mesh() {
+		for prim in mesh.primitives() {
+			let reader = prim.reader(|buffer| Some(&buffers[buffer.index()]));
+			let positions = reader
+				.read_positions()
+				.expect("A MESH IS MISSING POSITIONS!");
+			let normals = reader.read_normals().expect("A MESH IS MISSING NORMALS!");
+			let indices = reader.read_indices().expect("A MESH IS MISSING INDICES!");
+
+			// uwu
+			let mut new_node_option = if !first {
+				Some(ObjMesh::default())
+			} else {
+				None
+			};
+
+			let node_to_write = if first {
+				&mut this_node
+			} else {
+				new_node_option.as_mut().unwrap()
+			};
+
+			// fill the mesh with data
+			for position in positions {
+				node_to_write
+					.vertices
+					.push([position[0], position[2], position[1]])
+			}
+			for normal in normals {
+				node_to_write.normals.push(normal);
+			}
+			let indices: Vec<i32> = indices.into_u32().map(|i| i as i32).collect();
+			for i in indices.chunks_exact(3) {
+				node_to_write.triangles.push(i[0]);
+				node_to_write.triangles.push(i[2]);
+				node_to_write.triangles.push(i[1]);
+			}
+
+			// more borrow juggling!
+			if first {
+				first = false;
+			} else {
+				this_node.children.push(Box::new(new_node_option.unwrap()));
+			}
+		}
+	}
+
+	// At the end, assign the new node to the scene roots or the parent
+	if let Some(parent) = parent {
+		parent.children.push(Box::new(this_node));
+	} else {
+		scene.roots.push(this_node);
+	}
+}
+
+fn read_meshes_from_glb(dir: &DirEntry) -> anyhow::Result<ObjScene> {
+	// gltf::r
+	let (gltf, buffers, images) = gltf::import(dir.path())?;
+	let mut obj_scene = ObjScene { roots: vec![] };
+	println!("FILE +++ {:?}", dir.path());
+	for scene in gltf.scenes() {
+		for node in scene.nodes() {
+			walk_down_gltf(&node, &buffers, &images, None, &mut obj_scene);
+		}
+	}
+
+	Ok(obj_scene)
 }
 
 pub fn convert_glb_to_dae() -> anyhow::Result<()> {

@@ -354,6 +354,7 @@ fn compile() -> anyhow::Result<()> {
 
 	println!("Converting .obj files to .dae");
 	dae::convert_obj_to_dae()?;
+	dae::convert_glb_to_dae()?;
 
 	Ok(())
 }
