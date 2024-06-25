@@ -4,25 +4,25 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-gltf = "1.4.1"
+gltf = { version = "1.4.1", features = ["extras", "names"] }
 anyhow = "1.0.86"
-image = { version = "0.25.1", features = [
-	#"avif",
-	"bmp",
-	"dds",
-	#"exr",
-	#"ff",
-	#"gif",
-	#"hdr",
-	#"ico",
-	#"jpeg",
-	"png",
-	"pnm",
-	#"qoi",
-	"tga",
-	"tiff",
-	"webp",
-] }
+#image = { version = "0.25.1", features = [
+#	#"avif",
+#	"bmp",
+#	"dds",
+#	#"exr",
+#	#"ff",
+#	#"gif",
+#	#"hdr",
+#	#"ico",
+#	#"jpeg",
+#	"png",
+#	"pnm",
+#	#"qoi",
+#	"tga",
+#	"tiff",
+#	"webp",
+#] }
 base64 = "0.22.1"
 clap = { version = "*", features = ["derive"] }
 serde = { version = "1.0.203", features = ["derive"] }

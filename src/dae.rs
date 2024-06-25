@@ -4,8 +4,14 @@ use std::{
 };
 
 #[derive(Default, Debug)]
+pub struct ObjScene {
+	pub roots: Vec<ObjMesh>,
+}
+
+#[derive(Default, Debug)]
 pub struct ObjMesh {
 	pub name: String,
+	pub children: Vec<Box<ObjMesh>>,
 	pub vertices: Vec<[f32; 3]>,
 	pub normals: Vec<[f32; 3]>,
 	pub uvs: Vec<[f32; 2]>,
@@ -29,7 +35,7 @@ fn visit_dirs(dir: &std::path::Path, cb: &dyn Fn(&fs::DirEntry)) -> anyhow::Resu
 	Ok(())
 }
 
-fn read_meshes_from_obj(dir: &DirEntry) -> anyhow::Result<Vec<ObjMesh>> {
+fn read_meshes_from_obj(dir: &DirEntry) -> anyhow::Result<ObjScene> {
 	let mut objects = vec![];
 	let all_data = fs::read_to_string(dir.path())?;
 	let mut all_vertices: Vec<[f32; 3]> = vec![];
@@ -127,10 +133,10 @@ fn read_meshes_from_obj(dir: &DirEntry) -> anyhow::Result<Vec<ObjMesh>> {
 		}
 	}
 
-	Ok(objects)
+	Ok(ObjScene { roots: objects })
 }
 
-fn convert_obj_list_to_dae_string(objects: &Vec<ObjMesh>) -> anyhow::Result<String> {
+fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> {
 	let mut dae_string: String = "".to_string();
 	dae_string.push_str(
 		r###"<?xml version="1.0" encoding="utf-8"?>
@@ -381,3 +387,28 @@ pub fn convert_obj_to_dae() -> anyhow::Result<()> {
 
 	Ok(())
 }
+
+read_meshes_from_glb(dir: &DirEntry) -> anyhow::Result<ObjScene> {
+
+	Ok(())
+}
+
+pub fn convert_glb_to_dae() -> anyhow::Result<()> {
+	let mut meshes_path = env::current_dir().unwrap();
+	meshes_path.push("assets/meshes");
+
+	println!("Mesh path: {:?}", meshes_path);
+	visit_dirs(&meshes_path, &|dir| {
+		println!("{:?}", dir);
+		if dir.path().extension().unwrap_or_default() == "glb" {
+			let objects = read_meshes_from_glb(dir).unwrap();
+			let dae_string = convert_obj_list_to_dae_string(&objects).unwrap();
+			let mut dae_path = dir.path().clone();
+			dae_path.set_extension("dae");
+			fs::write(dae_path, dae_string).unwrap();
+		}
+	})?;
+
+	Ok(())
+}
+// TODO: handle the case of glb and obj of the same name writing the same file... We should give an error if that happens...
