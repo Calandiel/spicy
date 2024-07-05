@@ -439,10 +439,10 @@ pub fn get_target_path(original: &PathBuf) -> PathBuf {
 }
 
 fn copy_directory(subdir: &str) -> anyhow::Result<()> {
-	let mut icons_path = std::env::current_dir()?;
-	icons_path.push(subdir);
+	let mut dir_path = std::env::current_dir()?;
+	dir_path.push(subdir);
 	let mut all_icon_paths = std::collections::hash_set::HashSet::new();
-	visit_dirs(&icons_path, &mut all_icon_paths, &|dir, _| {
+	visit_dirs(&dir_path, &mut all_icon_paths, &|dir, _| {
 		let file_content = fs::read(dir.path())?;
 		fs::create_dir_all(get_target_path(&dir.path()).parent().unwrap())?;
 		fs::write(get_target_path(&dir.path()), file_content).unwrap();
@@ -455,7 +455,21 @@ fn copy_directory(subdir: &str) -> anyhow::Result<()> {
 pub fn compile_assets() -> anyhow::Result<()> {
 	copy_directory("assets/icons")?;
 	copy_directory("assets/textures")?;
-	// copy_directory("assets/dumdum")?;
+	copy_directory("assets/music")?;
+	copy_directory("assets/sound")?;
+	copy_directory("assets/scripts")?;
+
+	let file_content = {
+		let mut out_script_path = std::env::current_dir()?;
+		out_script_path.push("assets/out.omwscripts");
+		fs::read(out_script_path)?
+	};
+	{
+		let mut out_script_path = std::env::current_dir()?;
+		out_script_path.push("common/build/out.omwscripts");
+		fs::create_dir_all(get_target_path(&out_script_path).parent().unwrap())?;
+		fs::write(get_target_path(&out_script_path), file_content).unwrap();
+	}
 
 	let mut all_mesh_paths = std::env::current_dir()?;
 	all_mesh_paths.push("assets/meshes");
@@ -476,8 +490,8 @@ pub fn compile_assets() -> anyhow::Result<()> {
 			}
 			fs::create_dir_all(get_target_path(&dae_path).parent().unwrap())?;
 			fs::write(get_target_path(&dae_path), dae_string).unwrap();
-		} else if extension == "dae" {
-			// For dae files, just copy them over
+		} else if extension == "dae" || extension == "txt" || extension == "osgt" {
+			// For dae/txt/osgt files, just copy them over
 			let file_content = fs::read(dir_path.clone())?;
 			let dae_path = dir_path.clone();
 			if !all_paths.insert(get_target_path(&dae_path)) {

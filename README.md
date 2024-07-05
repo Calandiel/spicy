@@ -37,6 +37,10 @@ Run `openmw-launcher` and create a new profile.
 Add your projects `common/build` directory to data paths.
 This should be the *only* data path in the profile (besides the built-in path of the engine that can't be removed).
 
+Lastly, edit `openmw.cfg`. Yes, even though it tells you not to (it's one of the reasons why you need a separate openmw installation).
+`data-local` needs to point to `common/build` with a relative path, otherwise `openmw-cs` will not actually edit your mod file but instead create a cached copy on work on that (intended behavior, but why they'd want to break ctrl+s is beyond me).
+For the developers of spicy the path is set to `data-local="../MorrowindGames/ApoMW/common/build"`
+
 Enable the scripts and the addon of your game, then launch the game.
 From then on, you can run the game with `openmw --skip-menu --new-game` for faster development, without going through the launcher.
 
@@ -56,3 +60,12 @@ The general workflow is:
 Spicy handles conversion of standard glb files into a format compatible with openmw.
 Put assets in your projects `assets/meshes` directory.
 You can also put dae files in there but it's discouraged as glb is widely adapted and more commonly used.
+
+The general workflow is:
+- pull changes from other contributors with `git pull`
+- compile files with `spicy -a compile`
+- edit files with blender
+- export them to glb and put them in `assets/meshes`
+- save and debug wht game with `openmw --skip-menu --new-game`
+- decompile files with `spicy -a decompile`
+- commit and push with `git add --all && git commit -m "message" && git push`
