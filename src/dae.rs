@@ -1,10 +1,12 @@
 use std::{
-	borrow::BorrowMut,
+	collections::HashSet,
 	env,
 	fs::{self, DirEntry},
+	path::PathBuf,
 };
 
-use gltf::{json::extras, mesh::util::weights, Gltf, Node};
+use anyhow::anyhow;
+use gltf::Node;
 
 use crate::constants::TODD_UNIT;
 
@@ -21,124 +23,28 @@ pub struct ObjMesh {
 	pub normals: Vec<[f32; 3]>,
 	pub uvs: Vec<[f32; 2]>,
 	pub triangles: Vec<i32>,
+	pub transform: [[f32; 4]; 4],
 }
 
 // one possible implementation of walking a directory only visiting files
-fn visit_dirs(dir: &std::path::Path, cb: &dyn Fn(&fs::DirEntry)) -> anyhow::Result<()> {
+fn visit_dirs(
+	dir: &std::path::Path,
+	set: &mut HashSet<PathBuf>,
+	cb: &dyn Fn(&fs::DirEntry, &mut HashSet<PathBuf>) -> anyhow::Result<()>,
+) -> anyhow::Result<()> {
 	if dir.is_dir() {
 		for entry in fs::read_dir(dir)? {
 			let entry = entry?;
 			let path = entry.path();
 			if path.is_dir() {
-				visit_dirs(&path, cb)?;
+				visit_dirs(&path, set, cb)?;
 			} else {
-				cb(&entry);
+				cb(&entry, set)?;
 			}
 		}
 	}
 
 	Ok(())
-}
-
-fn read_meshes_from_obj(dir: &DirEntry) -> anyhow::Result<ObjScene> {
-	let mut objects = vec![];
-	let all_data = fs::read_to_string(dir.path())?;
-	let mut all_vertices: Vec<[f32; 3]> = vec![];
-	let mut all_normals: Vec<[f32; 3]> = vec![];
-	let mut all_uvs: Vec<[f32; 2]> = vec![];
-	for line in all_data.lines() {
-		let words: Vec<&str> = line.split_ascii_whitespace().to_owned().collect();
-		if words[0] == "#" {
-			continue; // comment, skip
-		}
-		if words[0] == "mtllib" {
-			continue; // material, ignore
-		}
-		if words[0] == "o" {
-			objects.push(ObjMesh::default());
-			objects.last_mut().unwrap().name = words[1].to_string();
-			continue; // object uwu
-		}
-		if words[0] == "vt" {
-			if words.len() == 3 {
-				let uvx: f32 = words[1].parse()?;
-				let uvy: f32 = words[2].parse()?;
-				all_uvs.push([uvx, uvy]);
-			} else {
-				panic!("Wrong vt length!");
-			}
-			continue;
-		}
-		if words[0] == "vn" {
-			if words.len() == 4 {
-				let v_0: f32 = words[1].parse()?;
-				let v_1: f32 = words[3].parse()?;
-				let v_2: f32 = words[2].parse()?;
-				all_normals.push([v_0, v_1, v_2]);
-			} else {
-				panic!("Wrong vn length!");
-			}
-			continue; // vertex normal
-		}
-		if words[0] == "v" {
-			if words.len() == 4 {
-				let v_0: f32 = words[1].parse()?;
-				let v_1: f32 = words[3].parse()?;
-				let v_2: f32 = words[2].parse()?;
-				all_vertices.push([v_0, v_1, v_2]);
-			} else {
-				panic!("Wrong v length!");
-			}
-			continue; // vertex position
-		}
-		if words[0] == "f" {
-			for i in 1..words.len() {
-				let v = all_vertices[words[i]
-					.split('/')
-					.skip(0)
-					.next()
-					.unwrap()
-					.parse::<usize>()? - 1];
-				let t = all_uvs[words[i]
-					.split('/')
-					.skip(1)
-					.next()
-					.unwrap()
-					.parse::<usize>()? - 1];
-				let n = all_normals[words[i]
-					.split('/')
-					.skip(2)
-					.next()
-					.unwrap()
-					.parse::<usize>()? - 1];
-				objects.last_mut().unwrap().vertices.push(v);
-				objects.last_mut().unwrap().normals.push(n);
-				objects.last_mut().unwrap().uvs.push(t);
-			}
-			let vc = objects.last().unwrap().vertices.len() as i32;
-			if words.len() == 4 {
-				objects.last_mut().unwrap().triangles.push(vc - 3);
-				objects.last_mut().unwrap().triangles.push(vc - 1);
-				objects.last_mut().unwrap().triangles.push(vc - 2);
-			} else if words.len() == 5 {
-				objects.last_mut().unwrap().triangles.push(vc - 4);
-				objects.last_mut().unwrap().triangles.push(vc - 2);
-				objects.last_mut().unwrap().triangles.push(vc - 3);
-
-				objects.last_mut().unwrap().triangles.push(vc - 4);
-				objects.last_mut().unwrap().triangles.push(vc - 1);
-				objects.last_mut().unwrap().triangles.push(vc - 2);
-			} else {
-				panic!("Wrong face length!");
-			}
-			continue; // face
-		}
-		if words[0] == "s" {
-			continue; // ? ignore
-		}
-	}
-
-	Ok(ObjScene { roots: objects })
 }
 
 fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> {
@@ -250,10 +156,18 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 			)
 			.as_str(),
 		);
-		for t in &obj.uvs {
-			for i in 0..2 {
-				dae_string.push_str(" ");
-				dae_string.push_str(t[i].to_string().as_str());
+		if obj.uvs.len() == 0 {
+			for _ in &obj.vertices {
+				dae_string.push_str(" 0 0");
+			}
+		} else if obj.uvs.len() != obj.vertices.len() {
+			return Err(anyhow!("Mismatching uv and vertex buffers found!"));
+		} else {
+			for t in &obj.uvs {
+				for i in 0..2 {
+					dae_string.push_str(" ");
+					dae_string.push_str(t[i].to_string().as_str());
+				}
 			}
 		}
 		dae_string.push_str(
@@ -314,24 +228,33 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 	<visual_scene id="id-scene-1" name="scene">"###,
 	);
 	for (idx, obj) in objects.roots.iter().enumerate() {
+		let mut transform_string = "".to_string();
+		for k in 0..4 {
+			for l in 0..4 {
+				let mul = if l == 3 && k != 3 { TODD_UNIT } else { 1.0 };
+				transform_string += &(mul * obj.transform[l][k]).to_string();
+				transform_string += " ";
+			}
+		}
+		println!("TRANSFORM: {:?}", transform_string);
 		if obj.name == "collisionmesh" {
 			dae_string.push_str(
 				format!(
 					r###"
 		<node id="collision" name="collision" type="NODE">
-			<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<matrix sid="transform"> {} </matrix>
 				<extra>
 					<technique profile="GODOT">
 						<empty_draw_type>PLAIN_AXES</empty_draw_type>
 					</technique>
 				</extra>
 			<node id="{}" name="{}" type="NODE">
-				<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+				<matrix sid="transform"> {} </matrix>
 				<instance_geometry url="#id-{}-{}">
 				</instance_geometry>
 			</node>
 		</node>"###,
-					obj.name, obj.name, obj.name, idx
+					transform_string, obj.name, obj.name, transform_string, obj.name, idx
 				)
 				.as_str(),
 			);
@@ -340,7 +263,7 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 				format!(
 					r###"
 		<node id="{}" name="{}" type="NODE">
-			<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<matrix sid="transform"> {}  </matrix>
 			<instance_geometry url="#id-{}-{}">
 			</instance_geometry>
 		</node>"###,
@@ -354,6 +277,7 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 					*/
 					obj.name,
 					obj.name,
+					transform_string,
 					obj.name,
 					idx
 				)
@@ -374,23 +298,29 @@ fn convert_obj_list_to_dae_string(objects: &ObjScene) -> anyhow::Result<String> 
 	Ok(dae_string)
 }
 
-pub fn convert_obj_to_dae() -> anyhow::Result<()> {
-	let mut meshes_path = env::current_dir().unwrap();
-	meshes_path.push("assets/meshes");
+fn rotate_to_z_up(matrix: &mut [[f32; 4]; 4]) {
+	let rotation_matrix = [
+		[1.0, 0.0, 0.0, 0.0],
+		[0.0, 0.0, 1.0, 0.0],
+		[0.0, -1.0, 0.0, 0.0],
+		[0.0, 0.0, 0.0, 1.0],
+	];
 
-	println!("Mesh path: {:?}", meshes_path);
-	visit_dirs(&meshes_path, &|dir| {
-		println!("{:?}", dir);
-		if dir.path().extension().unwrap_or_default() == "obj" {
-			let objects = read_meshes_from_obj(dir).unwrap();
-			let dae_string = convert_obj_list_to_dae_string(&objects).unwrap();
-			let mut dae_path = dir.path().clone();
-			dae_path.set_extension("dae");
-			fs::write(dae_path, dae_string).unwrap();
+	*matrix = multiply_matrices(matrix, &rotation_matrix);
+}
+
+fn multiply_matrices(a: &[[f32; 4]; 4], b: &[[f32; 4]; 4]) -> [[f32; 4]; 4] {
+	let mut result = [[0.0; 4]; 4];
+
+	for i in 0..4 {
+		for j in 0..4 {
+			for k in 0..4 {
+				result[i][j] += a[i][k] * b[k][j];
+			}
 		}
-	})?;
+	}
 
-	Ok(())
+	result
 }
 
 fn walk_down_gltf(
@@ -400,8 +330,6 @@ fn walk_down_gltf(
 	parent: Option<&mut ObjMesh>,
 	scene: &mut ObjScene,
 ) {
-	println!("{:?}", node.name());
-
 	let mut this_node = ObjMesh::default();
 
 	for child in node.children() {
@@ -421,6 +349,9 @@ fn walk_down_gltf(
 				.expect("A MESH IS MISSING POSITIONS!");
 			let normals = reader.read_normals().expect("A MESH IS MISSING NORMALS!");
 			let indices = reader.read_indices().expect("A MESH IS MISSING INDICES!");
+			let transform = node.transform();
+			let (_, _, scale) = transform.decomposed();
+			let mut matrix = node.transform().matrix();
 
 			// uwu
 			let mut new_node_option = if !first {
@@ -439,17 +370,26 @@ fn walk_down_gltf(
 			for position in positions {
 				node_to_write
 					.vertices
-					.push([position[0], position[2], position[1]])
+					.push([position[0], position[1], position[2]])
+				// .push([position[0], position[2], position[1]])
 			}
 			for normal in normals {
-				node_to_write.normals.push(normal);
+				node_to_write.normals.push([
+					scale[0].signum() * normal[0],
+					scale[1].signum() * normal[1],
+					scale[2].signum() * normal[2],
+				]);
+				// .push([normal[0], normal[2], normal[1]]);
 			}
 			let indices: Vec<i32> = indices.into_u32().map(|i| i as i32).collect();
 			for i in indices.chunks_exact(3) {
 				node_to_write.triangles.push(i[0]);
-				node_to_write.triangles.push(i[2]);
 				node_to_write.triangles.push(i[1]);
+				node_to_write.triangles.push(i[2]);
 			}
+
+			rotate_to_z_up(&mut matrix);
+			node_to_write.transform = matrix;
 
 			// more borrow juggling!
 			if first {
@@ -472,7 +412,6 @@ fn read_meshes_from_glb(dir: &DirEntry) -> anyhow::Result<ObjScene> {
 	// gltf::r
 	let (gltf, buffers, images) = gltf::import(dir.path())?;
 	let mut obj_scene = ObjScene { roots: vec![] };
-	println!("FILE +++ {:?}", dir.path());
 	for scene in gltf.scenes() {
 		for node in scene.nodes() {
 			walk_down_gltf(&node, &buffers, &images, None, &mut obj_scene);
@@ -482,22 +421,73 @@ fn read_meshes_from_glb(dir: &DirEntry) -> anyhow::Result<ObjScene> {
 	Ok(obj_scene)
 }
 
-pub fn convert_glb_to_dae() -> anyhow::Result<()> {
+// Replaces a part of a path string corresponding to the input directory with one corresponding to the target directory for assets
+pub fn get_target_path(original: &PathBuf) -> PathBuf {
 	let mut meshes_path = env::current_dir().unwrap();
-	meshes_path.push("assets/meshes");
+	meshes_path.push("assets");
 
-	println!("Mesh path: {:?}", meshes_path);
-	visit_dirs(&meshes_path, &|dir| {
-		println!("{:?}", dir);
-		if dir.path().extension().unwrap_or_default() == "glb" {
-			let objects = read_meshes_from_glb(dir).unwrap();
-			let dae_string = convert_obj_list_to_dae_string(&objects).unwrap();
-			let mut dae_path = dir.path().clone();
-			dae_path.set_extension("dae");
-			fs::write(dae_path, dae_string).unwrap();
-		}
+	let mut meshes_target = env::current_dir().unwrap();
+	meshes_target.push("common/build");
+
+	let original_str = original.to_str().unwrap();
+	return original_str
+		.replace(
+			meshes_path.to_str().unwrap(),
+			meshes_target.to_str().unwrap(),
+		)
+		.into();
+}
+
+fn copy_directory(subdir: &str) -> anyhow::Result<()> {
+	let mut icons_path = std::env::current_dir()?;
+	icons_path.push(subdir);
+	let mut all_icon_paths = std::collections::hash_set::HashSet::new();
+	visit_dirs(&icons_path, &mut all_icon_paths, &|dir, _| {
+		let file_content = fs::read(dir.path())?;
+		fs::create_dir_all(get_target_path(&dir.path()).parent().unwrap())?;
+		fs::write(get_target_path(&dir.path()), file_content).unwrap();
+		Ok(())
 	})?;
 
 	Ok(())
 }
-// TODO: handle the case of glb and obj of the same name writing the same file... We should give an error if that happens...
+
+pub fn compile_assets() -> anyhow::Result<()> {
+	copy_directory("assets/icons")?;
+	copy_directory("assets/textures")?;
+	// copy_directory("assets/dumdum")?;
+
+	let mut all_mesh_paths = std::env::current_dir()?;
+	all_mesh_paths.push("assets/meshes");
+	let mut all_paths = std::collections::hash_set::HashSet::new();
+	println!("Mesh path: {:?}", all_mesh_paths);
+	visit_dirs(&all_mesh_paths, &mut all_paths, &|dir, all_paths| {
+		println!("{:?}", dir);
+		let dir_path = dir.path();
+		let extension = dir_path.extension().unwrap_or_default();
+		if extension == "glb" {
+			// Dae files need to be preprocessed before being moved to another location
+			let objects = read_meshes_from_glb(dir).unwrap();
+			let dae_string = convert_obj_list_to_dae_string(&objects).unwrap();
+			let mut dae_path = dir_path.clone();
+			dae_path.set_extension("dae");
+			if !all_paths.insert(get_target_path(&dae_path)) {
+				return Err(anyhow!("Duplicate file: {}", dae_path.to_string_lossy()))?;
+			}
+			fs::create_dir_all(get_target_path(&dae_path).parent().unwrap())?;
+			fs::write(get_target_path(&dae_path), dae_string).unwrap();
+		} else if extension == "dae" {
+			// For dae files, just copy them over
+			let file_content = fs::read(dir_path.clone())?;
+			let dae_path = dir_path.clone();
+			if !all_paths.insert(get_target_path(&dae_path)) {
+				return Err(anyhow!("Duplicate file: {}", dae_path.to_string_lossy()))?;
+			}
+			fs::create_dir_all(get_target_path(&dae_path).parent().unwrap())?;
+			fs::write(get_target_path(&dae_path), file_content).unwrap();
+		}
+		Ok(())
+	})?;
+
+	Ok(())
+}

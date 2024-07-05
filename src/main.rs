@@ -1,6 +1,11 @@
-use crate::args::{Action, Args};
+use crate::{
+	args::{Action, Args},
+	constants::ORIGINAL_FILE_PATH_JSON_ATTR,
+};
 use anyhow::{anyhow, Ok};
 use clap::Parser;
+use constants::TODD_UNIT;
+use dae::get_target_path;
 use records::get_record_types;
 use serde_json::{from_str, Value};
 use std::{
@@ -16,6 +21,7 @@ mod constants;
 mod dae;
 mod record;
 mod records;
+mod world_gen;
 
 fn main() -> anyhow::Result<()> {
 	println!("=== spicy (v0.0.1) ===");
@@ -37,6 +43,9 @@ fn main() -> anyhow::Result<()> {
 		}
 		Action::Decompile => {
 			decompile(args)?;
+		}
+		Action::WorldGen => {
+			world_gen()?;
 		}
 	}
 
@@ -230,6 +239,10 @@ fn clear() -> anyhow::Result<()> {
 }
 
 fn compile() -> anyhow::Result<()> {
+	println!("Converting .obj files to .dae");
+	// dae::convert_obj_to_dae()?;
+	dae::compile_assets()?;
+
 	let tes3conv_path = get_tes3conv_path();
 
 	// Parse paths
@@ -262,6 +275,10 @@ fn compile() -> anyhow::Result<()> {
 		println!("Parsing: {:?}", file);
 		let json_data = fs::read_to_string(file).unwrap();
 		let mut parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
+		parsed_json.as_object_mut().unwrap().insert(
+			ORIGINAL_FILE_PATH_JSON_ATTR.to_string(),
+			file.to_string_lossy().into(),
+		);
 
 		// Validate individual records...
 		fill_in_single_record(&mut parsed_json, files.len(), &mut cell_reference_counter)?;
@@ -352,10 +369,6 @@ fn compile() -> anyhow::Result<()> {
 
 	println!("{:?}", output);
 
-	println!("Converting .obj files to .dae");
-	dae::convert_obj_to_dae()?;
-	dae::convert_glb_to_dae()?;
-
 	Ok(())
 }
 
@@ -415,10 +428,10 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 
 	println!("{:?}", output);
 
-	// Read back json for validation
+	// Read back json for validation // ??? why would we validate on DECOMPILEs?
 	let json_data = fs::read_to_string(output_path.clone()).unwrap();
 	let parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
-	validate_json(&parsed_json)?;
+	// validate_json(&parsed_json)?;
 
 	create_record_dirs()?;
 
@@ -643,6 +656,46 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 		}
 		_ => {}
 	}
+
+	let mesh_path = read_string_from_record(record, "mesh");
+	if let anyhow::Result::Ok(mesh_path) = mesh_path {
+		if mesh_path.len() == 0
+			&& read_string_from_record(record, "type").unwrap_or_default() != "Npc"
+		// npcs are allowed to have no mesh = they use racial meshes
+		{
+			let record_path = read_string_from_record(record, ORIGINAL_FILE_PATH_JSON_ATTR);
+			return Err(anyhow!("Mesh not defined. Path: {:?}", record_path));
+		}
+		let mut path = std::env::current_dir()?;
+		path.push("assets/meshes");
+		path.push(mesh_path.clone());
+		path = get_target_path(&path);
+		if !path.exists() {
+			return anyhow::Result::Err(anyhow!(
+				"Mesh path does not exist: {} ({})",
+				mesh_path,
+				path.to_string_lossy()
+			));
+		}
+	}
+	let icon_path = read_string_from_record(record, "icon");
+	if let anyhow::Result::Ok(icon_path) = icon_path {
+		if icon_path.len() == 0 {
+			let record_path = read_string_from_record(record, ORIGINAL_FILE_PATH_JSON_ATTR);
+			return Err(anyhow!("Icon not defined. Path: {:?}", record_path));
+		}
+		let mut path = std::env::current_dir()?;
+		path.push("assets/icons");
+		path.push(icon_path.clone());
+		path = get_target_path(&path);
+		if !path.exists() {
+			return anyhow::Result::Err(anyhow!(
+				"Icon path does not exist: {} ({})",
+				icon_path,
+				path.to_string_lossy()
+			));
+		}
+	}
 	Ok(())
 }
 
@@ -679,5 +732,21 @@ fn fill_in_single_record(
 		}
 		_ => {}
 	}
+	Ok(())
+}
+
+fn world_gen() -> anyhow::Result<()> {
+	todo!();
+
+	let mut world = world_gen::world::OpenmwWorld::new();
+
+	for u in 0..1024 {
+		for v in 0..1024 {
+			world.set_elevation([u, v], u as f32 / TODD_UNIT);
+		}
+	}
+
+	world.convert_to_json()?;
+
 	Ok(())
 }

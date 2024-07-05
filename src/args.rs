@@ -20,4 +20,5 @@ pub enum Action {
 	#[default]
 	Compile,
 	Decompile,
+	WorldGen,
 }
