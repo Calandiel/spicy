@@ -1,2 +1,50 @@
-# spicy
-A set of utilities for OpenMW
+# Spicy
+This repository contains spicy - a simple validator built on top of tes3conv that splits records into individual files.
+
+# Getting started
+While tes3conv is included with the repo, a number of important dependencies aren't.
+This section covers how to install them.
+
+## Rust
+To use spicy you need Rust installed and in your system path.
+You can get it here: https://rustup.rs/
+
+To verify that everything works, open your terminal, type in `cargo` and press `enter`.
+You should be greeted with instructions on how to use cargo. If the system complains about a missing path or file, you forgot to add the folder containing it to your system path.
+Note, if you are on Windows, you may need to restart the terminal or the system.
+
+## OpenMW
+To run projects, you will need the engine itself too.
+You can download a version specific to your system from https://openmw.org/downloads/
+Note that spicy was developed and tested with version 0.48 in mind.
+
+It's highly suggested you create a new installation. After downloading the engine, DO NOT run the installation wizard that openmw ships with as we will not be pointing it to any external game files.
+
+Instead, get `settings.cfg` from the repo and place it next to openmw executable. This will prepare it for use with spicy.
+
+## git
+To clone spicy and use it, install `git` and add it to your system path.
+Further instructions can be found on https://git-scm.com/
+
+## Building spicy
+Clone the repo with `git` and run `cargo build --release`. After that, add `target/release` to your system path to ease usage of the tool.
+
+## Creating a new project
+To create a new 
+
+# Intended workflow
+Spicy doesn't come with editing tools.
+You will need to rely on openmw-cs for that.
+
+The general workflow is:
+- pull changes from other contributors with `git pull`
+- compile files with `spicy -a compile`
+- edit files with `openmw-cs`
+- save and debug wht game with `openmw --skip-menu --new-game`
+- decompile files with `spicy -a decompile`
+- commit and push with `git add --all && git commit -m "message" && git push`
+
+## Asset workflow
+Spicy handles conversion of standard glb files into a format compatible with openmw.
+Put assets in your projects `assets/meshes` directory.
+You can also put dae files in there but it's discouraged as glb is widely adapted and more commonly used.
