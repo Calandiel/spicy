@@ -30,7 +30,15 @@ Further instructions can be found on https://git-scm.com/
 Clone the repo with `git` and run `cargo build --release`. After that, add `target/release` to your system path to ease usage of the tool.
 
 ## Creating a new project
-To create a new 
+This section will be written later as we are still working on automatic project creation.
+
+## Exposing the project to openmw and openmw-cs
+Run `openmw-launcher` and create a new profile.
+Add your projects `common/build` directory to data paths.
+This should be the *only* data path in the profile (besides the built-in path of the engine that can't be removed).
+
+Enable the scripts and the addon of your game, then launch the game.
+From then on, you can run the game with `openmw --skip-menu --new-game` for faster development, without going through the launcher.
 
 # Intended workflow
 Spicy doesn't come with editing tools.
