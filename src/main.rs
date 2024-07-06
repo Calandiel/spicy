@@ -1,8 +1,9 @@
 use crate::{
 	args::{Action, Args},
-	constants::ORIGINAL_FILE_PATH_JSON_ATTR,
+	constants::{LAND_RECORD_SCALER, ORIGINAL_FILE_PATH_JSON_ATTR, SQUARES_PER_CELL},
 };
 use anyhow::{anyhow, Ok};
+use base64::Engine;
 use clap::Parser;
 use constants::TODD_UNIT;
 use dae::get_target_path;
@@ -15,6 +16,7 @@ use std::{
 	path::PathBuf,
 	process::{Command, Stdio},
 };
+use world_gen::world::OpenmwWorld;
 
 mod args;
 mod constants;
@@ -271,7 +273,8 @@ fn compile() -> anyhow::Result<()> {
 	let mut cell_reference_counter = 0;
 	let mut dialogue_info_id_counter = 0;
 	let mut json = r"[".to_string();
-	for (index, file) in files.iter().enumerate() {
+	let mut parsed_jsons = vec![];
+	for file in &files {
 		println!("Parsing: {:?}", file);
 		let json_data = fs::read_to_string(file).unwrap();
 		let mut parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
@@ -284,8 +287,13 @@ fn compile() -> anyhow::Result<()> {
 		fill_in_single_record(&mut parsed_json, files.len(), &mut cell_reference_counter)?;
 		validate_single_record(&parsed_json)?;
 
-		// Write the final value
+		parsed_jsons.push(parsed_json);
+	}
+	// Validate all recorda at once
+	validate_records_together(&mut parsed_jsons)?;
 
+	// Write the final value
+	for (index, parsed_json) in parsed_jsons.iter_mut().enumerate() {
 		let mut infos = vec![];
 		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
 			infos = parsed_json
@@ -378,7 +386,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	// Parse paths
 	let mut input_path = PathBuf::from(
 		args.input_path
-			.expect("Missing input path for the decompilation step"),
+			.unwrap_or("common/build/out.omwgame".to_string()),
 	);
 	let mut output_path = env::current_dir().unwrap();
 	output_path.push("common/cache/temp.json");
@@ -639,6 +647,151 @@ fn read_string_from_record(record: &Value, attribute: &str) -> anyhow::Result<St
 	Err(anyhow!("Record has no string attribute {}", attribute))
 }
 
+// The first argument of the closure is in heightmap adjusted tuds
+fn do_for_all_landscapes<F>(records: &mut Vec<Value>, mut closure: F) -> anyhow::Result<()>
+where
+	F: FnMut(&mut f32, [i32; 2], &mut [u8]) -> anyhow::Result<()>,
+{
+	for record in records {
+		if read_string_from_record(record, "type").unwrap_or_default() == "Landscape" {
+			//
+			let grid_location = {
+				let grid_location = record.get("grid").unwrap().as_array().unwrap();
+				[
+					grid_location[0].as_i64().unwrap() as i32,
+					grid_location[1].as_i64().unwrap() as i32,
+				]
+			};
+
+			let heights_base64 = record
+				.get("vertex_heights")
+				.unwrap()
+				.get("data")
+				.unwrap()
+				.as_str()
+				.unwrap();
+			let mut heights_data = base64::prelude::BASE64_STANDARD
+				.decode(heights_base64)
+				.unwrap();
+			const LANDSCAPE_HEIGHT_DATA_SIZE: usize = 4225;
+			if heights_data.len() != LANDSCAPE_HEIGHT_DATA_SIZE {
+				return Err(anyhow!(
+					"Wrong landscape byte length, should be {} is {}",
+					LANDSCAPE_HEIGHT_DATA_SIZE,
+					heights_data.len()
+				));
+			}
+			let mut height_offset = {
+				if let Some(val) = record.get("vertex_heights").unwrap().get("offset") {
+					//
+					if let Some(val) = val.as_number() {
+						val.as_f64().unwrap() as f32
+					} else {
+						0.0
+					}
+				} else {
+					0.0
+				}
+			};
+
+			closure(&mut height_offset, grid_location, &mut heights_data)?;
+
+			record
+				.get_mut("vertex_heights")
+				.unwrap()
+				.as_object_mut()
+				.unwrap()
+				.insert("offset".to_string(), height_offset.into());
+			*record
+				.get_mut("vertex_heights")
+				.unwrap()
+				.get_mut("data")
+				.unwrap() = base64::prelude::BASE64_STANDARD
+				.encode(heights_data)
+				.as_str()
+				.into();
+		}
+	}
+
+	Ok(())
+}
+
+fn validate_records_together(records: &mut Vec<Value>) -> anyhow::Result<()> {
+	let mut openmw_world = OpenmwWorld::new();
+
+	// Write data from landscapes to the openmw world
+	do_for_all_landscapes(
+		records,
+		|height_offset: &mut f32, grid_location: [i32; 2], heights_data: &mut [u8]| {
+			let mut offset = *height_offset;
+			for iy in 0..65 {
+				let mut row_offset = 0.0;
+				for ix in 0..65 {
+					let delta = i8::from_le_bytes([heights_data[iy * 65 + ix]]);
+					if ix == 0 {
+						offset += delta as f32;
+					} else {
+						row_offset += delta as f32;
+					}
+
+					openmw_world.set_elevation_canonical(
+						[
+							grid_location[0] * SQUARES_PER_CELL as i32 + ix as i32,
+							grid_location[1] * SQUARES_PER_CELL as i32 + iy as i32,
+						],
+						offset + row_offset,
+					)
+				}
+			}
+
+			Ok(())
+		},
+	)?;
+
+	// Read data from openmw world to landscapes
+	do_for_all_landscapes(
+		records,
+		|height_offset: &mut f32, grid_location: [i32; 2], heights_data: &mut [u8]| {
+			let mut last_pixel = openmw_world.get_elevation_canonical([
+				grid_location[0] * SQUARES_PER_CELL as i32,
+				grid_location[1] * SQUARES_PER_CELL as i32,
+			]);
+			let mut last_row = last_pixel;
+			*height_offset = last_pixel as f32;
+			for iy in 0..65 {
+				for ix in 0..65 {
+					let elevation = openmw_world.get_elevation_canonical([
+						grid_location[0] * SQUARES_PER_CELL as i32 + ix as i32,
+						grid_location[1] * SQUARES_PER_CELL as i32 + iy as i32,
+					]);
+					let delta: i32;
+					if ix == 0 {
+						delta = elevation - last_row;
+						last_row = elevation;
+						last_pixel = elevation;
+					} else {
+						delta = elevation - last_pixel;
+						last_pixel = elevation;
+					}
+					if delta > i8::MAX as i32 || delta < i8::MIN as i32 {
+						return Err(anyhow!(
+							"HEIGHTMAP GRADIENT IS TOO LARGE, DELTA OUT OF I8 BOUNDS! ({} <= {} <= {})",
+							i8::MIN, delta, i8::MAX
+						));
+					}
+					heights_data[iy * 65 + ix] = i8::to_le_bytes(delta as i8)[0];
+				}
+			}
+
+			Ok(())
+		},
+	)?;
+	// panic!();
+
+	// After all data is set, we can read it back into the buffers
+	Ok(())
+}
+
 // Validates a single record upon reading
 fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 	let record_type = read_string_from_record(record, "type")?;
@@ -728,6 +881,16 @@ fn fill_in_single_record(
 					.unwrap()
 					.insert("refr_index".to_string(), (*last_reference_index).into());
 				*last_reference_index += 1;
+			}
+		}
+		"Landscape" => {
+			let landscape_flags = record
+				.get("landscape_flags")
+				.expect("Landscape flags are compulsory but missing on a landscape record!")
+				.as_str()
+				.unwrap();
+			if landscape_flags == "" {
+				return Err(anyhow!("A landscape has an empty landscape flags string. This indicates an error. Perhaps the tool used to edit it has an internal bug? A good default value is 'USES_VERTEX_HEIGHTS_AND_NORMALS | USES_TEXTURES'"));
 			}
 		}
 		_ => {}
