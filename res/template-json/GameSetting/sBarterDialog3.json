@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog3",
+  "type": "GameSetting",
+  "value": {
+    "data": "This weighs more than you can carry.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifySpellpoints",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Magicka",
+    "type": "String"
+  }
+}

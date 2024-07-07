@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sThrust",
+  "type": "GameSetting",
+  "value": {
+    "data": "Thrust",
+    "type": "String"
+  }
+}

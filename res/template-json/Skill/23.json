@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.75,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 4,
+    "specialization": 2
+  },
+  "description": "Proficiency in wielding daggers, short swords, or other small bladed weapons",
+  "flags": "",
+  "skill_id": "ShortBlade",
+  "type": "Skill"
+}

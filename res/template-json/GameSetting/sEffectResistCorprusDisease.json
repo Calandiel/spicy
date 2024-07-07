@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistCorprusDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Divine Disease",
+    "type": "String"
+  }
+}

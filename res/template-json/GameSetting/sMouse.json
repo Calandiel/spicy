@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMouse",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mouse",
+    "type": "String"
+  }
+}

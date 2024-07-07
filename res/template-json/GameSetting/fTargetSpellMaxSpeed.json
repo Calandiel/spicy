@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fTargetSpellMaxSpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": 1000.0,
+    "type": "Float"
+  }
+}

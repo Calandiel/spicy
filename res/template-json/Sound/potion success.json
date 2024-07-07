@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "potion success",
+  "sound_path": "potion_success.wav",
+  "type": "Sound"
+}

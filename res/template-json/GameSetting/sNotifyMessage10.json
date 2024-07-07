@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage10",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have to give this spell a name before buying it.",
+    "type": "String"
+  }
+}

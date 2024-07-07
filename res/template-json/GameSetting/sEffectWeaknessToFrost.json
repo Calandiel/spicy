@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToFrost",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Frost",
+    "type": "String"
+  }
+}

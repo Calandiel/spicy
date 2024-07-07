@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSunDamage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sun Damage",
+    "type": "String"
+  }
+}

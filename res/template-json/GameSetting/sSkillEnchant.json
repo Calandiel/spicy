@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillEnchant",
+  "type": "GameSetting",
+  "value": {
+    "data": "Enchant",
+    "type": "String"
+  }
+}

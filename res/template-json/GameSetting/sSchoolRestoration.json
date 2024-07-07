@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSchoolRestoration",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restoration",
+    "type": "String"
+  }
+}

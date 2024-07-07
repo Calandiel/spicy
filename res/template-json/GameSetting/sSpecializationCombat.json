@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpecializationCombat",
+  "type": "GameSetting",
+  "value": {
+    "data": "Combat",
+    "type": "String"
+  }
+}

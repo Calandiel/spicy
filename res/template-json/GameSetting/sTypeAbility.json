@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTypeAbility",
+  "type": "GameSetting",
+  "value": {
+    "data": "Abilities",
+    "type": "String"
+  }
+}

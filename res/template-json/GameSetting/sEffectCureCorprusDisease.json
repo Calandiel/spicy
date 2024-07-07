@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCureCorprusDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cure Divine Disease",
+    "type": "String"
+  }
+}

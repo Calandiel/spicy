@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBackspace",
+  "type": "GameSetting",
+  "value": {
+    "data": "Backspace",
+    "type": "String"
+  }
+}

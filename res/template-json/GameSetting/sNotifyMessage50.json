@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage50",
+  "type": "GameSetting",
+  "value": {
+    "data": "%s has no effect on you.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicItem",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic Items",
+    "type": "String"
+  }
+}

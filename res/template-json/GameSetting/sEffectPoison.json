@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectPoison",
+  "type": "GameSetting",
+  "value": {
+    "data": "Poison",
+    "type": "String"
+  }
+}

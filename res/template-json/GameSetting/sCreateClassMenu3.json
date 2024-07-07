@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "This class is missing a description.",
+    "type": "String"
+  }
+}

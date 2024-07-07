@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCostCharge",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cost / Item charge",
+    "type": "String"
+  }
+}

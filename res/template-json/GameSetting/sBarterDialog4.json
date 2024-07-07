@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog4",
+  "type": "GameSetting",
+  "value": {
+    "data": "I won't buy this item.",
+    "type": "String"
+  }
+}

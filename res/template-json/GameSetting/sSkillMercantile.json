@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillMercantile",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mercantile",
+    "type": "String"
+  }
+}

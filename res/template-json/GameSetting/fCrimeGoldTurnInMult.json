@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCrimeGoldTurnInMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.9,
+    "type": "Float"
+  }
+}

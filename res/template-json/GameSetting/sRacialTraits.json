@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRacialTraits",
+  "type": "GameSetting",
+  "value": {
+    "data": "Racial Traits",
+    "type": "String"
+  }
+}

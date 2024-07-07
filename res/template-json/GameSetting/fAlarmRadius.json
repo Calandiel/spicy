@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAlarmRadius",
+  "type": "GameSetting",
+  "value": {
+    "data": 2000.0,
+    "type": "Float"
+  }
+}

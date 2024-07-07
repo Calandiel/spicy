@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 4,
+    "specialization": 2
+  },
+  "description": "Introduce your enemies to a pair of hard fists.",
+  "flags": "",
+  "skill_id": "HandToHand",
+  "type": "Skill"
+}

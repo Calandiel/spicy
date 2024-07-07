@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectJump",
+  "type": "GameSetting",
+  "value": {
+    "data": "Jump",
+    "type": "String"
+  }
+}

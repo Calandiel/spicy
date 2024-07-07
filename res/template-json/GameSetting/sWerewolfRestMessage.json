@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWerewolfRestMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot rest while in werewolf form.",
+    "type": "String"
+  }
+}

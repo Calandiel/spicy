@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenuHelp2",
+  "type": "GameSetting",
+  "value": {
+    "data": "You get +10 to each of your primary attributes.",
+    "type": "String"
+  }
+}

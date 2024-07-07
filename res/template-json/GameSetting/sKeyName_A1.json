@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_A1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Calc",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectAbsorbHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Absorb Health",
+    "type": "String"
+  }
+}

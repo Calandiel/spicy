@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCaughtStealingMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Oi! What's happening there!",
+    "type": "String"
+  }
+}

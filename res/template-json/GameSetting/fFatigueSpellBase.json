@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFatigueSpellBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.0,
+    "type": "Float"
+  }
+}

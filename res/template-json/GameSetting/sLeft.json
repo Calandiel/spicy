@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLeft",
+  "type": "GameSetting",
+  "value": {
+    "data": "Left",
+    "type": "String"
+  }
+}

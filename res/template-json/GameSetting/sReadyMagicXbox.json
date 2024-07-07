@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReadyMagicXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ready Magic",
+    "type": "String"
+  }
+}

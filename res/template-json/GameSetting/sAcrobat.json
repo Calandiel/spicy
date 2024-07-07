@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAcrobat",
+  "type": "GameSetting",
+  "value": {
+    "data": "Acrobat",
+    "type": "String"
+  }
+}

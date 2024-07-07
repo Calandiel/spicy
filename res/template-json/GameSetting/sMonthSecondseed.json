@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthSecondseed",
+  "type": "GameSetting",
+  "value": {
+    "data": "September",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fBarterGoldResetDelay",
+  "type": "GameSetting",
+  "value": {
+    "data": 24.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundMace",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Mace",
+    "type": "String"
+  }
+}

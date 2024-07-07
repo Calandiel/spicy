@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFatigueReturnMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.02,
+    "type": "Float"
+  }
+}

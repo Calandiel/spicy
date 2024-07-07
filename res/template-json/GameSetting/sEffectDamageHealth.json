@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDamageHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Damage Health",
+    "type": "String"
+  }
+}

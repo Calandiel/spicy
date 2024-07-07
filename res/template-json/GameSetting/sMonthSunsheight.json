@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthSunsheight",
+  "type": "GameSetting",
+  "value": {
+    "data": "December",
+    "type": "String"
+  }
+}

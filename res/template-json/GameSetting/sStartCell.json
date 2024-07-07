@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStartCell",
+  "type": "GameSetting",
+  "value": {
+    "data": "Place of Initialization",
+    "type": "String"
+  }
+}

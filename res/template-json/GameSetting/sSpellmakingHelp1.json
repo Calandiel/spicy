@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp1",
+  "type": "GameSetting",
+  "value": {
+    "data": "How this spell will be called.",
+    "type": "String"
+  }
+}

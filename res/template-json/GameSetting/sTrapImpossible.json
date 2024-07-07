@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTrapImpossible",
+  "type": "GameSetting",
+  "value": {
+    "data": "This trap is too complex for you to disarm.",
+    "type": "String"
+  }
+}

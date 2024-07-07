@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_46",
+  "type": "GameSetting",
+  "value": {
+    "data": "Scroll Lock",
+    "type": "String"
+  }
+}

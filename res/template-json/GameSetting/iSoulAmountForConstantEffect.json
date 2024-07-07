@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iSoulAmountForConstantEffect",
+  "type": "GameSetting",
+  "value": {
+    "data": 400,
+    "type": "Integer"
+  }
+}

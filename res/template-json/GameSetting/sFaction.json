@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFaction",
+  "type": "GameSetting",
+  "value": {
+    "data": "Faction",
+    "type": "String"
+  }
+}

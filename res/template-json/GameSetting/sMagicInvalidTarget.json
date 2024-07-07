@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicInvalidTarget",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your spell failed to hit a target.",
+    "type": "String"
+  }
+}

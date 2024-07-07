@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSorceror",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sorcerer",
+    "type": "String"
+  }
+}

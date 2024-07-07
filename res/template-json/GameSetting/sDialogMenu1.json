@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDialogMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Final Disposition:",
+    "type": "String"
+  }
+}

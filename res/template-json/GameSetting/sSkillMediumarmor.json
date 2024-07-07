@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillMediumarmor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Medium Armor",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicInsufficientSP",
+  "type": "GameSetting",
+  "value": {
+    "data": "Not enough Magicka to cast this spell.",
+    "type": "String"
+  }
+}

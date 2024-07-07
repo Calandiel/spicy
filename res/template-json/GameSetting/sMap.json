@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMap",
+  "type": "GameSetting",
+  "value": {
+    "data": "Map",
+    "type": "String"
+  }
+}

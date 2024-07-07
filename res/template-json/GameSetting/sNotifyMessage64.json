@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage64",
+  "type": "GameSetting",
+  "value": {
+    "data": "You can't sleep in someone else's bed!",
+    "type": "String"
+  }
+}

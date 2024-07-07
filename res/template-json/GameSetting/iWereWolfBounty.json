@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iWereWolfBounty",
+  "type": "GameSetting",
+  "value": {
+    "data": 10000,
+    "type": "Integer"
+  }
+}

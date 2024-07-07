@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfUnarmored",
+  "type": "GameSetting",
+  "value": {
+    "data": 100.0,
+    "type": "Float"
+  }
+}

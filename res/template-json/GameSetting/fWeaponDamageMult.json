@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWeaponDamageMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.1,
+    "type": "Float"
+  }
+}

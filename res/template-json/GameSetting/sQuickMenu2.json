@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Inventory Item",
+    "type": "String"
+  }
+}

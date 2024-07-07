@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMaximumSaveGameMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have reached the limit of possible saved games!",
+    "type": "String"
+  }
+}

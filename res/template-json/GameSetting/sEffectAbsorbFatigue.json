@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectAbsorbFatigue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Absorb Fatigue",
+    "type": "String"
+  }
+}

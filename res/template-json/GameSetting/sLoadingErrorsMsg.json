@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingErrorsMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "Errors were encountered loading from file \"%s\".",
+    "type": "String"
+  }
+}

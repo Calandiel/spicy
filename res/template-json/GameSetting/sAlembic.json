@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAlembic",
+  "type": "GameSetting",
+  "value": {
+    "data": "Alembic",
+    "type": "String"
+  }
+}

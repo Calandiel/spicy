@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectAlmsiviIntervention",
+  "type": "GameSetting",
+  "value": {
+    "data": "Seraphic Intervention",
+    "type": "String"
+  }
+}

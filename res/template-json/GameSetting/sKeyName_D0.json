@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_D0",
+  "type": "GameSetting",
+  "value": {
+    "data": "Down",
+    "type": "String"
+  }
+}

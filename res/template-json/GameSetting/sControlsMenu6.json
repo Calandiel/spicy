@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControlsMenu6",
+  "type": "GameSetting",
+  "value": {
+    "data": "Press a button to assign this command.",
+    "type": "String"
+  }
+}

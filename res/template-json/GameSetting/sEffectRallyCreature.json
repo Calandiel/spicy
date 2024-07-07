@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRallyCreature",
+  "type": "GameSetting",
+  "value": {
+    "data": "Rally Creature",
+    "type": "String"
+  }
+}

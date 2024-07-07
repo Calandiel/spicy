@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLookUpXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Look Up",
+    "type": "String"
+  }
+}

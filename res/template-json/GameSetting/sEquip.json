@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEquip",
+  "type": "GameSetting",
+  "value": {
+    "data": "Equip",
+    "type": "String"
+  }
+}

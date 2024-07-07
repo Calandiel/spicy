@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCompanionWarningMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your mercenary doesn't see much value in travelling with you.",
+    "type": "String"
+  }
+}

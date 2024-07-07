@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreatedEffects",
+  "type": "GameSetting",
+  "value": {
+    "data": "Created Effects",
+    "type": "String"
+  }
+}

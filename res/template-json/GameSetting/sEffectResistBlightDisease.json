@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistBlightDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Blight Disease",
+    "type": "String"
+  }
+}

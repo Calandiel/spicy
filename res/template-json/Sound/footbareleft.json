@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "footbareleft",
+  "sound_path": "foot_bare_left.wav",
+  "type": "Sound"
+}

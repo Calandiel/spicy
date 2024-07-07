@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu10",
+  "type": "GameSetting",
+  "value": {
+    "data": "Casting cost cannot be larger than the maximum charge points held by the item",
+    "type": "String"
+  }
+}

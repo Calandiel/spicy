@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCommandHumanoids",
+  "type": "GameSetting",
+  "value": {
+    "data": "Command Humanoid",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPrev",
+  "type": "GameSetting",
+  "value": {
+    "data": "Prev",
+    "type": "String"
+  }
+}

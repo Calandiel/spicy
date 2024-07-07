@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sActorInCombat",
+  "type": "GameSetting",
+  "value": {
+    "data": "This character is in combat.",
+    "type": "String"
+  }
+}

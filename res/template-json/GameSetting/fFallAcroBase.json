@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFallAcroBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.25,
+    "type": "Float"
+  }
+}

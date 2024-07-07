@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeSpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": "Speed",
+    "type": "String"
+  }
+}

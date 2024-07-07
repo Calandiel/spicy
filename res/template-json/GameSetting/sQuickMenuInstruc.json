@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenuInstruc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Click on a Quick Key slot to assign a spell, magic item or inventory item",
+    "type": "String"
+  }
+}

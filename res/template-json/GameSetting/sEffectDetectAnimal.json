@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDetectAnimal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Detect Animal",
+    "type": "String"
+  }
+}

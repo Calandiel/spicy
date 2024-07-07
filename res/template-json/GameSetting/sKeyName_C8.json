@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_C8",
+  "type": "GameSetting",
+  "value": {
+    "data": "Up",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthRainshand",
+  "type": "GameSetting",
+  "value": {
+    "data": "August",
+    "type": "String"
+  }
+}

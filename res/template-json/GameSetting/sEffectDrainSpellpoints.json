@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDrainSpellpoints",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drain Magicka",
+    "type": "String"
+  }
+}

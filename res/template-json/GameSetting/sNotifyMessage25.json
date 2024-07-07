@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage25",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need to pick two primary attributes.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWeaponTab",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weapon",
+    "type": "String"
+  }
+}

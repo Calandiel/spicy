@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOnetypeEffectMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "This effect has already been added.",
+    "type": "String"
+  }
+}

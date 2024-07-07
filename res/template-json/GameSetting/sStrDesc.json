@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStrDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your ability to exert physical force on the world around you.  Increases weapon damage, carrying capacity, maximum Fatigue and starting Health.",
+    "type": "String"
+  }
+}

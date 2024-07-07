@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCustom",
+  "type": "GameSetting",
+  "value": {
+    "data": "Custom",
+    "type": "String"
+  }
+}

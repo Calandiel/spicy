@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage22",
+  "type": "GameSetting",
+  "value": {
+    "data": "Please remove the object assigned to the calcinator slot.",
+    "type": "String"
+  }
+}

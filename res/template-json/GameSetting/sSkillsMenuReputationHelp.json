@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillsMenuReputationHelp",
+  "type": "GameSetting",
+  "value": {
+    "data": "How famous you are in the world.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBribe 1000 Gold",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bribe 1000 Gold",
+    "type": "String"
+  }
+}

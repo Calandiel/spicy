@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFast",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fast",
+    "type": "String"
+  }
+}

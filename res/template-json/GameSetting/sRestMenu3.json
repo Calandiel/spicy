@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "REST",
+    "type": "String"
+  }
+}

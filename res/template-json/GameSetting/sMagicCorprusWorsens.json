@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicCorprusWorsens",
+  "type": "GameSetting",
+  "value": {
+    "data": "The Divine disease shows signs of getting worse.",
+    "type": "String"
+  }
+}

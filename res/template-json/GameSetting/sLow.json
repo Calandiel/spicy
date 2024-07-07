@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLow",
+  "type": "GameSetting",
+  "value": {
+    "data": "Low",
+    "type": "String"
+  }
+}

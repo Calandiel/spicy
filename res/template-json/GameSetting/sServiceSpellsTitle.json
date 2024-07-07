@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sServiceSpellsTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spells",
+    "type": "String"
+  }
+}

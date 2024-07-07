@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDisposeCorpseFail",
+  "type": "GameSetting",
+  "value": {
+    "data": "This corpse cannot be removed.",
+    "type": "String"
+  }
+}

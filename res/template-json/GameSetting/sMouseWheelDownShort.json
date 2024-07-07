@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMouseWheelDownShort",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mouse Wheel Down",
+    "type": "String"
+  }
+}

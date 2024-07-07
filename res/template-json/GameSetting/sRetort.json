@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRetort",
+  "type": "GameSetting",
+  "value": {
+    "data": "Retort",
+    "type": "String"
+  }
+}

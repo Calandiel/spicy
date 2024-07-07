@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOnce",
+  "type": "GameSetting",
+  "value": {
+    "data": "Once",
+    "type": "String"
+  }
+}

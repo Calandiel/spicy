@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveGameDenied",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot save your game at this time.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuick9Cmd",
+  "type": "GameSetting",
+  "value": {
+    "data": "Quick 9",
+    "type": "String"
+  }
+}

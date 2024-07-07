@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWaterReflectUpdateAlways",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.0,
+    "type": "Float"
+  }
+}

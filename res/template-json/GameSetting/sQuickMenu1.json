@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Item to Quick Key",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWeight",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weight",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectNightEye",
+  "type": "GameSetting",
+  "value": {
+    "data": "Night Eye",
+    "type": "String"
+  }
+}

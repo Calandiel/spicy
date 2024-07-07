@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWorld",
+  "type": "GameSetting",
+  "value": {
+    "data": "World",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuestionMark",
+  "type": "GameSetting",
+  "value": {
+    "data": "?",
+    "type": "String"
+  }
+}

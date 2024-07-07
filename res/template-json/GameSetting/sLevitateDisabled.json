@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevitateDisabled",
+  "type": "GameSetting",
+  "value": {
+    "data": "Levitation does not work here.",
+    "type": "String"
+  }
+}

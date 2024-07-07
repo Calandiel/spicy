@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessage4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Are you sure you wish to overwrite this saved game?",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage19",
+  "type": "GameSetting",
+  "value": {
+    "data": "Only one apparatus can be placed in each slot of the alchemy menu.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEndDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your body's ability to handle hardships. Affects starting health, health increase per level-up, and maximum fatigue.",
+    "type": "String"
+  }
+}

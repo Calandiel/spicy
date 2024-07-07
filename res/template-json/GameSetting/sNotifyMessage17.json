@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage17",
+  "type": "GameSetting",
+  "value": {
+    "data": "A skill cannot be trained beyond the value of its governing attribute.",
+    "type": "String"
+  }
+}

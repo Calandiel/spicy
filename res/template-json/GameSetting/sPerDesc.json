@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPerDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "How likeable you are to others from the way you speak, act, and look. Increases your chance at persuasion and haggling as well as the initial disposition others have towards you.",
+    "type": "String"
+  }
+}

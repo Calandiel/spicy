@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMove",
+  "type": "GameSetting",
+  "value": {
+    "data": "Move",
+    "type": "String"
+  }
+}

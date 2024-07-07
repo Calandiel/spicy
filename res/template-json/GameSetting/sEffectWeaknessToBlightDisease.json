@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToBlightDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Blight Disease",
+    "type": "String"
+  }
+}

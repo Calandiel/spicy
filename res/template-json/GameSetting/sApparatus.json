@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sApparatus",
+  "type": "GameSetting",
+  "value": {
+    "data": "Apparatus",
+    "type": "String"
+  }
+}

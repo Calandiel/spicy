@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage66",
+  "type": "GameSetting",
+  "value": {
+    "data": "This will reset all controls to their default settings. Do you wish to continue?",
+    "type": "String"
+  }
+}

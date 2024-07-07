@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCrouchXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sneak",
+    "type": "String"
+  }
+}

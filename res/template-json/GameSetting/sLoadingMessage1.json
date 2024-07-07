@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingMessage1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Loading Content Files",
+    "type": "String"
+  }
+}

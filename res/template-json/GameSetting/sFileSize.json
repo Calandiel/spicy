@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFileSize",
+  "type": "GameSetting",
+  "value": {
+    "data": "File Size",
+    "type": "String"
+  }
+}

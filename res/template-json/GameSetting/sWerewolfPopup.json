@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWerewolfPopup",
+  "type": "GameSetting",
+  "value": {
+    "data": "Werewolf",
+    "type": "String"
+  }
+}

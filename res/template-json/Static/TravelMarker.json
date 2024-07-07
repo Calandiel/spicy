@@ -1,0 +1,6 @@
+{
+  "flags": "",
+  "id": "TravelMarker",
+  "mesh": "marker_travel.dae",
+  "type": "Static"
+}

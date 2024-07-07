@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTravelServiceTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Where do you wish to travel?",
+    "type": "String"
+  }
+}

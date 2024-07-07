@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRepair",
+  "type": "GameSetting",
+  "value": {
+    "data": "Repair",
+    "type": "String"
+  }
+}

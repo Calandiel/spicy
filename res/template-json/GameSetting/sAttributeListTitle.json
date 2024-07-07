@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeListTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Attribute List",
+    "type": "String"
+  }
+}

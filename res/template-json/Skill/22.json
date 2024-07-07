@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 3,
+    "specialization": 2
+  },
+  "description": "Your skill in wearing and using armors of light category. They provide the weakest protection but don't hinder you when you need to dodge attacks or run away from danger.",
+  "flags": "",
+  "skill_id": "LightArmor",
+  "type": "Skill"
+}

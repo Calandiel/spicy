@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpace",
+  "type": "GameSetting",
+  "value": {
+    "data": "Space",
+    "type": "String"
+  }
+}

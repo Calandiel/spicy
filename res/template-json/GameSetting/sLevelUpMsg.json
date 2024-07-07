@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevelUpMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "You should rest and reflect on your recent experiences.",
+    "type": "String"
+  }
+}

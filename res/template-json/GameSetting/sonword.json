@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sonword",
+  "type": "GameSetting",
+  "value": {
+    "data": "on",
+    "type": "String"
+  }
+}

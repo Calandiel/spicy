@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCorpseClearDelay",
+  "type": "GameSetting",
+  "value": {
+    "data": 72.0,
+    "type": "Float"
+  }
+}

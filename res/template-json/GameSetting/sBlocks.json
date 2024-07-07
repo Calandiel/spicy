@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBlocks",
+  "type": "GameSetting",
+  "value": {
+    "data": "Block",
+    "type": "String"
+  }
+}

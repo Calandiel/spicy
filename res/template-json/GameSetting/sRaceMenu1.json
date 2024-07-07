@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRaceMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Appearance",
+    "type": "String"
+  }
+}

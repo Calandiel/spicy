@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "New Save Game",
+    "type": "String"
+  }
+}

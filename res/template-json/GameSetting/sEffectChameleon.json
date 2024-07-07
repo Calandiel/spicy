@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectChameleon",
+  "type": "GameSetting",
+  "value": {
+    "data": "Chameleon",
+    "type": "String"
+  }
+}

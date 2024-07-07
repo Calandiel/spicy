@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fProjectileThrownStoreChance",
+  "type": "GameSetting",
+  "value": {
+    "data": 25.0,
+    "type": "Float"
+  }
+}

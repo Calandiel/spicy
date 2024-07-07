@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMiscTab",
+  "type": "GameSetting",
+  "value": {
+    "data": "Misc",
+    "type": "String"
+  }
+}

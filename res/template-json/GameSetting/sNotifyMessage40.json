@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage40",
+  "type": "GameSetting",
+  "value": {
+    "data": "Skill maximum reached.",
+    "type": "String"
+  }
+}

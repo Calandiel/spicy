@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_DE",
+  "type": "GameSetting",
+  "value": {
+    "data": "Power",
+    "type": "String"
+  }
+}

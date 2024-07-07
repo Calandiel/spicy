@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDialogText2Xbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "TO GO BACK",
+    "type": "String"
+  }
+}

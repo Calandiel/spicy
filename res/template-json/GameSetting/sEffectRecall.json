@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRecall",
+  "type": "GameSetting",
+  "value": {
+    "data": "Recall",
+    "type": "String"
+  }
+}

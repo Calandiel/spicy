@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sExitGame",
+  "type": "GameSetting",
+  "value": {
+    "data": "Exit Game",
+    "type": "String"
+  }
+}

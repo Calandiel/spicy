@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSlowFall",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slowfall",
+    "type": "String"
+  }
+}

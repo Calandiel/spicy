@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLookDownXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Look Down",
+    "type": "String"
+  }
+}

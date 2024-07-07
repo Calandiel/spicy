@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundCuirassID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Cuirass",
+    "type": "String"
+  }
+}

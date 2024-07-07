@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sArea",
+  "type": "GameSetting",
+  "value": {
+    "data": "Area",
+    "type": "String"
+  }
+}

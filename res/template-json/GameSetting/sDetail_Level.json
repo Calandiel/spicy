@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDetail_Level",
+  "type": "GameSetting",
+  "value": {
+    "data": "Detail Level",
+    "type": "String"
+  }
+}

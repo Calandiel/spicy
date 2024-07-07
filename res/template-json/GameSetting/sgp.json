@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sgp",
+  "type": "GameSetting",
+  "value": {
+    "data": "gp",
+    "type": "String"
+  }
+}

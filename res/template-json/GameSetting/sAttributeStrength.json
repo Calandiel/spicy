@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeStrength",
+  "type": "GameSetting",
+  "value": {
+    "data": "Strength",
+    "type": "String"
+  }
+}

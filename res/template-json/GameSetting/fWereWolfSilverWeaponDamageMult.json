@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfSilverWeaponDamageMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 1.5,
+    "type": "Float"
+  }
+}

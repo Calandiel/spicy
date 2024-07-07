@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp10",
+  "type": "GameSetting",
+  "value": {
+    "data": "Current magic effects assigned to the item",
+    "type": "String"
+  }
+}

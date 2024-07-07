@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage26",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need to pick a specialization.",
+    "type": "String"
+  }
+}

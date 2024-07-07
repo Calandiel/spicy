@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSwiftSwim",
+  "type": "GameSetting",
+  "value": {
+    "data": "Swift Swim",
+    "type": "String"
+  }
+}

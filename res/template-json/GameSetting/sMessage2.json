@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessage2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Do you wish to quit to desktop?",
+    "type": "String"
+  }
+}

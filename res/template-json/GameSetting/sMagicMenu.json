@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicMenu",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic",
+    "type": "String"
+  }
+}

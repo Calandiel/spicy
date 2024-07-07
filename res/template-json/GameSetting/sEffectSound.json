@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSound",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sound",
+    "type": "String"
+  }
+}

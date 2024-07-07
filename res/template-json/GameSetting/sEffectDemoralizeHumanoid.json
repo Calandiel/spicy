@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDemoralizeHumanoid",
+  "type": "GameSetting",
+  "value": {
+    "data": "Demoralize Humanoid",
+    "type": "String"
+  }
+}

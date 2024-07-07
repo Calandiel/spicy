@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFortify",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify",
+    "type": "String"
+  }
+}

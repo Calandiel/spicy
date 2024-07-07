@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sClassChoiceMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fill out the forms on your own (Create Custom Class)",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage37",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need to enter your name.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp5",
+  "type": "GameSetting",
+  "value": {
+    "data": "The amount of enchanting power contained by the currently assigned soul gem",
+    "type": "String"
+  }
+}

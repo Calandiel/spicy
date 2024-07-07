@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuanityMenuMessage01",
+  "type": "GameSetting",
+  "value": {
+    "data": "Amount to Sell",
+    "type": "String"
+  }
+}

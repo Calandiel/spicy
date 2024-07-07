@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage34",
+  "type": "GameSetting",
+  "value": {
+    "data": "The enchantment attempt failed and the soul gem is destroyed.",
+    "type": "String"
+  }
+}

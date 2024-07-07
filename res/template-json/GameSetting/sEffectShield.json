@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectShield",
+  "type": "GameSetting",
+  "value": {
+    "data": "Shield",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenuWarning",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reselect your class?",
+    "type": "String"
+  }
+}

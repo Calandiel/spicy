@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRechargeEnchantment",
+  "type": "GameSetting",
+  "value": {
+    "data": "Recharge Enchanted Item",
+    "type": "String"
+  }
+}

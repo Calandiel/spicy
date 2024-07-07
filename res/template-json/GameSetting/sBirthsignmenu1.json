@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBirthsignmenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Abilities:",
+    "type": "String"
+  }
+}

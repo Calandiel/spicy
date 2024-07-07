@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatBlockRightAngle",
+  "type": "GameSetting",
+  "value": {
+    "data": 30.0,
+    "type": "Float"
+  }
+}

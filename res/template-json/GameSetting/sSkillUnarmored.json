@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillUnarmored",
+  "type": "GameSetting",
+  "value": {
+    "data": "Unarmored",
+    "type": "String"
+  }
+}

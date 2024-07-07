@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage59",
+  "type": "GameSetting",
+  "value": {
+    "data": "You are over-encumbered.",
+    "type": "String"
+  }
+}

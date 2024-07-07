@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillClassMinor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Minor Skills",
+    "type": "String"
+  }
+}

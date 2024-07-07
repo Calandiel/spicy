@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRallyHumanoid",
+  "type": "GameSetting",
+  "value": {
+    "data": "Rally Humanoid",
+    "type": "String"
+  }
+}

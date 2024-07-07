@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFallDistanceMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.07,
+    "type": "Float"
+  }
+}

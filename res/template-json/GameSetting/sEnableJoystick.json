@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnableJoystick",
+  "type": "GameSetting",
+  "value": {
+    "data": "Enable Joystick",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadFailedMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your last load failed. You must load another game or start a new one.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fPotionT4EquipStrengthMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 12.0,
+    "type": "Float"
+  }
+}

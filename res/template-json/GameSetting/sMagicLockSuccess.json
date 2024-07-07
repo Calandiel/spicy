@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicLockSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your spell has locked the target.",
+    "type": "String"
+  }
+}

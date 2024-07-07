@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFootsteps",
+  "type": "GameSetting",
+  "value": {
+    "data": "Footsteps",
+    "type": "String"
+  }
+}

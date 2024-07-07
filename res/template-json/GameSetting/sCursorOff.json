@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCursorOff",
+  "type": "GameSetting",
+  "value": {
+    "data": "Crosshair",
+    "type": "String"
+  }
+}

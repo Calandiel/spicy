@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReadyItemXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ready Item",
+    "type": "String"
+  }
+}

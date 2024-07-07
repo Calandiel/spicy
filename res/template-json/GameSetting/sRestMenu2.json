@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Hours",
+    "type": "String"
+  }
+}

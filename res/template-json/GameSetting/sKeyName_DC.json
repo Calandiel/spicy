@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_DC",
+  "type": "GameSetting",
+  "value": {
+    "data": "Right Super",
+    "type": "String"
+  }
+}

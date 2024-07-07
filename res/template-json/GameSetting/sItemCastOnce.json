@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sItemCastOnce",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cast Once",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJumpXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Jump",
+    "type": "String"
+  }
+}

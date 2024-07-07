@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPreferences",
+  "type": "GameSetting",
+  "value": {
+    "data": "Preferences",
+    "type": "String"
+  }
+}

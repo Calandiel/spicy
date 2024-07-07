@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRepairServiceTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Select item to repair",
+    "type": "String"
+  }
+}

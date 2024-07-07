@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHealthPerHourOfRest",
+  "type": "GameSetting",
+  "value": {
+    "data": "Health per hour of rest",
+    "type": "String"
+  }
+}

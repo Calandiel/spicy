@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFrostDamage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Frost Damage",
+    "type": "String"
+  }
+}

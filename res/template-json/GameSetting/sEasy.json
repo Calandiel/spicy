@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEasy",
+  "type": "GameSetting",
+  "value": {
+    "data": "Easy",
+    "type": "String"
+  }
+}

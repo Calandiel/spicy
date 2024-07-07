@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillSecurity",
+  "type": "GameSetting",
+  "value": {
+    "data": "Security",
+    "type": "String"
+  }
+}

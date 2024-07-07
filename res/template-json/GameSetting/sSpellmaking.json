@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmaking",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spellmaking",
+    "type": "String"
+  }
+}

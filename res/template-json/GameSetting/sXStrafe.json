@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sXStrafe",
+  "type": "GameSetting",
+  "value": {
+    "data": "X-Axis Movement",
+    "type": "String"
+  }
+}

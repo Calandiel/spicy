@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveMenuHelp03",
+  "type": "GameSetting",
+  "value": {
+    "data": "day",
+    "type": "String"
+  }
+}

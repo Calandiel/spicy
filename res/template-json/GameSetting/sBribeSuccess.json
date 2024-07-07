@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBribeSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bribe Success",
+    "type": "String"
+  }
+}

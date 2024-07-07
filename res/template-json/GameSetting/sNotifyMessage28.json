@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage28",
+  "type": "GameSetting",
+  "value": {
+    "data": "A spell cannot hold more than eight magic effects.",
+    "type": "String"
+  }
+}

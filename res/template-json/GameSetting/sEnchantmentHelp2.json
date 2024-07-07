@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slot holding the soul gem needed to enchant an item. The gem must contain a trapped soul.",
+    "type": "String"
+  }
+}

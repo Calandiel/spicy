@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage67",
+  "type": "GameSetting",
+  "value": {
+    "data": "This will immediately change your resolution. Do you wish to continue?",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage51",
+  "type": "GameSetting",
+  "value": {
+    "data": "The %s has been used up.",
+    "type": "String"
+  }
+}

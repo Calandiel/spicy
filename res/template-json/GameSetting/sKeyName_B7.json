@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_B7",
+  "type": "GameSetting",
+  "value": {
+    "data": "SysRq",
+    "type": "String"
+  }
+}

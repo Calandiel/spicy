@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCalmCreature",
+  "type": "GameSetting",
+  "value": {
+    "data": "Calm Creature",
+    "type": "String"
+  }
+}

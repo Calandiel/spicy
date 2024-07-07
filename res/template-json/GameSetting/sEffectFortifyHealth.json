@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifyHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Health",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSave",
+  "type": "GameSetting",
+  "value": {
+    "data": "Save",
+    "type": "String"
+  }
+}

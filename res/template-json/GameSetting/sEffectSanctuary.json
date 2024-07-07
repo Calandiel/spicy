@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSanctuary",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sanctuary",
+    "type": "String"
+  }
+}

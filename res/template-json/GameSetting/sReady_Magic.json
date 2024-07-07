@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReady_Magic",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ready Magic",
+    "type": "String"
+  }
+}

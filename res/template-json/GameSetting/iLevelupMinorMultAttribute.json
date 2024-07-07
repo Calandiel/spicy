@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iLevelupMinorMultAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": 1,
+    "type": "Integer"
+  }
+}

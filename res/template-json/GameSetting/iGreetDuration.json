@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iGreetDuration",
+  "type": "GameSetting",
+  "value": {
+    "data": 4,
+    "type": "Integer"
+  }
+}

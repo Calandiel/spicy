@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sChop",
+  "type": "GameSetting",
+  "value": {
+    "data": "Chop",
+    "type": "String"
+  }
+}

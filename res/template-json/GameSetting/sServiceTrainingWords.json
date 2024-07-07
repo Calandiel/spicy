@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sServiceTrainingWords",
+  "type": "GameSetting",
+  "value": {
+    "data": "You already know more about this skill than me.",
+    "type": "String"
+  }
+}

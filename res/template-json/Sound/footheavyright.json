@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "footheavyright",
+  "sound_path": "foot_heavy_right.wav",
+  "type": "Sound"
+}

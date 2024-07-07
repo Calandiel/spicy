@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNear",
+  "type": "GameSetting",
+  "value": {
+    "data": "Near",
+    "type": "String"
+  }
+}

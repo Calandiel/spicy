@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDispPickPocketMod",
+  "type": "GameSetting",
+  "value": {
+    "data": -25.0,
+    "type": "Float"
+  }
+}

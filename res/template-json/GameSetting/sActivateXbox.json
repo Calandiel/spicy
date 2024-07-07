@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sActivateXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Activate",
+    "type": "String"
+  }
+}

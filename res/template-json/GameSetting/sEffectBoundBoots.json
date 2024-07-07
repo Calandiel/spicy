@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundBoots",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Boots",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillBluntweapon",
+  "type": "GameSetting",
+  "value": {
+    "data": "Blunt Weapon",
+    "type": "String"
+  }
+}

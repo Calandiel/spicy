@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSummonCreature01",
+  "type": "GameSetting",
+  "value": {
+    "data": "Call Wolf",
+    "type": "String"
+  }
+}

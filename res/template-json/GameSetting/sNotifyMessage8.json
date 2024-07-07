@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage8",
+  "type": "GameSetting",
+  "value": {
+    "data": "You failed to brew a potion.",
+    "type": "String"
+  }
+}

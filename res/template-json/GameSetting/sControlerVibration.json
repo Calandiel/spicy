@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControlerVibration",
+  "type": "GameSetting",
+  "value": {
+    "data": "Controller Vibration",
+    "type": "String"
+  }
+}

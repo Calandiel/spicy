@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fIdleChanceMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.75,
+    "type": "Float"
+  }
+}

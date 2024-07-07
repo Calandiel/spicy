@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTypePower",
+  "type": "GameSetting",
+  "value": {
+    "data": "Powers",
+    "type": "String"
+  }
+}

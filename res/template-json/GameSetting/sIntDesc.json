@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sIntDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your mental capacity to understand the universe as well as yourself. Determines the amount of Magicka you have.",
+    "type": "String"
+  }
+}

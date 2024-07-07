@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_38",
+  "type": "GameSetting",
+  "value": {
+    "data": "Left Alt",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSilence",
+  "type": "GameSetting",
+  "value": {
+    "data": "Silence",
+    "type": "String"
+  }
+}

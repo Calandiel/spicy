@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpecialization",
+  "type": "GameSetting",
+  "value": {
+    "data": "Specialization",
+    "type": "String"
+  }
+}

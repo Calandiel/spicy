@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMoveUpXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Move Up",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTransparency_Menu",
+  "type": "GameSetting",
+  "value": {
+    "data": "Menu Transparency",
+    "type": "String"
+  }
+}

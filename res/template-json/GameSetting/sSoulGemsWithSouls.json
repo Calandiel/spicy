@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSoulGemsWithSouls",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sould Gems with Souls",
+    "type": "String"
+  }
+}

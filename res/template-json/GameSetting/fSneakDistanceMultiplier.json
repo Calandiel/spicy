@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fSneakDistanceMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.002,
+    "type": "Float"
+  }
+}

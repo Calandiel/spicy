@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarbarian",
+  "type": "GameSetting",
+  "value": {
+    "data": "Barbarian",
+    "type": "String"
+  }
+}

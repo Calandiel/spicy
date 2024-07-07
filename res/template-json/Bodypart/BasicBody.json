@@ -1,0 +1,13 @@
+{
+	"data": {
+		"bodypart_type": "Skin",
+		"flags": "",
+		"part": "Groin",
+		"vampire": false
+	},
+	"flags": "",
+	"id": "BasicBody",
+	"mesh": "BasicPlayerBody.dae",
+	"race": "DefaultRace",
+	"type": "Bodypart"
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillShortblade",
+  "type": "GameSetting",
+  "value": {
+    "data": "Short Blade",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagnitude",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magnitude",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveMenuHelp04",
+  "type": "GameSetting",
+  "value": {
+    "data": "a.m.",
+    "type": "String"
+  }
+}

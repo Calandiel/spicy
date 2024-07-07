@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundLongbow",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Longbow",
+    "type": "String"
+  }
+}

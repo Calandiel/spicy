@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sYourGold",
+  "type": "GameSetting",
+  "value": {
+    "data": "YOUR GOLD",
+    "type": "String"
+  }
+}

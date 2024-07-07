@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sGeneralMastPlugMismatchMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "Content files mis-match. There could be errors during game play or load.",
+    "type": "String"
+  }
+}

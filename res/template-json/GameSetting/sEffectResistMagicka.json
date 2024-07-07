@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistMagicka",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Magicka",
+    "type": "String"
+  }
+}

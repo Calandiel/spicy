@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage38",
+  "type": "GameSetting",
+  "value": {
+    "data": "Skill Increase:",
+    "type": "String"
+  }
+}

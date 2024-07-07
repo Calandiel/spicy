@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickLoadCmd",
+  "type": "GameSetting",
+  "value": {
+    "data": "Quick Load",
+    "type": "String"
+  }
+}

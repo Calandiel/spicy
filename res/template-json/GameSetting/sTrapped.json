@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTrapped",
+  "type": "GameSetting",
+  "value": {
+    "data": "Trapped",
+    "type": "String"
+  }
+}

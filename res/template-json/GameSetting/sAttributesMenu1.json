@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributesMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Choose an Attribute",
+    "type": "String"
+  }
+}

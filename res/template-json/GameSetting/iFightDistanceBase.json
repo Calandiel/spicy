@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iFightDistanceBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 20,
+    "type": "Integer"
+  }
+}

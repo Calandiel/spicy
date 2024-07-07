@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sThief",
+  "type": "GameSetting",
+  "value": {
+    "data": "Thief",
+    "type": "String"
+  }
+}

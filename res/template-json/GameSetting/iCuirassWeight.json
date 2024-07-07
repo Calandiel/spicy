@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iCuirassWeight",
+  "type": "GameSetting",
+  "value": {
+    "data": 30,
+    "type": "Integer"
+  }
+}

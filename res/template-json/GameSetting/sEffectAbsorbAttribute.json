@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectAbsorbAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Absorb Attribute",
+    "type": "String"
+  }
+}

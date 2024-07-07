@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventory",
+  "type": "GameSetting",
+  "value": {
+    "data": "Inventory",
+    "type": "String"
+  }
+}

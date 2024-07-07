@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFeather",
+  "type": "GameSetting",
+  "value": {
+    "data": "Feather",
+    "type": "String"
+  }
+}

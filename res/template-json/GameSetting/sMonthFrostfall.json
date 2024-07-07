@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthFrostfall",
+  "type": "GameSetting",
+  "value": {
+    "data": "March",
+    "type": "String"
+  }
+}

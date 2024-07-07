@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventorySelectNoSoul",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have no Soul Gems with trapped souls.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp9",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic effects you can assign to the item. Only includes effects you already know.",
+    "type": "String"
+  }
+}

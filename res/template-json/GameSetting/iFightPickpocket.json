@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iFightPickpocket",
+  "type": "GameSetting",
+  "value": {
+    "data": 25,
+    "type": "Integer"
+  }
+}

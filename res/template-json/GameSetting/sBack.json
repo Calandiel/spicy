@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBack",
+  "type": "GameSetting",
+  "value": {
+    "data": "Back",
+    "type": "String"
+  }
+}

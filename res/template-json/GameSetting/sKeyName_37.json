@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_37",
+  "type": "GameSetting",
+  "value": {
+    "data": "Numpad *",
+    "type": "String"
+  }
+}

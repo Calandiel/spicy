@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSex",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sex",
+    "type": "String"
+  }
+}

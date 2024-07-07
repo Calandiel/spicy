@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWait",
+  "type": "GameSetting",
+  "value": {
+    "data": "Wait",
+    "type": "String"
+  }
+}

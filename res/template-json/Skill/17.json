@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      2.0,
+      0.5,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 1,
+    "specialization": 1
+  },
+  "description": "Knowledge of brewing potions and of the various ingredients that go in them. The higher your level, the more effects each ingredient will show.",
+  "flags": "",
+  "skill_id": "Alchemy",
+  "type": "Skill"
+}

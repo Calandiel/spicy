@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessage3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Are you sure you wish to delete this saved game?",
+    "type": "String"
+  }
+}

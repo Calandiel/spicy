@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestore",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore",
+    "type": "String"
+  }
+}

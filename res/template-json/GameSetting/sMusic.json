@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMusic",
+  "type": "GameSetting",
+  "value": {
+    "data": "Music",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRace",
+  "type": "GameSetting",
+  "value": {
+    "data": "Race",
+    "type": "String"
+  }
+}

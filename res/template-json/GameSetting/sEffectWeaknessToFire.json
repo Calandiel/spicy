@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToFire",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Fire",
+    "type": "String"
+  }
+}

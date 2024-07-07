@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOptionsMenuXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Options Menu",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fStromWindSpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.7,
+    "type": "Float"
+  }
+}

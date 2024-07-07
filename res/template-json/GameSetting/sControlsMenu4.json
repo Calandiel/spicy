@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControlsMenu4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Vertical Sensitivity",
+    "type": "String"
+  }
+}

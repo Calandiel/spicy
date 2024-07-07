@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeWillpower",
+  "type": "GameSetting",
+  "value": {
+    "data": "Willpower",
+    "type": "String"
+  }
+}

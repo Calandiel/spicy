@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTaunt",
+  "type": "GameSetting",
+  "value": {
+    "data": "Taunt",
+    "type": "String"
+  }
+}

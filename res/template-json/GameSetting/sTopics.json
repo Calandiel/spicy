@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTopics",
+  "type": "GameSetting",
+  "value": {
+    "data": "Topics",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog8",
+  "type": "GameSetting",
+  "value": {
+    "data": "Offer",
+    "type": "String"
+  }
+}

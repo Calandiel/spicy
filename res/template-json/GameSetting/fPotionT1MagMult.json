@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fPotionT1MagMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 1.5,
+    "type": "Float"
+  }
+}

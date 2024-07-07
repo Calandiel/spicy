@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevelUpMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have advanced to Level",
+    "type": "String"
+  }
+}

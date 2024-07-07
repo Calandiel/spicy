@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWaterWalking",
+  "type": "GameSetting",
+  "value": {
+    "data": "Water Walking",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBye",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bye",
+    "type": "String"
+  }
+}

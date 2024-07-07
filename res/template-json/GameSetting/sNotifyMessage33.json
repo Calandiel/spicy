@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage33",
+  "type": "GameSetting",
+  "value": {
+    "data": "Only soul gems can be put in the soul gem slot.",
+    "type": "String"
+  }
+}

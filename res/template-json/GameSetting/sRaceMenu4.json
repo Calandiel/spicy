@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRaceMenu4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Change Hair",
+    "type": "String"
+  }
+}

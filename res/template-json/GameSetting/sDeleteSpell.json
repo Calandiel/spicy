@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDeleteSpell",
+  "type": "GameSetting",
+  "value": {
+    "data": "Delete Spell",
+    "type": "String"
+  }
+}

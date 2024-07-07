@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingMessage2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Loading Area...",
+    "type": "String"
+  }
+}

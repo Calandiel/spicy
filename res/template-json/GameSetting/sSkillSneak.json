@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillSneak",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sneak",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage24",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need to assign skills to all major and minor skill slots.",
+    "type": "String"
+  }
+}

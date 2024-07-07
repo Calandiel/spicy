@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCompanionWarningButtonOne",
+  "type": "GameSetting",
+  "value": {
+    "data": "Dismiss your mercenary.",
+    "type": "String"
+  }
+}

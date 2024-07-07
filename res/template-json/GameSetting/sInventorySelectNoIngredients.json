@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventorySelectNoIngredients",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have no ingredients.",
+    "type": "String"
+  }
+}

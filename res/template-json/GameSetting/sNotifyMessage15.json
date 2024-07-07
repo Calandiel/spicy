@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage15",
+  "type": "GameSetting",
+  "value": {
+    "data": "Beast races cannot wear shoes.",
+    "type": "String"
+  }
+}

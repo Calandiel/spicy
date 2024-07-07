@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "repair fail",
+  "sound_path": "repair_fail.wav",
+  "type": "Sound"
+}

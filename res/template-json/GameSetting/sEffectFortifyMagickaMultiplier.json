@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifyMagickaMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Maximum Magicka",
+    "type": "String"
+  }
+}

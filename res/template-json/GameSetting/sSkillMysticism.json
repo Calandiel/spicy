@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillMysticism",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mysticism",
+    "type": "String"
+  }
+}

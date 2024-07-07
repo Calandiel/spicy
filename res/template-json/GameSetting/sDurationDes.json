@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDurationDes",
+  "type": "GameSetting",
+  "value": {
+    "data": "How long the spell lasts",
+    "type": "String"
+  }
+}

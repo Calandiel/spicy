@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAlarmStealing",
+  "type": "GameSetting",
+  "value": {
+    "data": 1,
+    "type": "Integer"
+  }
+}

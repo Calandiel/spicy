@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundBattleAxeID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Battle_Axe",
+    "type": "String"
+  }
+}

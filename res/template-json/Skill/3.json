@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 5,
+    "specialization": 0
+  },
+  "description": "Your skill in wearing and using armors of medium category. They provide a good balance between mobility and protection.",
+  "flags": "",
+  "skill_id": "MediumArmor",
+  "type": "Skill"
+}

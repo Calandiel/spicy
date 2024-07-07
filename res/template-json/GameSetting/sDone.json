@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDone",
+  "type": "GameSetting",
+  "value": {
+    "data": "Done",
+    "type": "String"
+  }
+}

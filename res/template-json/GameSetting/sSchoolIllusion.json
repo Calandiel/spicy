@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSchoolIllusion",
+  "type": "GameSetting",
+  "value": {
+    "data": "Illusion",
+    "type": "String"
+  }
+}

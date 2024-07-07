@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sContainer",
+  "type": "GameSetting",
+  "value": {
+    "data": "Container",
+    "type": "String"
+  }
+}

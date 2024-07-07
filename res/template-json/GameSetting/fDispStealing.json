@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDispStealing",
+  "type": "GameSetting",
+  "value": {
+    "data": -0.5,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicCannotRecast",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot cast this spell while it is still in effect.",
+    "type": "String"
+  }
+}

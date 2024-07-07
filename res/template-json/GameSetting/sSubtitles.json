@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSubtitles",
+  "type": "GameSetting",
+  "value": {
+    "data": "Subtitles",
+    "type": "String"
+  }
+}

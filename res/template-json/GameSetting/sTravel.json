@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTravel",
+  "type": "GameSetting",
+  "value": {
+    "data": "Travel",
+    "type": "String"
+  }
+}

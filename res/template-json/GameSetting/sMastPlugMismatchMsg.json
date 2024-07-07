@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMastPlugMismatchMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "A file that \"%s\" depends on has changed since the last save...",
+    "type": "String"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 2,
+    "specialization": 1
+  },
+  "description": "Magic of damaging and breaking things. Weaken your enemies and make them susceptible to various damage types before wreaking havoc on them.",
+  "flags": "",
+  "skill_id": "Destruction",
+  "type": "Skill"
+}

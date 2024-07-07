@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDrainSkill",
+  "type": "GameSetting",
+  "value": {
+    "data": "Dram SKill",
+    "type": "String"
+  }
+}

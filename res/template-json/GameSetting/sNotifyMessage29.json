@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage29",
+  "type": "GameSetting",
+  "value": {
+    "data": "The enchantment is too large for this object to hold.",
+    "type": "String"
+  }
+}

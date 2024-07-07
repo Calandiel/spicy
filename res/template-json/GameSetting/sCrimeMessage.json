@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCrimeMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your crime has been reported!",
+    "type": "String"
+  }
+}

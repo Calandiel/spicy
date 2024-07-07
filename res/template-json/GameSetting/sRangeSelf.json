@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRangeSelf",
+  "type": "GameSetting",
+  "value": {
+    "data": "Self",
+    "type": "String"
+  }
+}

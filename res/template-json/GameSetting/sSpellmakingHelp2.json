@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Amount of magicka required for each casting of the spell.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNextWeaponXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next Weapon",
+    "type": "String"
+  }
+}

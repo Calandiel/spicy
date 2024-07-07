@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "enchant fail",
+  "sound_path": "enchant_fail.wav",
+  "type": "Sound"
+}

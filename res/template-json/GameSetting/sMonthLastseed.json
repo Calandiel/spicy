@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthLastseed",
+  "type": "GameSetting",
+  "value": {
+    "data": "May",
+    "type": "String"
+  }
+}

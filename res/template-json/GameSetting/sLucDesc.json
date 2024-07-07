@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLucDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortune bestowed upon you by the universe. Affects your every action in a small way.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBookSkillMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "You learned something useful from this book.",
+    "type": "String"
+  }
+}

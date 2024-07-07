@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Close the Description menu before leaving class creation.",
+    "type": "String"
+  }
+}

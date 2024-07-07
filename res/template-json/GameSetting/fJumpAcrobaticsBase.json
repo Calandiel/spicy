@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fJumpAcrobaticsBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 128.0,
+    "type": "Float"
+  }
+}

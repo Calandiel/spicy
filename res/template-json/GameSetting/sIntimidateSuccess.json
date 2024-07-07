@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sIntimidateSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Intimidate Success",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage16_a",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannnot equip more than one item of this type at a time.",
+    "type": "String"
+  }
+}

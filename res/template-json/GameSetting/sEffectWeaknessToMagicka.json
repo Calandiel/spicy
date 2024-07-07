@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToMagicka",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Magicka",
+    "type": "String"
+  }
+}

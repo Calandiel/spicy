@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundGloves",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Gloves",
+    "type": "String"
+  }
+}

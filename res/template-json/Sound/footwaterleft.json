@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "footwaterleft",
+  "sound_path": "foot_water_left.wav",
+  "type": "Sound"
+}

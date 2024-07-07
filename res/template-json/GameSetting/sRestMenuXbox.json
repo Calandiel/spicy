@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestMenuXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Rest / Wait",
+    "type": "String"
+  }
+}

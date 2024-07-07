@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessageQuestionAnswer2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Accept This Class",
+    "type": "String"
+  }
+}

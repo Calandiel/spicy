@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillAlchemy",
+  "type": "GameSetting",
+  "value": {
+    "data": "Alchemy",
+    "type": "String"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "ai_data": {
+    "alarm": 0,
+    "fight": 30,
+    "flee": 30,
+    "hello": 30,
+    "services": ""
+  },
+  "ai_packages": [],
+  "blood_type": 0,
+  "class": "DefaultClass",
+  "data": {
+    "disposition": 0,
+    "gold": 0,
+    "level": 1,
+    "rank": 0,
+    "reputation": 0,
+    "stats": {
+      "attributes": [
+        25,
+        25,
+        25,
+        25,
+        50,
+        25,
+        25,
+        25
+      ],
+      "fatigue": 1000,
+      "health": 35,
+      "magicka": 25,
+      "skills": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        50,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        35,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    }
+  },
+  "faction": "",
+  "flags": "",
+  "hair": "",
+  "head": "",
+  "id": "Player",
+  "inventory": [],
+  "mesh": "",
+  "name": "",
+  "npc_flags": "",
+  "race": "DefaultRace",
+  "script": "",
+  "spells": [
+    "ICONTEST"
+  ],
+  "travel_destinations": [],
+  "type": "Npc"
+}

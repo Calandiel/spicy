@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeAgility",
+  "type": "GameSetting",
+  "value": {
+    "data": "Agility",
+    "type": "String"
+  }
+}

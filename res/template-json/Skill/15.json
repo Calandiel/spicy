@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 2,
+    "specialization": 1
+  },
+  "description": "Bypass the physical world completely and manipulate reality at its fundamental level.",
+  "flags": "",
+  "skill_id": "Mysticism",
+  "type": "Skill"
+}

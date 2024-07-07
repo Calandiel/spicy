@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSchoolConjuration",
+  "type": "GameSetting",
+  "value": {
+    "data": "Conjuration",
+    "type": "String"
+  }
+}

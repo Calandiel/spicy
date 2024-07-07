@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJournalEntry",
+  "type": "GameSetting",
+  "value": {
+    "data": "Journal updated.",
+    "type": "String"
+  }
+}

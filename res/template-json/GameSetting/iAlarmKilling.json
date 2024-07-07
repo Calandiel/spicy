@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAlarmKilling",
+  "type": "GameSetting",
+  "value": {
+    "data": 90,
+    "type": "Integer"
+  }
+}

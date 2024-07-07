@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillsMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Choose a Skill",
+    "type": "String"
+  }
+}

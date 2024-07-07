@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJoystickHatShort",
+  "type": "GameSetting",
+  "value": {
+    "data": "JHat",
+    "type": "String"
+  }
+}

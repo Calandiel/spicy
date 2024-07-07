@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage52",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need a soul gem with a trapped soul to enchant an item.",
+    "type": "String"
+  }
+}

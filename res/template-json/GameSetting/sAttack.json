@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttack",
+  "type": "GameSetting",
+  "value": {
+    "data": "Attack",
+    "type": "String"
+  }
+}

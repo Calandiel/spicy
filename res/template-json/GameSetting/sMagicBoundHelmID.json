@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundHelmID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Helm",
+    "type": "String"
+  }
+}

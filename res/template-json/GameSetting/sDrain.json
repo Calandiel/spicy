@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDrain",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drain",
+    "type": "String"
+  }
+}

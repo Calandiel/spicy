@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot equip items that are bartered.",
+    "type": "String"
+  }
+}

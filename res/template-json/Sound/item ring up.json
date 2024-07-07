@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "item ring up",
+  "sound_path": "item_ring_up.wav",
+  "type": "Sound"
+}

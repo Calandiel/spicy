@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Buy",
+    "type": "String"
+  }
+}

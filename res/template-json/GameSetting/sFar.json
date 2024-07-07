@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFar",
+  "type": "GameSetting",
+  "value": {
+    "data": "Far",
+    "type": "String"
+  }
+}

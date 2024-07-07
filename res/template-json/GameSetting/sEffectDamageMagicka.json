@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDamageMagicka",
+  "type": "GameSetting",
+  "value": {
+    "data": "Damage Magicka",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillConjuration",
+  "type": "GameSetting",
+  "value": {
+    "data": "Conjuration",
+    "type": "String"
+  }
+}

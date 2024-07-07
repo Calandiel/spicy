@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInvalidSaveGameMsgXBOX",
+  "type": "GameSetting",
+  "value": {
+    "data": "Unable to load a saved game. Press A to continue.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOfferMenuTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Offer Menu",
+    "type": "String"
+  }
+}

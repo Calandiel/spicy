@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "health damage",
+  "sound_path": "health_damage.wav",
+  "type": "Sound"
+}

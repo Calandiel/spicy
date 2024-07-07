@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage6a",
+  "type": "GameSetting",
+  "value": {
+    "data": "At least two ingredients are needed to brew a potion.",
+    "type": "String"
+  }
+}

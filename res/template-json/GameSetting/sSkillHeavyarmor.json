@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillHeavyarmor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Heavy Armor",
+    "type": "String"
+  }
+}

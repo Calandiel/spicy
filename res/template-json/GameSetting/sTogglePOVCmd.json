@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTogglePOVCmd",
+  "type": "GameSetting",
+  "value": {
+    "data": "Toggle POV",
+    "type": "String"
+  }
+}

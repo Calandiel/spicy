@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLocal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Local",
+    "type": "String"
+  }
+}

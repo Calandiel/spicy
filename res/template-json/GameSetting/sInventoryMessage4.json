@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMessage4",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot read during combat.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventorySelectNoItems",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have no items valid for this slot.",
+    "type": "String"
+  }
+}

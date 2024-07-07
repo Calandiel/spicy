@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_EB",
+  "type": "GameSetting",
+  "value": {
+    "data": "My Comp",
+    "type": "String"
+  }
+}

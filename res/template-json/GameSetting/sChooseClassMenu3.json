@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sChooseClassMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Major Skills:",
+    "type": "String"
+  }
+}

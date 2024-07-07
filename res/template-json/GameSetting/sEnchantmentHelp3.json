@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Total cost to cast the enchantment / Maximum amount of charge points this item can hold.",
+    "type": "String"
+  }
+}

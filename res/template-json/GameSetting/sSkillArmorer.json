@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillArmorer",
+  "type": "GameSetting",
+  "value": {
+    "data": "Armorer",
+    "type": "String"
+  }
+}

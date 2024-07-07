@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDrainFatigue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drain Fatigue",
+    "type": "String"
+  }
+}

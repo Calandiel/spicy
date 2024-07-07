@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot afford this transaction.",
+    "type": "String"
+  }
+}

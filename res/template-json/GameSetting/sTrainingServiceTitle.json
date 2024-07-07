@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTrainingServiceTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Select skill to train",
+    "type": "String"
+  }
+}

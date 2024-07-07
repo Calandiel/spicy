@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillSpear",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spear",
+    "type": "String"
+  }
+}

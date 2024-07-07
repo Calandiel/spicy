@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDrainAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drain Attribute",
+    "type": "String"
+  }
+}

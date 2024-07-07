@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sin",
+  "type": "GameSetting",
+  "value": {
+    "data": "in",
+    "type": "String"
+  }
+}

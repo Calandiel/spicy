@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfAgility",
+  "type": "GameSetting",
+  "value": {
+    "data": 150.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSelect",
+  "type": "GameSetting",
+  "value": {
+    "data": "Select",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillAlteration",
+  "type": "GameSetting",
+  "value": {
+    "data": "Alteration",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fLuckMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 10.0,
+    "type": "Float"
+  }
+}

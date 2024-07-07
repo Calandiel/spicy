@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMouseWheelUpShort",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mouse Wheel Up",
+    "type": "String"
+  }
+}

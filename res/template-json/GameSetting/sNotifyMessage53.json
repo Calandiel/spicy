@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage53",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your menu sizes and positions have been saved for exploration mode.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCureParalyzation",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cure Paralysis",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControlsMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mouse Sensitivity",
+    "type": "String"
+  }
+}

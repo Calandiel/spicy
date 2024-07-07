@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sArmorRating",
+  "type": "GameSetting",
+  "value": {
+    "data": "Armor Rating",
+    "type": "String"
+  }
+}

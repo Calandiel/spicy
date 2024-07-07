@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLockImpossible",
+  "type": "GameSetting",
+  "value": {
+    "data": "Lock too complex.",
+    "type": "String"
+  }
+}

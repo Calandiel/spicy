@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDrop",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drop",
+    "type": "String"
+  }
+}

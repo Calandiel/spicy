@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributePersonality",
+  "type": "GameSetting",
+  "value": {
+    "data": "Personality",
+    "type": "String"
+  }
+}

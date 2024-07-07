@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog11",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot make an offer without trading any items.",
+    "type": "String"
+  }
+}

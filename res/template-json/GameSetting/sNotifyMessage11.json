@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage11",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need an item that can be enchanted.",
+    "type": "String"
+  }
+}

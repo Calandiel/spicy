@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNextSpellXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next Spell",
+    "type": "String"
+  }
+}

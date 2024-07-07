@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFull",
+  "type": "GameSetting",
+  "value": {
+    "data": "Full",
+    "type": "String"
+  }
+}

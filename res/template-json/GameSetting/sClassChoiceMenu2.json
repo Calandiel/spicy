@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sClassChoiceMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Provide information about yourself (Pick from Class list)",
+    "type": "String"
+  }
+}

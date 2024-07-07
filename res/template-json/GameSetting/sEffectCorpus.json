@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCorpus",
+  "type": "GameSetting",
+  "value": {
+    "data": "Divined",
+    "type": "String"
+  }
+}

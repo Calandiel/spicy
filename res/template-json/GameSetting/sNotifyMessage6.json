@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage6",
+  "type": "GameSetting",
+  "value": {
+    "data": "Each ingredient can be used only once per potion.",
+    "type": "String"
+  }
+}

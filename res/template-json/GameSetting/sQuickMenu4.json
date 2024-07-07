@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenu4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Remove Quick Key Item",
+    "type": "String"
+  }
+}

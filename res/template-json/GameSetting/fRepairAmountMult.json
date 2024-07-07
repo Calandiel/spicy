@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fRepairAmountMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 3.0,
+    "type": "Float"
+  }
+}

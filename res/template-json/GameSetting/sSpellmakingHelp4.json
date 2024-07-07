@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Amount of gold you will pay to create this spell.",
+    "type": "String"
+  }
+}

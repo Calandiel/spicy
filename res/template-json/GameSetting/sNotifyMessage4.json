@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Saving...",
+    "type": "String"
+  }
+}

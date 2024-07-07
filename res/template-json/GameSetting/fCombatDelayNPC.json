@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatDelayNPC",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.1,
+    "type": "Float"
+  }
+}

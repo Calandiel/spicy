@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "spoints",
+  "type": "GameSetting",
+  "value": {
+    "data": "pts",
+    "type": "String"
+  }
+}

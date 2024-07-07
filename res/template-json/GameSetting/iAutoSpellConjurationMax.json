@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAutoSpellConjurationMax",
+  "type": "GameSetting",
+  "value": {
+    "data": 2,
+    "type": "Integer"
+  }
+}

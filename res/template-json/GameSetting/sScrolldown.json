@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sScrolldown",
+  "type": "GameSetting",
+  "value": {
+    "data": "Scroll Down",
+    "type": "String"
+  }
+}

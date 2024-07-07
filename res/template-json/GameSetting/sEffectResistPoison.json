@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistPoison",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Poison",
+    "type": "String"
+  }
+}

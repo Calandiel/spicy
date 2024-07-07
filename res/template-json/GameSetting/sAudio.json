@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAudio",
+  "type": "GameSetting",
+  "value": {
+    "data": "Audio",
+    "type": "String"
+  }
+}

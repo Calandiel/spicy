@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessage1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Do you wish to load a saved game and lose the progress made in your current game?",
+    "type": "String"
+  }
+}

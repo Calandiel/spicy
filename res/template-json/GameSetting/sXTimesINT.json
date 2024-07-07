@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sXTimesINT",
+  "type": "GameSetting",
+  "value": {
+    "data": "x INT",
+    "type": "String"
+  }
+}

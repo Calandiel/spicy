@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellsword",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spellsword",
+    "type": "String"
+  }
+}

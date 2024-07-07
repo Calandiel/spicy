@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sToggleRunXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Toggle Run",
+    "type": "String"
+  }
+}

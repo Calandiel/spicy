@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCantEquipWeapWarning",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot equip a new weapon until your current attack is done.",
+    "type": "String"
+  }
+}

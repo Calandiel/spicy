@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.2,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 0,
+    "specialization": 0
+  },
+  "description": "Proficiency in wielding all kinds of axes made for battle.",
+  "flags": "",
+  "skill_id": "Axe",
+  "type": "Skill"
+}

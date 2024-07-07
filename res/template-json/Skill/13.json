@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 6,
+    "specialization": 1
+  },
+  "description": "Hide what is present and show what isn't.",
+  "flags": "",
+  "skill_id": "Illusion",
+  "type": "Skill"
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sArmor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Armor",
+    "type": "String"
+  }
+}

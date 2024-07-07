@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage46",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need an alembic to use",
+    "type": "String"
+  }
+}

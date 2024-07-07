@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReputation",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reputation",
+    "type": "String"
+  }
+}

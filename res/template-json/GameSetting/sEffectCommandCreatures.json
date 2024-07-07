@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCommandCreatures",
+  "type": "GameSetting",
+  "value": {
+    "data": "Command Creature",
+    "type": "String"
+  }
+}

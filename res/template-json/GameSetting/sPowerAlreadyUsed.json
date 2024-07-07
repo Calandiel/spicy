@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPowerAlreadyUsed",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have already used this power for today.",
+    "type": "String"
+  }
+}

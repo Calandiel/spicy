@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRogue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Rogue",
+    "type": "String"
+  }
+}

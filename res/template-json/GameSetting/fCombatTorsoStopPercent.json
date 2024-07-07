@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatTorsoStopPercent",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.8,
+    "type": "Float"
+  }
+}

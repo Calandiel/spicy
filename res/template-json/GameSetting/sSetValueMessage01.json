@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSetValueMessage01",
+  "type": "GameSetting",
+  "value": {
+    "data": "The maximum magnitude cannot be less than the minimum magnitude!",
+    "type": "String"
+  }
+}

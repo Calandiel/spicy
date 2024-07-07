@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUntilHealed",
+  "type": "GameSetting",
+  "value": {
+    "data": "Until Healed",
+    "type": "String"
+  }
+}

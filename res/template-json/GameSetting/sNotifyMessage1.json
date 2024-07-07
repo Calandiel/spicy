@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You can rest only on solid ground.",
+    "type": "String"
+  }
+}

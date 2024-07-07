@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "crossbowshoot",
+  "sound_path": "bow_shoot.wav",
+  "type": "Sound"
+}

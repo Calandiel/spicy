@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUserDefinedClass",
+  "type": "GameSetting",
+  "value": {
+    "data": "User Defined Class",
+    "type": "String"
+  }
+}

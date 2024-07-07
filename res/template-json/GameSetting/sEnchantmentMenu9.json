@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu9",
+  "type": "GameSetting",
+  "value": {
+    "data": "Only one item of this type can be enchanted at a time.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Less",
+    "type": "String"
+  }
+}

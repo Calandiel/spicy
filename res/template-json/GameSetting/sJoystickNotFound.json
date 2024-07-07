@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJoystickNotFound",
+  "type": "GameSetting",
+  "value": {
+    "data": "Joystick not found.",
+    "type": "String"
+  }
+}

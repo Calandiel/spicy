@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fEnchantmentChanceMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 3.0,
+    "type": "Float"
+  }
+}

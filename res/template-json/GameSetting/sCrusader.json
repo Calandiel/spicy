@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCrusader",
+  "type": "GameSetting",
+  "value": {
+    "data": "Crusader",
+    "type": "String"
+  }
+}

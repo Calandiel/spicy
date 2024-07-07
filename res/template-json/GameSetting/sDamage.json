@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDamage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Damage",
+    "type": "String"
+  }
+}

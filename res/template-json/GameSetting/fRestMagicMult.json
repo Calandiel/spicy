@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fRestMagicMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.15,
+    "type": "Float"
+  }
+}

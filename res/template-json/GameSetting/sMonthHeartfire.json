@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthHeartfire",
+  "type": "GameSetting",
+  "value": {
+    "data": "April",
+    "type": "String"
+  }
+}

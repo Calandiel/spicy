@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sServiceRepairTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Repair Service Menu",
+    "type": "String"
+  }
+}

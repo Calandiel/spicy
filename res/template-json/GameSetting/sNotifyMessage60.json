@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage60",
+  "type": "GameSetting",
+  "value": {
+    "data": "%s has been added to your inventory.",
+    "type": "String"
+  }
+}

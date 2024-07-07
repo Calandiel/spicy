@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectMark",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mark",
+    "type": "String"
+  }
+}

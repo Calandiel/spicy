@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_A0",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mute",
+    "type": "String"
+  }
+}

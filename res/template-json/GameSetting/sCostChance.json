@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCostChance",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cost / Casting chance",
+    "type": "String"
+  }
+}

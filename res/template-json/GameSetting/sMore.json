@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMore",
+  "type": "GameSetting",
+  "value": {
+    "data": "More",
+    "type": "String"
+  }
+}

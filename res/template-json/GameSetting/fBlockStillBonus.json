@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fBlockStillBonus",
+  "type": "GameSetting",
+  "value": {
+    "data": 1.25,
+    "type": "Float"
+  }
+}

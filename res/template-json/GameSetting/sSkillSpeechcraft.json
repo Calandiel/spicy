@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillSpeechcraft",
+  "type": "GameSetting",
+  "value": {
+    "data": "Speechcraft",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sfor",
+  "type": "GameSetting",
+  "value": {
+    "data": "for",
+    "type": "String"
+  }
+}

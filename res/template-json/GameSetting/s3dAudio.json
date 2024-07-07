@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "s3dAudio",
+  "type": "GameSetting",
+  "value": {
+    "data": "3D Audio",
+    "type": "String"
+  }
+}

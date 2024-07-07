@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWilDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mental fortitude enabling you to achieve your goals. Affects spellcasting, magic resistance, and maximum fatigue.",
+    "type": "String"
+  }
+}

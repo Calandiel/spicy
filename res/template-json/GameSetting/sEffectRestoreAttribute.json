@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRestoreAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore Attribute",
+    "type": "String"
+  }
+}

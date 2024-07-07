@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHeal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Heal",
+    "type": "String"
+  }
+}

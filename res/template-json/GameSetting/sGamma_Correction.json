@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sGamma_Correction",
+  "type": "GameSetting",
+  "value": {
+    "data": "Gamma Correction",
+    "type": "String"
+  }
+}

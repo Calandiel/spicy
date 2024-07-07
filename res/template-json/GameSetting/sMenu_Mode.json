@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMenu_Mode",
+  "type": "GameSetting",
+  "value": {
+    "data": "Menu Mode",
+    "type": "String"
+  }
+}

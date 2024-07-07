@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWaterTerrainReflect",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reflect Terrain",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_01",
+  "type": "GameSetting",
+  "value": {
+    "data": "ESC",
+    "type": "String"
+  }
+}

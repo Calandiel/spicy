@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectStuntedMagicka",
+  "type": "GameSetting",
+  "value": {
+    "data": "Stunted Magicka",
+    "type": "String"
+  }
+}

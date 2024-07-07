@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fMagicDetectRefreshRate",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.0167,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog7",
+  "type": "GameSetting",
+  "value": {
+    "data": "Price",
+    "type": "String"
+  }
+}

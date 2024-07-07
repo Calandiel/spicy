@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectInvisibility",
+  "type": "GameSetting",
+  "value": {
+    "data": "Invisibility",
+    "type": "String"
+  }
+}

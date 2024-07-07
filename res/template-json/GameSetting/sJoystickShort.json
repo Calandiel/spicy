@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJoystickShort",
+  "type": "GameSetting",
+  "value": {
+    "data": "Joy",
+    "type": "String"
+  }
+}

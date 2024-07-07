@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSlash",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slash",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fEndFatigueMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.04,
+    "type": "Float"
+  }
+}

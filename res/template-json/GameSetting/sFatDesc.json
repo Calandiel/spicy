@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFatDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your capacity to successfully perform actions. The more tired you are, the more you will be failing at what you do. It restores on its own by resting or when performing only light tasks.",
+    "type": "String"
+  }
+}

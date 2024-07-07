@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "footlightright",
+  "sound_path": "foot_light_right.wav",
+  "type": "Sound"
+}

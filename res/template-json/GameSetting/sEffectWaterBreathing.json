@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWaterBreathing",
+  "type": "GameSetting",
+  "value": {
+    "data": "Water Breathing",
+    "type": "String"
+  }
+}

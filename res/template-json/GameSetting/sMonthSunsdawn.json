@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthSunsdawn",
+  "type": "GameSetting",
+  "value": {
+    "data": "October",
+    "type": "String"
+  }
+}

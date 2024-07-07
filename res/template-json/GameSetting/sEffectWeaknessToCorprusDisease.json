@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToCorprusDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Divine Disease",
+    "type": "String"
+  }
+}

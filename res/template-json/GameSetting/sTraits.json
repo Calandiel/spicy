@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTraits",
+  "type": "GameSetting",
+  "value": {
+    "data": "Traits",
+    "type": "String"
+  }
+}

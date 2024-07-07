@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      2.5,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 3,
+    "specialization": 0
+  },
+  "description": "How skilled you are in using a shield to deflect incoming attacks.",
+  "flags": "",
+  "skill_id": "Block",
+  "type": "Skill"
+}

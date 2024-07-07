@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 2,
+    "specialization": 1
+  },
+  "description": "Manipulation of the physical laws of the universe.",
+  "flags": "",
+  "skill_id": "Alteration",
+  "type": "Skill"
+}

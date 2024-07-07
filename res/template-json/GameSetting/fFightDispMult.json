@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFightDispMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.2,
+    "type": "Float"
+  }
+}

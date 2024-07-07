@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRange",
+  "type": "GameSetting",
+  "value": {
+    "data": "Range",
+    "type": "String"
+  }
+}

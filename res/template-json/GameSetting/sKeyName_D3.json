@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_D3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Delete",
+    "type": "String"
+  }
+}

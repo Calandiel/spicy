@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadLastSaveMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "The most recent saved game is \"%s\".",
+    "type": "String"
+  }
+}

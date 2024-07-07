@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicPCResisted",
+  "type": "GameSetting",
+  "value": {
+    "data": "You resisted magic.",
+    "type": "String"
+  }
+}

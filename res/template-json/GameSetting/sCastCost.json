@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCastCost",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cast Cost",
+    "type": "String"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 5,
+    "specialization": 0
+  },
+  "description": "Your skill in wearing and using armors of heavy category. They provide the best protection, but require great strength if you don't want to be slowed down.",
+  "flags": "",
+  "skill_id": "HeavyArmor",
+  "type": "Skill"
+}

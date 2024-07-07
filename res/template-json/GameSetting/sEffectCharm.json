@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCharm",
+  "type": "GameSetting",
+  "value": {
+    "data": "Charm",
+    "type": "String"
+  }
+}

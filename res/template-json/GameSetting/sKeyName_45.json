@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_45",
+  "type": "GameSetting",
+  "value": {
+    "data": "Num Lock",
+    "type": "String"
+  }
+}

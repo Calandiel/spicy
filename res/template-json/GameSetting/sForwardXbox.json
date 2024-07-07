@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sForwardXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Move Forward",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeEndurance",
+  "type": "GameSetting",
+  "value": {
+    "data": "Endurance",
+    "type": "String"
+  }
+}

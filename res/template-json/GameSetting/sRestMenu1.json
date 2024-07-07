@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "How many hours?",
+    "type": "String"
+  }
+}

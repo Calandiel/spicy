@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iMaxActivateDist",
+  "type": "GameSetting",
+  "value": {
+    "data": 192,
+    "type": "Integer"
+  }
+}

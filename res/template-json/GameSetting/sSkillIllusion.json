@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillIllusion",
+  "type": "GameSetting",
+  "value": {
+    "data": "Illusion",
+    "type": "String"
+  }
+}

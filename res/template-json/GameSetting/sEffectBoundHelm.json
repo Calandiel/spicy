@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundHelm",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Helm",
+    "type": "String"
+  }
+}

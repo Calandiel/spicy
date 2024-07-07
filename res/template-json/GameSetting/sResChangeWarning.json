@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sResChangeWarning",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resolution not supported by the video card.",
+    "type": "String"
+  }
+}

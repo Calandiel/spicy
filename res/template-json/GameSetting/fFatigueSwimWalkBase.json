@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFatigueSwimWalkBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 2.5,
+    "type": "Float"
+  }
+}

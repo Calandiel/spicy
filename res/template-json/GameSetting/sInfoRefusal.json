@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInfoRefusal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Info Refusal",
+    "type": "String"
+  }
+}

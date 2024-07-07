@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMouseFlip",
+  "type": "GameSetting",
+  "value": {
+    "data": "Invert Y Axis",
+    "type": "String"
+  }
+}

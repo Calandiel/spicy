@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRaceMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Change Face",
+    "type": "String"
+  }
+}

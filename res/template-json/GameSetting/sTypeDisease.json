@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTypeDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Disease",
+    "type": "String"
+  }
+}

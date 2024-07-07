@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRepairSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your repair succeeded!",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "s3dSoftware",
+  "type": "GameSetting",
+  "value": {
+    "data": "Software Mode",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeLuck",
+  "type": "GameSetting",
+  "value": {
+    "data": "Luck",
+    "type": "String"
+  }
+}

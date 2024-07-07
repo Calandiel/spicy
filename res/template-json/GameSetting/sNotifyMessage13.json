@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage13",
+  "type": "GameSetting",
+  "value": {
+    "data": "Beast races cannot wear full helmets.",
+    "type": "String"
+  }
+}

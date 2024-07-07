@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTypeBlightDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Blight Disease",
+    "type": "String"
+  }
+}

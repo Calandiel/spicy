@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSleepInterrupt",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your rest has been interrupted.",
+    "type": "String"
+  }
+}

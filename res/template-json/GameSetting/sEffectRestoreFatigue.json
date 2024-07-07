@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRestoreFatigue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore Fatigue",
+    "type": "String"
+  }
+}

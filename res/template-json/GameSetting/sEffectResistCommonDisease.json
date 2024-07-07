@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistCommonDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Common Disease",
+    "type": "String"
+  }
+}

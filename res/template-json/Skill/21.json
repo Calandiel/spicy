@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.15,
+      3.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 0,
+    "specialization": 2
+  },
+  "description": "Jump farther, jump higher, and don't break any bones when you land.",
+  "flags": "",
+  "skill_id": "Acrobatics",
+  "type": "Skill"
+}

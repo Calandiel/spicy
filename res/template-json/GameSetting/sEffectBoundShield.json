@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundShield",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Shield",
+    "type": "String"
+  }
+}

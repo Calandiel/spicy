@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.3,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 6,
+    "specialization": 2
+  },
+  "description": "Buy low, sell high.",
+  "flags": "",
+  "skill_id": "Mercantile",
+  "type": "Skill"
+}

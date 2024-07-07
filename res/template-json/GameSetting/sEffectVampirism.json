@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectVampirism",
+  "type": "GameSetting",
+  "value": {
+    "data": "Vampirism",
+    "type": "String"
+  }
+}

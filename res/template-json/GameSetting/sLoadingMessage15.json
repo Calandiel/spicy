@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingMessage15",
+  "type": "GameSetting",
+  "value": {
+    "data": "Loading (%s)",
+    "type": "String"
+  }
+}

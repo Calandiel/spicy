@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sContentsMessage3",
+  "type": "GameSetting",
+  "value": {
+    "data": "This item will not fit.",
+    "type": "String"
+  }
+}

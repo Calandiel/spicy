@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAIDistance",
+  "type": "GameSetting",
+  "value": {
+    "data": "AI Distance",
+    "type": "String"
+  }
+}

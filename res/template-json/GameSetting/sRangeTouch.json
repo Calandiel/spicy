@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRangeTouch",
+  "type": "GameSetting",
+  "value": {
+    "data": "Touch",
+    "type": "String"
+  }
+}

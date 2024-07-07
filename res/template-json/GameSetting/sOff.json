@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOff",
+  "type": "GameSetting",
+  "value": {
+    "data": "Off",
+    "type": "String"
+  }
+}

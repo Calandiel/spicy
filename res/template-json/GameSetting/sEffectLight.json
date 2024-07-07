@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectLight",
+  "type": "GameSetting",
+  "value": {
+    "data": "Lights",
+    "type": "String"
+  }
+}

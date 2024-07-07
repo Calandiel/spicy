@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sServiceTrainingTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Training",
+    "type": "String"
+  }
+}

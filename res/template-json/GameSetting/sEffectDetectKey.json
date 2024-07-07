@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDetectKey",
+  "type": "GameSetting",
+  "value": {
+    "data": "Detect Key",
+    "type": "String"
+  }
+}

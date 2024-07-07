@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sContentsMessage1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot move summoned items from their original container.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagic",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magicka",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iPickMaxChance",
+  "type": "GameSetting",
+  "value": {
+    "data": 75,
+    "type": "Integer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAbsorb",
+  "type": "GameSetting",
+  "value": {
+    "data": "Absorb",
+    "type": "String"
+  }
+}

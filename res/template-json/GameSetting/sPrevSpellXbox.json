@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPrevSpellXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Previous Spell",
+    "type": "String"
+  }
+}

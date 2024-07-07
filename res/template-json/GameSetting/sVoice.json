@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sVoice",
+  "type": "GameSetting",
+  "value": {
+    "data": "Voice",
+    "type": "String"
+  }
+}

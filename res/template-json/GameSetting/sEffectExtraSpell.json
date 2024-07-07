@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectExtraSpell",
+  "type": "GameSetting",
+  "value": {
+    "data": "EXTRA SPELL",
+    "type": "String"
+  }
+}

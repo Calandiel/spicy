@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCrimeHelp",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bounty on your head due to your crimes. You can also pay it yourself to atone for your crimes.",
+    "type": "String"
+  }
+}

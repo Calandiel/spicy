@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFireDamage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fire Damage",
+    "type": "String"
+  }
+}

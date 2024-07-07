@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWarrior",
+  "type": "GameSetting",
+  "value": {
+    "data": "Warrior",
+    "type": "String"
+  }
+}

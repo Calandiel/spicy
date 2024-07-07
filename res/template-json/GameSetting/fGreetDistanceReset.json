@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fGreetDistanceReset",
+  "type": "GameSetting",
+  "value": {
+    "data": 512.0,
+    "type": "Float"
+  }
+}

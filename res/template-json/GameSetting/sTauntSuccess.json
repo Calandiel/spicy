@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTauntSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Taunt Success",
+    "type": "String"
+  }
+}

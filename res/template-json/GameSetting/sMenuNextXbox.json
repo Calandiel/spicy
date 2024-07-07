@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMenuNextXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next Menu",
+    "type": "String"
+  }
+}

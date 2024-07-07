@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic effects you can add to the spell. Only includes effects you already know.",
+    "type": "String"
+  }
+}

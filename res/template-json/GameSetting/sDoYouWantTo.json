@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDoYouWantTo",
+  "type": "GameSetting",
+  "value": {
+    "data": "Do you want to",
+    "type": "String"
+  }
+}

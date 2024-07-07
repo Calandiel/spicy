@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "thunder3",
+  "sound_path": "thunder3.wav",
+  "type": "Sound"
+}

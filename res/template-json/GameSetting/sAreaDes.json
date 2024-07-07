@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAreaDes",
+  "type": "GameSetting",
+  "value": {
+    "data": "Radius in which the spell has a chance to affect",
+    "type": "String"
+  }
+}

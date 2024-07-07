@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevelUpMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "x2",
+    "type": "String"
+  }
+}

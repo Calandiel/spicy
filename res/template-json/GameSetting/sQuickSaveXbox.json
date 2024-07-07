@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickSaveXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Quick Save",
+    "type": "String"
+  }
+}

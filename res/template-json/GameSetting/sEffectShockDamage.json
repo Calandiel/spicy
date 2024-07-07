@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectShockDamage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Shock Damage",
+    "type": "String"
+  }
+}

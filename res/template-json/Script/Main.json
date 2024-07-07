@@ -1,0 +1,15 @@
+{
+  "bytecode": "AAAAAA==",
+  "flags": "",
+  "header": {
+    "bytecode_length": 0,
+    "num_floats": 0,
+    "num_longs": 0,
+    "num_shorts": 0,
+    "variables_length": 0
+  },
+  "id": "Main",
+  "text": "Begin Main\n\n;Starts when the game is run\n\nif ( CharGenState != -1)\n\tstartscript EnableMenus\nendif\n\nEnd Main\n\n",
+  "type": "Script",
+  "variables": "AAAAAA=="
+}

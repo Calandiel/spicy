@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBattlemage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Battlemage",
+    "type": "String"
+  }
+}

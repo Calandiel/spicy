@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpecializationStealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Stealth",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenu",
+  "type": "GameSetting",
+  "value": {
+    "data": "Quick Menu",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellServiceTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Select spell to buy",
+    "type": "String"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "flags": "",
+  "id": "Island",
+  "map_color": [
+    155,
+    201,
+    231,
+    0
+  ],
+  "name": "",
+  "sleep_creature": "",
+  "sounds": [],
+  "type": "Region",
+  "weather_chances": {
+    "ash": 0,
+    "blight": 0,
+    "blizzard": 0,
+    "clear": 0,
+    "cloudy": 0,
+    "foggy": 0,
+    "overcast": 0,
+    "rain": 0,
+    "snow": 0,
+    "thunder": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage36",
+  "type": "GameSetting",
+  "value": {
+    "data": "Distribute all your points before proceeding.",
+    "type": "String"
+  }
+}

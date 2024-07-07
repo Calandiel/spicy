@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillClassMajor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Major Skills",
+    "type": "String"
+  }
+}

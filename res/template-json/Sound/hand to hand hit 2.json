@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "hand to hand hit 2",
+  "sound_path": "hand_to_hand_hit2.wav",
+  "type": "Sound"
+}

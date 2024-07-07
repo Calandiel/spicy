@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp6",
+  "type": "GameSetting",
+  "value": {
+    "data": "How much gold this enchantment will cost you",
+    "type": "String"
+  }
+}

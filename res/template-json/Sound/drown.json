@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "drown",
+  "sound_path": "drown.wav",
+  "type": "Sound"
+}

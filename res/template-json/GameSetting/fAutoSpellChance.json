@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAutoSpellChance",
+  "type": "GameSetting",
+  "value": {
+    "data": 80.0,
+    "type": "Float"
+  }
+}

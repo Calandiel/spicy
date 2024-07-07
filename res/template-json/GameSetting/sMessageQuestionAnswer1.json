@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessageQuestionAnswer1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Judging by your answers you seem fit for a:",
+    "type": "String"
+  }
+}

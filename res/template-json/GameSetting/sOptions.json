@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOptions",
+  "type": "GameSetting",
+  "value": {
+    "data": "Options Menu",
+    "type": "String"
+  }
+}

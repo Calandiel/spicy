@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSoultrapSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have trapped a soul",
+    "type": "String"
+  }
+}

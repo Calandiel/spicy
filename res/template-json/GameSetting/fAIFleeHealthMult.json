@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAIFleeHealthMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 7.0,
+    "type": "Float"
+  }
+}

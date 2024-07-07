@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPrevWeapon",
+  "type": "GameSetting",
+  "value": {
+    "data": "Previous Weapon",
+    "type": "String"
+  }
+}

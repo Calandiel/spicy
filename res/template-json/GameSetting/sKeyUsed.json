@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyUsed",
+  "type": "GameSetting",
+  "value": {
+    "data": "used to open lock",
+    "type": "String"
+  }
+}

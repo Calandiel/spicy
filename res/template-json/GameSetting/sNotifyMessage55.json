@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage55",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reconnect your controller and press START to continue.",
+    "type": "String"
+  }
+}

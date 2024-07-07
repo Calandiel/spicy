@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDifficulty",
+  "type": "GameSetting",
+  "value": {
+    "data": "Difficulty",
+    "type": "String"
+  }
+}

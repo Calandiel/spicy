@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistParalysis",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Paralysis",
+    "type": "String"
+  }
+}

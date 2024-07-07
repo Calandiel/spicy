@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToCommonDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Common Disease",
+    "type": "String"
+  }
+}

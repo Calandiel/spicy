@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWerewolfAlarmMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Someone saw you changing from your werewolf form.",
+    "type": "String"
+  }
+}

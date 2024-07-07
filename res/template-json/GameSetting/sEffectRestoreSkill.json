@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRestoreSkill",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore Skill",
+    "type": "String"
+  }
+}

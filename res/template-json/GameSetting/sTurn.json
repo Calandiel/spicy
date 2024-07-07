@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTurn",
+  "type": "GameSetting",
+  "value": {
+    "data": "Turn",
+    "type": "String"
+  }
+}

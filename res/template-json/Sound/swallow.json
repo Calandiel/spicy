@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "swallow",
+  "sound_path": "swallow.wav",
+  "type": "Sound"
+}

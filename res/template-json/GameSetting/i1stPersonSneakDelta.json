@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "i1stPersonSneakDelta",
+  "type": "GameSetting",
+  "value": {
+    "data": 10,
+    "type": "Integer"
+  }
+}

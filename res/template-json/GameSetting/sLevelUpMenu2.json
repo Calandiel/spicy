@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevelUpMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution!",
+    "type": "String"
+  }
+}

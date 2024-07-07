@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMaster",
+  "type": "GameSetting",
+  "value": {
+    "data": "Master",
+    "type": "String"
+  }
+}

@@ -17,7 +17,7 @@ use std::{
 	path::PathBuf,
 	process::{Command, Stdio},
 };
-use utils::{create_bin_file, create_text_file};
+use utils::{copy_dir_from_res_to_game_dir, copy_file_from_res_to_game_dir, create_text_file};
 use world_gen::world::OpenmwWorld;
 
 mod args;
@@ -83,9 +83,9 @@ fn get_tes3conv_path() -> PathBuf {
 	let mut tes3conv_path = env::current_dir().unwrap();
 	println!("Current dir: {:.?}", tes3conv_path);
 	if cfg!(target_os = "windows") {
-		tes3conv_path.push("cache/tes3conv/windows/tes3conv.exe");
+		tes3conv_path.push("bin/tes3conv/windows/tes3conv.exe");
 	} else if cfg!(target_os = "linux") {
-		tes3conv_path.push("cache/tes3conv/linux/tes3conv");
+		tes3conv_path.push("bin/tes3conv/linux/tes3conv");
 	} else {
 		panic!("Unsupported OS!");
 	}
@@ -99,9 +99,30 @@ fn get_tes3conv_path() -> PathBuf {
 	tes3conv_path
 }
 
+fn get_openmw_path() -> PathBuf {
+	// Parse openmw path
+	let mut openmw_path = env::current_dir().unwrap();
+	println!("Current dir: {:.?}", openmw_path);
+	if cfg!(target_os = "windows") {
+		openmw_path.push("bin/openmw/windows/openmw.exe");
+	} else if cfg!(target_os = "linux") {
+		openmw_path.push("bin/openmw/linux/openmw");
+	} else {
+		panic!("Unsupported OS!");
+	}
+	if !openmw_path.exists() {
+		panic!(
+			"openmw executable file: {} does not exist.",
+			openmw_path.to_string_lossy()
+		)
+	}
+
+	openmw_path
+}
+
 fn process_directory(mut input_path: PathBuf, outputs: &mut Vec<PathBuf>) -> anyhow::Result<()> {
 	if cfg!(target_os = "windows") {
-		let new_input_path = input_path.clone().to_string_lossy().replace("/", "\\");
+		let new_input_path = input_path.clone().to_string_lossy().replace('/', "\\");
 		input_path = new_input_path.into();
 	}
 	let directories = fs::read_dir(input_path).unwrap();
@@ -133,40 +154,54 @@ fn ensure_common_exists() -> anyhow::Result<()> {
 		clear()?;
 	}
 
-	let _ = ensure_tes3conv_exists();
+	let _ = ensure_tes3conv_exists(None);
+	let _ = ensure_openmw_exists(None);
 
 	Ok(())
 }
 
-// fn ensure_openmw_exists() -> anyhow::Result<()> {
-
-// }
-
-fn ensure_tes3conv_exists() -> anyhow::Result<()> {
-	if !PathBuf::from("cache/tes3conv").exists() {
-		// Get raw data
-		let tes3conv_windows = include_bytes!("tes3conv/windows/tes3conv.exe");
-		let tes3conv_linux = include_bytes!("tes3conv/linux/tes3conv");
-
-		// Create dirs
-		let mut path = env::current_dir().unwrap();
-		path.push("cache/tes3conv/windows");
-		fs::create_dir_all(path.clone()).unwrap();
-
-		let mut path = env::current_dir().unwrap();
-		path.push("cache/tes3conv/linux");
-		fs::create_dir_all(path.clone()).unwrap();
-
-		// Create and write files
-		create_bin_file("cache/tes3conv/windows", "tes3conv.exe", tes3conv_windows).unwrap();
-		create_bin_file("cache/tes3conv/linux", "tes3conv", tes3conv_linux).unwrap();
-
-		set_exe_permissions("cache/tes3conv/linux/tes3conv").unwrap();
-	}
-
+fn ensure_openmw_exists(base_path: Option<String>) -> anyhow::Result<()> {
+	copy_dir_from_res_to_game_dir(
+		"res/openmw-windows",
+		"bin/openmw/windows",
+		true,
+		base_path.clone(),
+	);
+	copy_dir_from_res_to_game_dir(
+		"res/openmw-linux",
+		"bin/openmw/linux",
+		true,
+		base_path.clone(),
+	);
+	copy_file_from_res_to_game_dir(
+		"res/config/openmw.cfg",
+		"bin/openmw/windows/openmw.cfg",
+		&base_path,
+	);
+	copy_file_from_res_to_game_dir(
+		"res/config/openmw.cfg",
+		"bin/openmw/linux/openmw.cfg",
+		&base_path,
+	);
+	copy_file_from_res_to_game_dir(
+		"res/config/settings.cfg",
+		"bin/openmw/windows/settings.cfg",
+		&base_path,
+	);
+	copy_file_from_res_to_game_dir(
+		"res/config/settings.cfg",
+		"bin/openmw/linux/settings.cfg",
+		&base_path,
+	);
 	Ok(())
 }
 
+fn ensure_tes3conv_exists(base_path: Option<String>) -> anyhow::Result<()> {
+	copy_dir_from_res_to_game_dir("res/tes3conv", "bin/tes3conv", true, base_path);
+	Ok(())
+}
+
+/*
 #[cfg(target_os = "linux")]
 fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
 	use std::os::unix::fs::PermissionsExt;
@@ -186,9 +221,23 @@ fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
 	);
 	Ok(())
 }
+*/
 
 fn run() -> anyhow::Result<()> {
 	compile()?;
+
+	ensure_openmw_exists(None).unwrap();
+
+	println!("\n\n\n=== launching openmw ===\n\n\n");
+	let openmw_output = std::process::Command::new(get_openmw_path()).output();
+	match openmw_output {
+		std::result::Result::Ok(output) => {
+			let formatted = format!("{:?}", output);
+			println!("{}", formatted.replace("\\n", "\n"));
+		}
+		Err(err) => return Err(anyhow!("{:?}", err)),
+	}
+
 	Ok(())
 }
 
@@ -206,7 +255,33 @@ fn new(relative_path: String) -> anyhow::Result<()> {
 	spicy_toml.push("spicy.toml");
 	fs::write(spicy_toml, "# The project was created by spicy")?;
 
+	// Setup basic directories
+	ensure_tes3conv_exists(Some(relative_path.clone()))?;
+	ensure_openmw_exists(Some(relative_path.clone()))?;
 	create_record_dirs(Some(relative_path.clone()))?;
+
+	// Copy over the gitignore
+	copy_file_from_res_to_game_dir(
+		"res/template-for-gitignore",
+		".gitignore",
+		&Some(relative_path.clone()),
+	);
+
+	// Copy over template assets
+	copy_dir_from_res_to_game_dir(
+		"res/template-assets",
+		"assets",
+		false,
+		Some(relative_path.clone()),
+	);
+
+	// Copy over template assets
+	copy_dir_from_res_to_game_dir(
+		"res/template-json",
+		"common/data",
+		false,
+		Some(relative_path.clone()),
+	);
 
 	let json = r###"{
   "author": "Author",
@@ -245,7 +320,7 @@ fn compile() -> anyhow::Result<()> {
 	check_for_spicy_toml()?;
 	create_subdirectory("cache").unwrap();
 	create_subdirectory("build").unwrap();
-	ensure_tes3conv_exists().unwrap();
+	ensure_tes3conv_exists(None).unwrap();
 	dae::compile_assets()?;
 
 	let tes3conv_path = get_tes3conv_path();
@@ -298,7 +373,7 @@ fn compile() -> anyhow::Result<()> {
 	// Write the final value
 	for (index, parsed_json) in parsed_jsons.iter_mut().enumerate() {
 		let mut infos = vec![];
-		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
+		if read_string_from_record(parsed_json, "type").unwrap() == "Dialogue" {
 			infos = parsed_json
 				.get("dialogue_infos")
 				.unwrap()
@@ -340,7 +415,7 @@ fn compile() -> anyhow::Result<()> {
 			dialogue_info_id_counter += 1;
 		}
 
-		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
+		if read_string_from_record(parsed_json, "type").unwrap() == "Dialogue" {
 			for info in &mut infos {
 				fill_in_single_record(info, 0, &mut cell_reference_counter).unwrap();
 				validate_single_record(info).unwrap();
@@ -621,7 +696,7 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 		if let anyhow::Result::Ok(id) = read_string_from_record(record, "id") {
 			println!("ID: |{}| - {}", id, record_type);
 
-			if id.len() == 0 {
+			if id.is_empty() {
 				return Err(anyhow!("A record has an id of length 0!"));
 			}
 			let first = id.chars().next().unwrap();
@@ -820,7 +895,7 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 
 	let mesh_path = read_string_from_record(record, "mesh");
 	if let anyhow::Result::Ok(mesh_path) = mesh_path {
-		if mesh_path.len() == 0
+		if mesh_path.is_empty()
 			&& read_string_from_record(record, "type").unwrap_or_default() != "Npc"
 		// npcs are allowed to have no mesh = they use racial meshes
 		{
@@ -841,7 +916,7 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 	}
 	let icon_path = read_string_from_record(record, "icon");
 	if let anyhow::Result::Ok(icon_path) = icon_path {
-		if icon_path.len() == 0 {
+		if icon_path.is_empty() {
 			let record_path = read_string_from_record(record, ORIGINAL_FILE_PATH_JSON_ATTR);
 			return Err(anyhow!("Icon not defined. Path: {:?}", record_path));
 		}
@@ -897,7 +972,7 @@ fn fill_in_single_record(
 				.expect("Landscape flags are compulsory but missing on a landscape record!")
 				.as_str()
 				.unwrap();
-			if landscape_flags == "" {
+			if landscape_flags.is_empty() {
 				return Err(anyhow!("A landscape has an empty landscape flags string. This indicates an error. Perhaps the tool used to edit it has an internal bug.unwrap() A good default value is 'USES_VERTEX_HEIGHTS_AND_NORMALS | USES_TEXTURES'"));
 			}
 		}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReady_Weapon",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ready Weapon",
+    "type": "String"
+  }
+}

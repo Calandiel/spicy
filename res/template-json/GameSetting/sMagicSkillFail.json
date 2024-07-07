@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicSkillFail",
+  "type": "GameSetting",
+  "value": {
+    "data": "You failed casting the spell.",
+    "type": "String"
+  }
+}

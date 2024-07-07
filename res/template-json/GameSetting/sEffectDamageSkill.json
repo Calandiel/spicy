@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDamageSkill",
+  "type": "GameSetting",
+  "value": {
+    "data": "Damage Skill",
+    "type": "String"
+  }
+}

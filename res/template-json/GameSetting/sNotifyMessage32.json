@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage32",
+  "type": "GameSetting",
+  "value": {
+    "data": "Only soul gems with a trapped soul can be put in the soul gem slot.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCancel",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cancel",
+    "type": "String"
+  }
+}

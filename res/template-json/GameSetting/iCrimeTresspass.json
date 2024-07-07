@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iCrimeTresspass",
+  "type": "GameSetting",
+  "value": {
+    "data": 5,
+    "type": "Integer"
+  }
+}

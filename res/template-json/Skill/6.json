@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 0,
+    "specialization": 0
+  },
+  "description": "Proficiency in wielding long swords and other big bladed weapons.",
+  "flags": "",
+  "skill_id": "LongBlade",
+  "type": "Skill"
+}

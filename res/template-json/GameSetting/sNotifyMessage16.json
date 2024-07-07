@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage16",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot wear more than one clothing item at a time.",
+    "type": "String"
+  }
+}

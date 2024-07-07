@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp4",
+  "type": "GameSetting",
+  "value": {
+    "data": "How many charge points will be spent every time this enchantment is used. Depends on your enchant skill.",
+    "type": "String"
+  }
+}

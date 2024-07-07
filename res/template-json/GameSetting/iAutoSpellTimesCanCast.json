@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAutoSpellTimesCanCast",
+  "type": "GameSetting",
+  "value": {
+    "data": 3,
+    "type": "Integer"
+  }
+}

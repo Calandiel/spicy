@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sGoverningAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Governing Attribute",
+    "type": "String"
+  }
+}

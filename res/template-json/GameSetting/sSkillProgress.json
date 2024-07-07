@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillProgress",
+  "type": "GameSetting",
+  "value": {
+    "data": "Progress towards skill increase",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicContractDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have contracted %s.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSoultrap",
+  "type": "GameSetting",
+  "value": {
+    "data": "Soultrap",
+    "type": "String"
+  }
+}

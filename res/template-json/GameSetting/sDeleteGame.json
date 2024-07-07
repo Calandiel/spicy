@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDeleteGame",
+  "type": "GameSetting",
+  "value": {
+    "data": "Delete Game",
+    "type": "String"
+  }
+}

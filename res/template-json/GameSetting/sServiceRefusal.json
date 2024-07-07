@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sServiceRefusal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Service Refusal",
+    "type": "String"
+  }
+}

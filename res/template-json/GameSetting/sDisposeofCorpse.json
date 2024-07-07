@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDisposeofCorpse",
+  "type": "GameSetting",
+  "value": {
+    "data": "Dispose of Corpse",
+    "type": "String"
+  }
+}

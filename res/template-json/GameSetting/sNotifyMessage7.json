@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage7",
+  "type": "GameSetting",
+  "value": {
+    "data": "No more than four ingredients can be used in a potion.",
+    "type": "String"
+  }
+}

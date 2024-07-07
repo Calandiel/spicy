@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iCrimeAttack",
+  "type": "GameSetting",
+  "value": {
+    "data": 40,
+    "type": "Integer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRangeDes",
+  "type": "GameSetting",
+  "value": {
+    "data": "The way this spell will deliver its effect. Can be cast on yourself, on others at touch distance, or on targets farther way.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu11",
+  "type": "GameSetting",
+  "value": {
+    "data": "At least one assigned magic effect needed to perform the enchantment",
+    "type": "String"
+  }
+}

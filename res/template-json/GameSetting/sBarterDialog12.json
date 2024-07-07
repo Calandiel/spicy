@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog12",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot drop summoned items.",
+    "type": "String"
+  }
+}

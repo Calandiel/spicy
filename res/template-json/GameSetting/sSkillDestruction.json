@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillDestruction",
+  "type": "GameSetting",
+  "value": {
+    "data": "Destruction",
+    "type": "String"
+  }
+}

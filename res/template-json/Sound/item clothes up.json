@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "item clothes up",
+  "sound_path": "item_clothes_up.wav",
+  "type": "Sound"
+}

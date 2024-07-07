@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStrafe",
+  "type": "GameSetting",
+  "value": {
+    "data": "Strafe",
+    "type": "String"
+  }
+}

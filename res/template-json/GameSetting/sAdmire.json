@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAdmire",
+  "type": "GameSetting",
+  "value": {
+    "data": "Admire",
+    "type": "String"
+  }
+}

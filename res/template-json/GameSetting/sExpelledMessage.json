@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sExpelledMessage",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have been expelled from",
+    "type": "String"
+  }
+}

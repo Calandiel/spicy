@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpecializationMagic",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic",
+    "type": "String"
+  }
+}

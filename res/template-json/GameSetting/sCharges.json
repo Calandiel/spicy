@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCharges",
+  "type": "GameSetting",
+  "value": {
+    "data": "Charge:",
+    "type": "String"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "data": {
+    "agility": [
+      1,
+      1
+    ],
+    "endurance": [
+      1,
+      1
+    ],
+    "flags": "PLAYABLE",
+    "height": [
+      1.0,
+      1.0
+    ],
+    "intelligence": [
+      1,
+      1
+    ],
+    "luck": [
+      1,
+      1
+    ],
+    "personality": [
+      1,
+      1
+    ],
+    "skill_bonuses": {
+      "bonus_0": 0,
+      "bonus_1": 0,
+      "bonus_2": 0,
+      "bonus_3": 0,
+      "bonus_4": 0,
+      "bonus_5": 0,
+      "bonus_6": 0,
+      "skill_0": "None",
+      "skill_1": "None",
+      "skill_2": "None",
+      "skill_3": "None",
+      "skill_4": "None",
+      "skill_5": "None",
+      "skill_6": "None"
+    },
+    "speed": [
+      1,
+      1
+    ],
+    "strength": [
+      1,
+      1
+    ],
+    "weight": [
+      1.0,
+      1.0
+    ],
+    "willpower": [
+      1,
+      1
+    ]
+  },
+  "description": "Their origin shrouded in mists of ancient history, they are known as the Init people.",
+  "flags": "",
+  "id": "DefaultRace",
+  "name": "Defaultfolk",
+  "spells": [],
+  "type": "Race"
+}

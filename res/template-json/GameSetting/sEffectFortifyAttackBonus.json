@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifyAttackBonus",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Attack",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sfeet",
+  "type": "GameSetting",
+  "value": {
+    "data": "ft",
+    "type": "String"
+  }
+}

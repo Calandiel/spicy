@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWerewolfRefusal",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot do this while in werewolf form.",
+    "type": "String"
+  }
+}

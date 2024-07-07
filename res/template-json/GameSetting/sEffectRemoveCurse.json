@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRemoveCurse",
+  "type": "GameSetting",
+  "value": {
+    "data": "Remove Curse",
+    "type": "String"
+  }
+}

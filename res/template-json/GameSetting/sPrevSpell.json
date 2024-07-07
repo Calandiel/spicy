@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPrevSpell",
+  "type": "GameSetting",
+  "value": {
+    "data": "Previous Spell",
+    "type": "String"
+  }
+}

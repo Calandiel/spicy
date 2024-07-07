@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage63",
+  "type": "GameSetting",
+  "value": {
+    "data": "%d %s has been removed from your inventory.",
+    "type": "String"
+  }
+}

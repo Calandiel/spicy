@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToShock",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Shock",
+    "type": "String"
+  }
+}

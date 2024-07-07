@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCenter",
+  "type": "GameSetting",
+  "value": {
+    "data": "Center",
+    "type": "String"
+  }
+}

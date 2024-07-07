@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectLock",
+  "type": "GameSetting",
+  "value": {
+    "data": "Lock",
+    "type": "String"
+  }
+}

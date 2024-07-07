@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBirthSign",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sign",
+    "type": "String"
+  }
+}

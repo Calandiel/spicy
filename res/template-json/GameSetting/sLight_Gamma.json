@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLight_Gamma",
+  "type": "GameSetting",
+  "value": {
+    "data": "Light",
+    "type": "String"
+  }
+}

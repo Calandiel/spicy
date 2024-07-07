@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBard",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bard",
+    "type": "String"
+  }
+}

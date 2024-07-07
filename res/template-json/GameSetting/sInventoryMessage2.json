@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMessage2",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot perform repairs during combat.",
+    "type": "String"
+  }
+}

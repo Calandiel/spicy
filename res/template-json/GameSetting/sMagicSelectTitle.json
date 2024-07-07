@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicSelectTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Select a magic item, power, or spell to Quick Key.",
+    "type": "String"
+  }
+}

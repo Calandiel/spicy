@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDiseaseXferChance",
+  "type": "GameSetting",
+  "value": {
+    "data": 2.5,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sContentsMessage2",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot place items in this container.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCompanionShare",
+  "type": "GameSetting",
+  "value": {
+    "data": "Companion Share",
+    "type": "String"
+  }
+}

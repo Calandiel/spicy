@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFatigue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fatigue",
+    "type": "String"
+  }
+}

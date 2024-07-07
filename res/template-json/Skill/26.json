@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 6,
+    "specialization": 2
+  },
+  "description": "Make them love you, make them hate you, but above all, make them do what you want. All by using words.",
+  "flags": "",
+  "skill_id": "Speechcraft",
+  "type": "Skill"
+}

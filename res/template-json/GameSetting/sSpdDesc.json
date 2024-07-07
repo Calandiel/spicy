@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpdDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Determines how fast you cover distances. Affects walking, running, swimming, and levitating.",
+    "type": "String"
+  }
+}

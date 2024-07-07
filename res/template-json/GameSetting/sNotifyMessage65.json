@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage65",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot save a game without a name!",
+    "type": "String"
+  }
+}

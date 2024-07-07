@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicTargetResisted",
+  "type": "GameSetting",
+  "value": {
+    "data": "Target resisted magic.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStartCellError",
+  "type": "GameSetting",
+  "value": {
+    "data": "Starting interior cell \"Place of Initialization\" not found!",
+    "type": "String"
+  }
+}

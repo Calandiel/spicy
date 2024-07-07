@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sReturnToGame",
+  "type": "GameSetting",
+  "value": {
+    "data": "Return To Game",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFatigueBlockBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 4.0,
+    "type": "Float"
+  }
+}

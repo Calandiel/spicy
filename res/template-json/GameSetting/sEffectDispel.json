@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDispel",
+  "type": "GameSetting",
+  "value": {
+    "data": "Dispel",
+    "type": "String"
+  }
+}

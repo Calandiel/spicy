@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDeleteSpellError",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot remove this item from the magic menu.",
+    "type": "String"
+  }
+}

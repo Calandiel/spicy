@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMoveDownXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Move Down",
+    "type": "String"
+  }
+}

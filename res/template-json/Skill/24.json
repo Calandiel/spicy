@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 3,
+    "specialization": 2
+  },
+  "description": "An essential skill when you want to actually hit things with ranged weapons. These include bows, crossbows, and various throwing objects.",
+  "flags": "",
+  "skill_id": "Marksman",
+  "type": "Skill"
+}

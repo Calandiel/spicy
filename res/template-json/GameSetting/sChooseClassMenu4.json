@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sChooseClassMenu4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Minor Skills:",
+    "type": "String"
+  }
+}

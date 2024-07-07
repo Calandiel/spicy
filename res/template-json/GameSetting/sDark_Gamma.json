@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDark_Gamma",
+  "type": "GameSetting",
+  "value": {
+    "data": "Dark",
+    "type": "String"
+  }
+}

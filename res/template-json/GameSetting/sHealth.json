@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Health",
+    "type": "String"
+  }
+}

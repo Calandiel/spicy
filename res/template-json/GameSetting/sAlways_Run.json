@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAlways_Run",
+  "type": "GameSetting",
+  "value": {
+    "data": "Always Run",
+    "type": "String"
+  }
+}

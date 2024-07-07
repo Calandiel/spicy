@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthMorningstar",
+  "type": "GameSetting",
+  "value": {
+    "data": "July",
+    "type": "String"
+  }
+}

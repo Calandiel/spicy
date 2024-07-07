@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sOn",
+  "type": "GameSetting",
+  "value": {
+    "data": "On",
+    "type": "String"
+  }
+}

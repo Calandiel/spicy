@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTrapSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Trap disarmed!",
+    "type": "String"
+  }
+}

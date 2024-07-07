@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicOpenSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your spell has unlocked the target.",
+    "type": "String"
+  }
+}

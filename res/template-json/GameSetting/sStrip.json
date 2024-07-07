@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStrip",
+  "type": "GameSetting",
+  "value": {
+    "data": "Strip",
+    "type": "String"
+  }
+}

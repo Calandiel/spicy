@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iMagicItemChargeOnce",
+  "type": "GameSetting",
+  "value": {
+    "data": 1,
+    "type": "Integer"
+  }
+}

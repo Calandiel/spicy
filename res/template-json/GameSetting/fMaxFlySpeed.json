@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fMaxFlySpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": 300.0,
+    "type": "Float"
+  }
+}

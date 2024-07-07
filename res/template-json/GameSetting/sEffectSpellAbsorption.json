@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectSpellAbsorption",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spell Absorption",
+    "type": "String"
+  }
+}

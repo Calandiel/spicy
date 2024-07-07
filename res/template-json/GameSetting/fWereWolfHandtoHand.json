@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfHandtoHand",
+  "type": "GameSetting",
+  "value": {
+    "data": 100.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sScout",
+  "type": "GameSetting",
+  "value": {
+    "data": "Scout",
+    "type": "String"
+  }
+}

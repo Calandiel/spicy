@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNextRank",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next Rank:",
+    "type": "String"
+  }
+}

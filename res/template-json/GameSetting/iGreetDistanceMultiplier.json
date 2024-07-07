@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iGreetDistanceMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": 6,
+    "type": "Integer"
+  }
+}

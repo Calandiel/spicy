@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sForward",
+  "type": "GameSetting",
+  "value": {
+    "data": "Forward",
+    "type": "String"
+  }
+}

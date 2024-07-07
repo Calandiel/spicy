@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAlways",
+  "type": "GameSetting",
+  "value": {
+    "data": "Always",
+    "type": "String"
+  }
+}

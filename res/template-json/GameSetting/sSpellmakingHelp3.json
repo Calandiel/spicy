@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Probability to successfully cast the spell with your current skill level.",
+    "type": "String"
+  }
+}

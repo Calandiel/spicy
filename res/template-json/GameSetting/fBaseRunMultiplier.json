@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fBaseRunMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": 1.75,
+    "type": "Float"
+  }
+}

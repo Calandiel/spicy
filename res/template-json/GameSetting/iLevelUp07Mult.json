@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iLevelUp07Mult",
+  "type": "GameSetting",
+  "value": {
+    "data": 3,
+    "type": "Integer"
+  }
+}

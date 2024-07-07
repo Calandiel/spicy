@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingHelp6",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic effects currently on the spell.",
+    "type": "String"
+  }
+}

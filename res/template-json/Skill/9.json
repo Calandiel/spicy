@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.02,
+      0.03,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 4,
+    "specialization": 0
+  },
+  "description": "Techniques and training required for fast running and swimming.",
+  "flags": "",
+  "skill_id": "Athletics",
+  "type": "Skill"
+}

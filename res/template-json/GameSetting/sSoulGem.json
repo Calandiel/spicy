@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSoulGem",
+  "type": "GameSetting",
+  "value": {
+    "data": "Soul",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDrainHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Drain Health",
+    "type": "String"
+  }
+}

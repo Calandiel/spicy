@@ -1,5 +1,3 @@
-use std::{fs, path::PathBuf};
-
 use crate::constants::{LAND_RECORD_SCALER, SQUARES_PER_CELL, TODD_UNIT};
 
 use super::cell::OpenmwCell;
@@ -16,6 +14,7 @@ impl OpenmwWorld {
 		}
 	}
 
+	/*
 	pub fn convert_to_json(&self) -> anyhow::Result<()> {
 		if PathBuf::from("common/data/Cell").exists() {
 			fs::remove_dir_all("common/data/Cell")?;
@@ -27,7 +26,9 @@ impl OpenmwWorld {
 
 		Ok(())
 	}
+	*/
 
+	/*
 	// Value should be in METERS, not tuds
 	pub fn set_elevation(&mut self, square: [i32; 2], value: f32) {
 		println!("{}", value);
@@ -36,6 +37,7 @@ impl OpenmwWorld {
 		let cell = get_cell(&mut self.overworld_cells, square);
 		cell.set_elevation(square_within_cell, value);
 	}
+	*/
 
 	// Value should be in heightmap adjusted tuds
 	pub fn set_elevation_canonical(&mut self, square: [i32; 2], value: f32) {

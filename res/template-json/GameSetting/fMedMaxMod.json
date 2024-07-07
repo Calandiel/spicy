@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fMedMaxMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.9,
+    "type": "Float"
+  }
+}

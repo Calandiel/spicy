@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFace",
+  "type": "GameSetting",
+  "value": {
+    "data": "Face",
+    "type": "String"
+  }
+}

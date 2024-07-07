@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Required to cast spells. It restores on its own by resting.",
+    "type": "String"
+  }
+}

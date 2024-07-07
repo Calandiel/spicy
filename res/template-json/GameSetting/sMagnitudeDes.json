@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagnitudeDes",
+  "type": "GameSetting",
+  "value": {
+    "data": "How far the effects of this spell reach",
+    "type": "String"
+  }
+}

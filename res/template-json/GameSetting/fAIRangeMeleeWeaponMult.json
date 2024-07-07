@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAIRangeMeleeWeaponMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 5.0,
+    "type": "Float"
+  }
+}

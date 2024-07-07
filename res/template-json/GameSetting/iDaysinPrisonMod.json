@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iDaysinPrisonMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 100,
+    "type": "Integer"
+  }
+}

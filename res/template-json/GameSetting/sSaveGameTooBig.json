@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveGameTooBig",
+  "type": "GameSetting",
+  "value": {
+    "data": "<obsolete>",
+    "type": "String"
+  }
+}

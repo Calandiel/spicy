@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectTurnUndead",
+  "type": "GameSetting",
+  "value": {
+    "data": "Turn Undead",
+    "type": "String"
+  }
+}

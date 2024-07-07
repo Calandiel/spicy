@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatTorsoSideAngle",
+  "type": "GameSetting",
+  "value": {
+    "data": 45.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNext",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectTelekinesis",
+  "type": "GameSetting",
+  "value": {
+    "data": "Telekinesis",
+    "type": "String"
+  }
+}

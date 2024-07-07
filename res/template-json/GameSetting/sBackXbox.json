@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBackXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Move Backwards",
+    "type": "String"
+  }
+}

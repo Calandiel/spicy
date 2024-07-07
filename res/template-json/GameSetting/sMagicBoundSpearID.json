@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundSpearID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Spear",
+    "type": "String"
+  }
+}

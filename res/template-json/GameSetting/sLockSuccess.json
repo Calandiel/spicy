@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLockSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "Lock pick success!",
+    "type": "String"
+  }
+}

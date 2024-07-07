@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iPerMinChance",
+  "type": "GameSetting",
+  "value": {
+    "data": 5,
+    "type": "Integer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTypeCurse",
+  "type": "GameSetting",
+  "value": {
+    "data": "Curse",
+    "type": "String"
+  }
+}

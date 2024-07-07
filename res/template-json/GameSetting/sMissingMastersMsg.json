@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMissingMastersMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "Currently selected content files don't match the ones used by this saved game. There could be errors during game play or load.\nDo you wish to continue?",
+    "type": "String"
+  }
+}

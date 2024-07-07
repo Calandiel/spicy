@@ -1,0 +1,6 @@
+{
+  "flags": "",
+  "id": "DoorMarker",
+  "mesh": "marker_door.dae",
+  "type": "Static"
+}

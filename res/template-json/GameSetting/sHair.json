@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHair",
+  "type": "GameSetting",
+  "value": {
+    "data": "Hair",
+    "type": "String"
+  }
+}

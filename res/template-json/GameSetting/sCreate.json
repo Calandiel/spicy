@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreate",
+  "type": "GameSetting",
+  "value": {
+    "data": "Create",
+    "type": "String"
+  }
+}

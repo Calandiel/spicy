@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fMaxWalkSpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": 200.0,
+    "type": "Float"
+  }
+}

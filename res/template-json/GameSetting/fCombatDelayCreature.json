@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatDelayCreature",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.1,
+    "type": "Float"
+  }
+}

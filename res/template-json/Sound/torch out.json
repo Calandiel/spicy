@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "torch out",
+  "sound_path": "torch_out.wav",
+  "type": "Sound"
+}

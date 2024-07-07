@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sItemName",
+  "type": "GameSetting",
+  "value": {
+    "data": "Item Name",
+    "type": "String"
+  }
+}

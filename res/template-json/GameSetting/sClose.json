@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sClose",
+  "type": "GameSetting",
+  "value": {
+    "data": "Close",
+    "type": "String"
+  }
+}

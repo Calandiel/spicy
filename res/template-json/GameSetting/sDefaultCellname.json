@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDefaultCellname",
+  "type": "GameSetting",
+  "value": {
+    "data": "Wilderness",
+    "type": "String"
+  }
+}

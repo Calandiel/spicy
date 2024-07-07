@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFireShield",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fire Shield",
+    "type": "String"
+  }
+}

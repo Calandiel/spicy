@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slot holding the item you wish enchanted. Only accepts weapons, armor, scrolls, and apparel without existing enchantments.",
+    "type": "String"
+  }
+}

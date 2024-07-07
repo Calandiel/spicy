@@ -1,0 +1,6 @@
+{
+  "flags": "",
+  "id": "TempleMarker",
+  "mesh": "marker_temple.dae",
+  "type": "Static"
+}

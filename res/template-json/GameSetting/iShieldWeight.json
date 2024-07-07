@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iShieldWeight",
+  "type": "GameSetting",
+  "value": {
+    "data": 15,
+    "type": "Integer"
+  }
+}

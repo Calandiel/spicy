@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveMenuHelp06",
+  "type": "GameSetting",
+  "value": {
+    "data": "Delete Game?",
+    "type": "String"
+  }
+}

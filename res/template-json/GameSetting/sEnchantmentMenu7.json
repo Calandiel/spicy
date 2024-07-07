@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu7",
+  "type": "GameSetting",
+  "value": {
+    "data": "Remove the current soul gem before assigning a different one.",
+    "type": "String"
+  }
+}

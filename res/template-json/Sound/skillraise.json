@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "skillraise",
+  "sound_path": "skill_raise.wav",
+  "type": "Sound"
+}

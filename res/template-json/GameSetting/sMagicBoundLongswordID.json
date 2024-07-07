@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundLongswordID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Longsword",
+    "type": "String"
+  }
+}

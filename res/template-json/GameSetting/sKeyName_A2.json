@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_A2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Play / Pause",
+    "type": "String"
+  }
+}

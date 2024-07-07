@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAlchemyMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 2,
+    "type": "Integer"
+  }
+}

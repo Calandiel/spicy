@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_DD",
+  "type": "GameSetting",
+  "value": {
+    "data": "Apps",
+    "type": "String"
+  }
+}

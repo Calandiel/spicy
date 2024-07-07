@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestKey",
+  "type": "GameSetting",
+  "value": {
+    "data": "Rest",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundLongbowID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Longbow",
+    "type": "String"
+  }
+}

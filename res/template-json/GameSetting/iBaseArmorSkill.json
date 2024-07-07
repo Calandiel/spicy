@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iBaseArmorSkill",
+  "type": "GameSetting",
+  "value": {
+    "data": 30,
+    "type": "Integer"
+  }
+}

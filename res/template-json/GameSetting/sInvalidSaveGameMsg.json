@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInvalidSaveGameMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "This is an invalid saved game.",
+    "type": "String"
+  }
+}

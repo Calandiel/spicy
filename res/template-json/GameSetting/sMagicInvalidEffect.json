@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicInvalidEffect",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot cast this magic effect at this time.",
+    "type": "String"
+  }
+}

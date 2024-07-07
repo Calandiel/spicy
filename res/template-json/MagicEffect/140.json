@@ -1,0 +1,29 @@
+{
+  "area_sound": "",
+  "area_visual": "",
+  "bolt_sound": "",
+  "bolt_visual": "",
+  "cast_sound": "",
+  "cast_visual": "",
+  "data": {
+    "base_cost": 0.0,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "flags": "NO_MAGNITUDE | CAN_CAST_SELF | APPLIED_ONCE | ILLEGAL_DAEDRA",
+    "school": "Conjuration",
+    "size": 0.0,
+    "size_cap": -4.0193455e-37,
+    "speed": 0.0
+  },
+  "description": "",
+  "effect_id": "SummonHunger",
+  "flags": "",
+  "hit_sound": "",
+  "hit_visual": "",
+  "icon": "magic/mysticism/telekinesis.dds",
+  "texture": "",
+  "type": "MagicEffect"
+}

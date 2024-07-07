@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPickUp",
+  "type": "GameSetting",
+  "value": {
+    "data": "Take",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_DB",
+  "type": "GameSetting",
+  "value": {
+    "data": "Left Super",
+    "type": "String"
+  }
+}

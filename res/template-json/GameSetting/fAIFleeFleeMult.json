@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAIFleeFleeMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.3,
+    "type": "Float"
+  }
+}

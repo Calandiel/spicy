@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpecializationMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Choose a Specialization",
+    "type": "String"
+  }
+}

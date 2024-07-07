@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage54",
+  "type": "GameSetting",
+  "value": {
+    "data": "Do you wish to start a new game and abandon your current game?",
+    "type": "String"
+  }
+}

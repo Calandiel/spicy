@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage48",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need a retort to use",
+    "type": "String"
+  }
+}

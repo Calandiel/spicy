@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sIngredients",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ingredients",
+    "type": "String"
+  }
+}

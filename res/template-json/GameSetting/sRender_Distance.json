@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRender_Distance",
+  "type": "GameSetting",
+  "value": {
+    "data": "View Distance",
+    "type": "String"
+  }
+}

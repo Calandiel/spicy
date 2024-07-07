@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSlow",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slow",
+    "type": "String"
+  }
+}

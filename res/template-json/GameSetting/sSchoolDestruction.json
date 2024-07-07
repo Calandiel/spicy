@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSchoolDestruction",
+  "type": "GameSetting",
+  "value": {
+    "data": "Destruction",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEditNote",
+  "type": "GameSetting",
+  "value": {
+    "data": "Edit Note",
+    "type": "String"
+  }
+}

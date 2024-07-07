@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHeavy",
+  "type": "GameSetting",
+  "value": {
+    "data": "Heavy",
+    "type": "String"
+  }
+}

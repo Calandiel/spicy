@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFightDistanceMultiplier",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.005,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sChangedMastersMsg",
+  "type": "GameSetting",
+  "value": {
+    "data": "Content files may have mis-matched since this saved game was created. There could be errors during game play or load. Continue?",
+    "type": "String"
+  }
+}

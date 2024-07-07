@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fMagicItemRechargePerSecond",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.05,
+    "type": "Float"
+  }
+}

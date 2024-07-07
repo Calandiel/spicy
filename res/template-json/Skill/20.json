@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.25,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 3,
+    "specialization": 2
+  },
+  "description": "Art of how to make yourself not be noticed. Useful for stealing, backstabbing, or merely visiting places where your presence would not be tolerated.\n",
+  "flags": "",
+  "skill_id": "Sneak",
+  "type": "Skill"
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage45",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need a mortar and pestle to use",
+    "type": "String"
+  }
+}

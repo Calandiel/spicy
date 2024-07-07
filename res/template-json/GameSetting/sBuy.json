@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBuy",
+  "type": "GameSetting",
+  "value": {
+    "data": "Buy",
+    "type": "String"
+  }
+}

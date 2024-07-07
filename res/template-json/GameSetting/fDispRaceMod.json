@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDispRaceMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 5.0,
+    "type": "Float"
+  }
+}

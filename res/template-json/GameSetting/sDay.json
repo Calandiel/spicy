@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sDay",
+  "type": "GameSetting",
+  "value": {
+    "data": "Days",
+    "type": "String"
+  }
+}

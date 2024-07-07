@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "item repair up",
+  "sound_path": "item_misc_up.wav",
+  "type": "Sound"
+}

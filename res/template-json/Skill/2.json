@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      0.4,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 0,
+    "specialization": 0
+  },
+  "description": "Knowledge on how to properly repair weapons and armor so that they will serve you for many battles to come.",
+  "flags": "",
+  "skill_id": "Armorer",
+  "type": "Skill"
+}

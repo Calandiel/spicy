@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundShieldID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Shield",
+    "type": "String"
+  }
+}

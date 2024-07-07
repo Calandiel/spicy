@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "weapon swish",
+  "sound_path": "weapon_swish.wav",
+  "type": "Sound"
+}

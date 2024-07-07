@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRangeTarget",
+  "type": "GameSetting",
+  "value": {
+    "data": "Target",
+    "type": "String"
+  }
+}

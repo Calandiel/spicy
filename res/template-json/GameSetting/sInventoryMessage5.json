@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMessage5",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot perform enchantments during combat.",
+    "type": "String"
+  }
+}

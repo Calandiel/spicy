@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCureBlightDisease",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cure Blight Disease",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSeldom",
+  "type": "GameSetting",
+  "value": {
+    "data": "Seldom",
+    "type": "String"
+  }
+}

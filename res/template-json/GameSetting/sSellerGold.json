@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSellerGold",
+  "type": "GameSetting",
+  "value": {
+    "data": "SELLER GOLD",
+    "type": "String"
+  }
+}

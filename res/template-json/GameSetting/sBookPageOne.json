@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBookPageOne",
+  "type": "GameSetting",
+  "value": {
+    "data": "1",
+    "type": "String"
+  }
+}

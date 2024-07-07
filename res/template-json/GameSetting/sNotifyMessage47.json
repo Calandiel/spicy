@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage47",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need a calcinator to use",
+    "type": "String"
+  }
+}

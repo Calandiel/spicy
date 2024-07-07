@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillHandtohand",
+  "type": "GameSetting",
+  "value": {
+    "data": "Hand-to-hand",
+    "type": "String"
+  }
+}

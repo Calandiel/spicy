@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sFavoriteSkills",
+  "type": "GameSetting",
+  "value": {
+    "data": "Favorite Skills",
+    "type": "String"
+  }
+}

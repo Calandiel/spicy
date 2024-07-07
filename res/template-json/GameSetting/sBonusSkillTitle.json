@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBonusSkillTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Skill Bonus",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_C9",
+  "type": "GameSetting",
+  "value": {
+    "data": "Page Up",
+    "type": "String"
+  }
+}

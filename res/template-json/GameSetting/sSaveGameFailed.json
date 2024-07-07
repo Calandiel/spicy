@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSaveGameFailed",
+  "type": "GameSetting",
+  "value": {
+    "data": "An error was encountered while saving your game.",
+    "type": "String"
+  }
+}

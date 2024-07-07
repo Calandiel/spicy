@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundDaggerID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Dagger",
+    "type": "String"
+  }
+}

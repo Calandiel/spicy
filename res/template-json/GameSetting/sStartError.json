@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sStartError",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cannot start the game in an empty interior cell!",
+    "type": "String"
+  }
+}

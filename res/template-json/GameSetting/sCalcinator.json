@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCalcinator",
+  "type": "GameSetting",
+  "value": {
+    "data": "Calcinator",
+    "type": "String"
+  }
+}

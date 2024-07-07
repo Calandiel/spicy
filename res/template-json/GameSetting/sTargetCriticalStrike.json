@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTargetCriticalStrike",
+  "type": "GameSetting",
+  "value": {
+    "data": "Critical Damage!",
+    "type": "String"
+  }
+}

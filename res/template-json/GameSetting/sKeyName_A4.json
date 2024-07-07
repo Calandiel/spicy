@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_A4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Media Stop",
+    "type": "String"
+  }
+}

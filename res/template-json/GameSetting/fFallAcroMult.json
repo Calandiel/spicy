@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFallAcroMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 0.01,
+    "type": "Float"
+  }
+}

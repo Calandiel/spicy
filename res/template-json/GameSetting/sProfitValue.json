@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sProfitValue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Profit Value",
+    "type": "String"
+  }
+}

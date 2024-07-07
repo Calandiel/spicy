@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMage",
+  "type": "GameSetting",
+  "value": {
+    "data": "Mage",
+    "type": "String"
+  }
+}

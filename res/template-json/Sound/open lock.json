@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "open lock",
+  "sound_path": "open_lock_success.wav",
+  "type": "Sound"
+}

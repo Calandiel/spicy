@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHealthPerLevel",
+  "type": "GameSetting",
+  "value": {
+    "data": "Health per level",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAttributeIntelligence",
+  "type": "GameSetting",
+  "value": {
+    "data": "Intelligence",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInPrisonTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Imprisoned...",
+    "type": "String"
+  }
+}

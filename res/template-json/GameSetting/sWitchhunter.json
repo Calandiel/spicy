@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWitchhunter",
+  "type": "GameSetting",
+  "value": {
+    "data": "Witchhunter",
+    "type": "String"
+  }
+}

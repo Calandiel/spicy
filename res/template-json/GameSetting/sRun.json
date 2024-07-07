@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRun",
+  "type": "GameSetting",
+  "value": {
+    "data": "Run",
+    "type": "String"
+  }
+}

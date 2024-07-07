@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFrenzyCreature",
+  "type": "GameSetting",
+  "value": {
+    "data": "Frenzy Creature",
+    "type": "String"
+  }
+}

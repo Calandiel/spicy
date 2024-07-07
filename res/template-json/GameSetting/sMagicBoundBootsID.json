@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundBootsID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Boots",
+    "type": "String"
+  }
+}

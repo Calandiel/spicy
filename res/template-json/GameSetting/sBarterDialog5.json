@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Thank you, may we barter again.",
+    "type": "String"
+  }
+}

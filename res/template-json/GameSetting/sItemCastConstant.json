@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sItemCastConstant",
+  "type": "GameSetting",
+  "value": {
+    "data": "Constant Effect",
+    "type": "String"
+  }
+}

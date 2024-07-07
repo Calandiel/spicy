@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 0,
+    "specialization": 0
+  },
+  "description": "Your skill in wielding maces, hammers, and staves.",
+  "flags": "",
+  "skill_id": "BluntWeapon",
+  "type": "Skill"
+}

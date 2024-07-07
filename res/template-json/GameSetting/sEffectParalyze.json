@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectParalyze",
+  "type": "GameSetting",
+  "value": {
+    "data": "Paralyze",
+    "type": "String"
+  }
+}

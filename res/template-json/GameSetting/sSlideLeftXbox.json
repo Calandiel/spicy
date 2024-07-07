@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSlideLeftXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Slide Left",
+    "type": "String"
+  }
+}

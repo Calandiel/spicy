@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDispPersonalityBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 50.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage5",
+  "type": "GameSetting",
+  "value": {
+    "data": "You must place the object you are currently holding into a container before you can exit the menus.",
+    "type": "String"
+  }
+}

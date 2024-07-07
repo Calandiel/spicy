@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sActivate",
+  "type": "GameSetting",
+  "value": {
+    "data": "Activate",
+    "type": "String"
+  }
+}

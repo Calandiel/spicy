@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_B0",
+  "type": "GameSetting",
+  "value": {
+    "data": "Volume Up",
+    "type": "String"
+  }
+}

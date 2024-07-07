@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_CD",
+  "type": "GameSetting",
+  "value": {
+    "data": "Right",
+    "type": "String"
+  }
+}

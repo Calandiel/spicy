@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessageQuestionAnswer3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Choose Another Class",
+    "type": "String"
+  }
+}

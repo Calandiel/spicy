@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp8",
+  "type": "GameSetting",
+  "value": {
+    "data": "Name of the newly enchanted item",
+    "type": "String"
+  }
+}

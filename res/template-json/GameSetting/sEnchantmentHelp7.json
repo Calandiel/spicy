@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentHelp7",
+  "type": "GameSetting",
+  "value": {
+    "data": "The way this enchantment will be cast.",
+    "type": "String"
+  }
+}

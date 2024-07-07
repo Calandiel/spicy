@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "item gold up",
+  "sound_path": "item_gold_up.wav",
+  "type": "Sound"
+}

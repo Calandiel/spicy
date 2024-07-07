@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sItemCastWhenStrikes",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cast When Strikes",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistFrost",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Frost",
+    "type": "String"
+  }
+}

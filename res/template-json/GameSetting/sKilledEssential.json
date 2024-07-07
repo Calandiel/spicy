@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKilledEssential",
+  "type": "GameSetting",
+  "value": {
+    "data": "With this character's death, the main quest is broken.",
+    "type": "String"
+  }
+}

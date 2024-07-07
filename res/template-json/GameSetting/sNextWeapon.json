@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNextWeapon",
+  "type": "GameSetting",
+  "value": {
+    "data": "Next Weapon",
+    "type": "String"
+  }
+}

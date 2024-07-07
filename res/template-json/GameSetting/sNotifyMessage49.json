@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage49",
+  "type": "GameSetting",
+  "value": {
+    "data": "That %s is mine.",
+    "type": "String"
+  }
+}

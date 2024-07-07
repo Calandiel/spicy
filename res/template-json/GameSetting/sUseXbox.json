@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUseXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Use",
+    "type": "String"
+  }
+}

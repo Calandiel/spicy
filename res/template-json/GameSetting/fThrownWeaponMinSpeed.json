@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fThrownWeaponMinSpeed",
+  "type": "GameSetting",
+  "value": {
+    "data": 300.0,
+    "type": "Float"
+  }
+}

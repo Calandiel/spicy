@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage30",
+  "type": "GameSetting",
+  "value": {
+    "data": "You need to add at least one magic effect to a spell.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Class Description",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistShock",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Shock",
+    "type": "String"
+  }
+}

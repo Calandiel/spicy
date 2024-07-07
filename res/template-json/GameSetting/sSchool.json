@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSchool",
+  "type": "GameSetting",
+  "value": {
+    "data": "School",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMaxSale",
+  "type": "GameSetting",
+  "value": {
+    "data": "Maximum Price",
+    "type": "String"
+  }
+}

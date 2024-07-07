@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_D1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Page Down",
+    "type": "String"
+  }
+}

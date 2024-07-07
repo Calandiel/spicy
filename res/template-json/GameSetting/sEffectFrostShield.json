@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFrostShield",
+  "type": "GameSetting",
+  "value": {
+    "data": "Frost Shield",
+    "type": "String"
+  }
+}

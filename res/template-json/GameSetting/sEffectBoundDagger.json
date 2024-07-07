@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBoundDagger",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound Dagger",
+    "type": "String"
+  }
+}

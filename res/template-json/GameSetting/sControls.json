@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControls",
+  "type": "GameSetting",
+  "value": {
+    "data": "Controls",
+    "type": "String"
+  }
+}

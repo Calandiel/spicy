@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToNormalWeapons",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Normal Weapons",
+    "type": "String"
+  }
+}

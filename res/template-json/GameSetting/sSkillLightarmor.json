@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillLightarmor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Light Armor",
+    "type": "String"
+  }
+}

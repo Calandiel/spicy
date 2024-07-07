@@ -1,0 +1,29 @@
+{
+  "area_sound": "",
+  "area_visual": "",
+  "bolt_sound": "",
+  "bolt_visual": "",
+  "cast_sound": "",
+  "cast_visual": "",
+  "data": {
+    "base_cost": 0.0,
+    "color": [
+      0,
+      0,
+      0
+    ],
+    "flags": "HARMFUL | CAN_CAST_SELF | CAN_CAST_TOUCH | CAN_CAST_TARGET | APPLIED_ONCE",
+    "school": "Illusion",
+    "size": 0.0,
+    "size_cap": -4.0193455e-37,
+    "speed": 0.0
+  },
+  "description": "",
+  "effect_id": "Blind",
+  "flags": "",
+  "hit_sound": "",
+  "hit_visual": "",
+  "icon": "magic/illusion/blind.dds",
+  "texture": "",
+  "type": "MagicEffect"
+}

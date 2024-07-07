@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sseconds",
+  "type": "GameSetting",
+  "value": {
+    "data": "seconds",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSystemMenuXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "System Menu",
+    "type": "String"
+  }
+}

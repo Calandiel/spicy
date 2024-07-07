@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iCrimeThreshold",
+  "type": "GameSetting",
+  "value": {
+    "data": 1000,
+    "type": "Integer"
+  }
+}

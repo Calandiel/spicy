@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu12",
+  "type": "GameSetting",
+  "value": {
+    "data": "Item successfully enchanted.",
+    "type": "String"
+  }
+}

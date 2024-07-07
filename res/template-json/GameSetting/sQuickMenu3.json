@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuickMenu3",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic Item",
+    "type": "String"
+  }
+}

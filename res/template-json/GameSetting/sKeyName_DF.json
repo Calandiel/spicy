@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_DF",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sleep",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sJournalXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Journal",
+    "type": "String"
+  }
+}

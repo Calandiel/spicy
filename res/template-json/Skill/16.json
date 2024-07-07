@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 2,
+    "specialization": 1
+  },
+  "description": "Magic of making things whole again. Used for healing, removing afflictions, and other beneficial effects.",
+  "flags": "",
+  "skill_id": "Restoration",
+  "type": "Skill"
+}

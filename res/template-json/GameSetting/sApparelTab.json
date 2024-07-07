@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sApparelTab",
+  "type": "GameSetting",
+  "value": {
+    "data": "Apparel",
+    "type": "String"
+  }
+}

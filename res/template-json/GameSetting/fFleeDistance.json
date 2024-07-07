@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFleeDistance",
+  "type": "GameSetting",
+  "value": {
+    "data": 3000.0,
+    "type": "Float"
+  }
+}

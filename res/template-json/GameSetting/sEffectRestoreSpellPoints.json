@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRestoreSpellPoints",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore Magicka",
+    "type": "String"
+  }
+}

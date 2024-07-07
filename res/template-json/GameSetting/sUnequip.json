@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUnequip",
+  "type": "GameSetting",
+  "value": {
+    "data": "Unequip",
+    "type": "String"
+  }
+}

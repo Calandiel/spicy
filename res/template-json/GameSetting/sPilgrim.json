@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPilgrim",
+  "type": "GameSetting",
+  "value": {
+    "data": "Pilgrim",
+    "type": "String"
+  }
+}

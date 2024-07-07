@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage12",
+  "type": "GameSetting",
+  "value": {
+    "data": "You lack sufficient gold to buy this spell.",
+    "type": "String"
+  }
+}

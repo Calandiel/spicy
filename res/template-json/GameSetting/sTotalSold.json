@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTotalSold",
+  "type": "GameSetting",
+  "value": {
+    "data": "TOTAL SOLD",
+    "type": "String"
+  }
+}

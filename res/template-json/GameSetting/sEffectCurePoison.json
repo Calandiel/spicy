@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectCurePoison",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cure Poison",
+    "type": "String"
+  }
+}

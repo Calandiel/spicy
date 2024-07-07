@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWaterReflectUpdate",
+  "type": "GameSetting",
+  "value": {
+    "data": "Update Reflection",
+    "type": "String"
+  }
+}

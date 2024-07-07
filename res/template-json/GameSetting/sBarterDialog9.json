@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog9",
+  "type": "GameSetting",
+  "value": {
+    "data": "Summoned items cannot be bartered.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sand",
+  "type": "GameSetting",
+  "value": {
+    "data": "and",
+    "type": "String"
+  }
+}

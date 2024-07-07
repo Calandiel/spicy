@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMenuPrevXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Previous Menu",
+    "type": "String"
+  }
+}

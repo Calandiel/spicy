@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 5,
+    "specialization": 0
+  },
+  "description": "Proficiency in wielding weapons with a long reach. Includes spears and halberds.",
+  "flags": "",
+  "skill_id": "Spear",
+  "type": "Skill"
+}

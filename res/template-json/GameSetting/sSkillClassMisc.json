@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillClassMisc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Misc Skills",
+    "type": "String"
+  }
+}

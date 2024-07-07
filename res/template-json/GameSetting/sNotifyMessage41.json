@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage41",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your %s skill has reached the limit of your %s.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHigh",
+  "type": "GameSetting",
+  "value": {
+    "data": "High",
+    "type": "String"
+  }
+}

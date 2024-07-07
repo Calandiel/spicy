@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingMessage5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Parsing Quests...",
+    "type": "String"
+  }
+}

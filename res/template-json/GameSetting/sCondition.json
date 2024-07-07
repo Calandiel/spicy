@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCondition",
+  "type": "GameSetting",
+  "value": {
+    "data": "Condition",
+    "type": "String"
+  }
+}

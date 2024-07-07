@@ -1,0 +1,24 @@
+{
+  "data": {
+    "attribute1": "Agility",
+    "attribute2": "Strength",
+    "flags": "",
+    "major1": "Restoration",
+    "major2": "Block",
+    "major3": "Armorer",
+    "major4": "Security",
+    "major5": "MediumArmor",
+    "minor1": "Speechcraft",
+    "minor2": "Mercantile",
+    "minor3": "Acrobatics",
+    "minor4": "Alchemy",
+    "minor5": "Illusion",
+    "services": "",
+    "specialization": "Combat"
+  },
+  "description": "There is noone more default.",
+  "flags": "",
+  "id": "DefaultClass",
+  "name": "Defaultlander",
+  "type": "Class"
+}

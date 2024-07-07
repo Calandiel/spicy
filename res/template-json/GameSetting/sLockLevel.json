@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLockLevel",
+  "type": "GameSetting",
+  "value": {
+    "data": "Lock Level",
+    "type": "String"
+  }
+}

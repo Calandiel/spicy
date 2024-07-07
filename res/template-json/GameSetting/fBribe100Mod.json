@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fBribe100Mod",
+  "type": "GameSetting",
+  "value": {
+    "data": 75.0,
+    "type": "Float"
+  }
+}

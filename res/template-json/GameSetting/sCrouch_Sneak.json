@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCrouch_Sneak",
+  "type": "GameSetting",
+  "value": {
+    "data": "Sneak",
+    "type": "String"
+  }
+}

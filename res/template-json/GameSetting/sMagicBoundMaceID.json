@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundMaceID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Mace",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMonthMidyear",
+  "type": "GameSetting",
+  "value": {
+    "data": "June",
+    "type": "String"
+  }
+}

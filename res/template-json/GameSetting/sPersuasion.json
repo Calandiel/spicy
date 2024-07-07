@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPersuasion",
+  "type": "GameSetting",
+  "value": {
+    "data": "Persuasion",
+    "type": "String"
+  }
+}

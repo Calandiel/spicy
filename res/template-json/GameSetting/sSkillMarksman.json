@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillMarksman",
+  "type": "GameSetting",
+  "value": {
+    "data": "Marksman",
+    "type": "String"
+  }
+}

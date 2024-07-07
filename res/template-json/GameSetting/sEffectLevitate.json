@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectLevitate",
+  "type": "GameSetting",
+  "value": {
+    "data": "Levitate",
+    "type": "String"
+  }
+}

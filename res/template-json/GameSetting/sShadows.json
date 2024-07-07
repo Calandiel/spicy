@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sShadows",
+  "type": "GameSetting",
+  "value": {
+    "data": "Shadows",
+    "type": "String"
+  }
+}

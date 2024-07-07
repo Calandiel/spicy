@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillMaxReached",
+  "type": "GameSetting",
+  "value": {
+    "data": "You've mastered this skill to its fullest.",
+    "type": "String"
+  }
+}

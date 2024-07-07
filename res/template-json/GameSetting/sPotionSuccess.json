@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sPotionSuccess",
+  "type": "GameSetting",
+  "value": {
+    "data": "You successfully brewed a potion.",
+    "type": "String"
+  }
+}

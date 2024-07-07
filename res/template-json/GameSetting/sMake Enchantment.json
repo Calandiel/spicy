@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMake Enchantment",
+  "type": "GameSetting",
+  "value": {
+    "data": "Enchant an Item",
+    "type": "String"
+  }
+}

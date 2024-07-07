@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTeleportDisabled",
+  "type": "GameSetting",
+  "value": {
+    "data": "Teleportation does not work here.",
+    "type": "String"
+  }
+}

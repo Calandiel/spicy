@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iDispTresspass",
+  "type": "GameSetting",
+  "value": {
+    "data": -20,
+    "type": "Integer"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage2",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot rest while there are enemies nearby...",
+    "type": "String"
+  }
+}

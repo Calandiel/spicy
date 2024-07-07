@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMessage5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Do you wish to quit your current game?",
+    "type": "String"
+  }
+}

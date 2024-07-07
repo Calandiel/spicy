@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifyAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Attribute",
+    "type": "String"
+  }
+}

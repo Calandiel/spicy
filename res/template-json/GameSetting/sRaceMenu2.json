@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRaceMenu2",
+  "type": "GameSetting",
+  "value": {
+    "data": "Change Sex",
+    "type": "String"
+  }
+}

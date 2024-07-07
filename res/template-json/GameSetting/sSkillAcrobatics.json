@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillAcrobatics",
+  "type": "GameSetting",
+  "value": {
+    "data": "Acrobatics",
+    "type": "String"
+  }
+}

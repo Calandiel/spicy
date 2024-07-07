@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectReflect",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reflect",
+    "type": "String"
+  }
+}

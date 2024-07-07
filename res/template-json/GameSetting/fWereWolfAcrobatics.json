@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfAcrobatics",
+  "type": "GameSetting",
+  "value": {
+    "data": 150.0,
+    "type": "Float"
+  }
+}

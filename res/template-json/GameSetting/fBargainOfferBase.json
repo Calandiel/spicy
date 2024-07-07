@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fBargainOfferBase",
+  "type": "GameSetting",
+  "value": {
+    "data": 50.0,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "item weapon spear up",
+  "sound_path": "item_weapon_up.wav",
+  "type": "Sound"
+}

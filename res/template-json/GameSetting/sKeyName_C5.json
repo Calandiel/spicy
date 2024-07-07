@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_C5",
+  "type": "GameSetting",
+  "value": {
+    "data": "Pause",
+    "type": "String"
+  }
+}

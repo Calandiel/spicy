@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestIllegal",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resting here is not allowed. You will need to find a bed.",
+    "type": "String"
+  }
+}

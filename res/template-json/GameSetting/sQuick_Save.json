@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuick_Save",
+  "type": "GameSetting",
+  "value": {
+    "data": "Auto-Save when Rest",
+    "type": "String"
+  }
+}

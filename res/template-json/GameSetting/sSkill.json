@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkill",
+  "type": "GameSetting",
+  "value": {
+    "data": "Skill",
+    "type": "String"
+  }
+}

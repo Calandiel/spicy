@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sControlsMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Reset Controls",
+    "type": "String"
+  }
+}

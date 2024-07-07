@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sQuality",
+  "type": "GameSetting",
+  "value": {
+    "data": "Quality",
+    "type": "String"
+  }
+}

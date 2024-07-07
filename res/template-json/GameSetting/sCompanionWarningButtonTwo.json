@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCompanionWarningButtonTwo",
+  "type": "GameSetting",
+  "value": {
+    "data": "Return to companion share.",
+    "type": "String"
+  }
+}

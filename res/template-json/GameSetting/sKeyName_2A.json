@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sKeyName_2A",
+  "type": "GameSetting",
+  "value": {
+    "data": "Left Shift",
+    "type": "String"
+  }
+}

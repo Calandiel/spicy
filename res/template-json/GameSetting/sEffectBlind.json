@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectBlind",
+  "type": "GameSetting",
+  "value": {
+    "data": "Blind",
+    "type": "String"
+  }
+}

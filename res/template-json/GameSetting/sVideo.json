@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sVideo",
+  "type": "GameSetting",
+  "value": {
+    "data": "Video",
+    "type": "String"
+  }
+}

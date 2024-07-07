@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTogglePOVXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Toggle View",
+    "type": "String"
+  }
+}

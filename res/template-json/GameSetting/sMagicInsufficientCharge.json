@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicInsufficientCharge",
+  "type": "GameSetting",
+  "value": {
+    "data": "Item doesn't have enough charge to use its enchantment.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "close_sound": "",
+  "flags": "",
+  "id": "PrisonMarker",
+  "mesh": "marker_prison.dae",
+  "name": "",
+  "open_sound": "",
+  "script": "",
+  "type": "Door"
+}

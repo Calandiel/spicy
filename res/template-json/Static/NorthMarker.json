@@ -1,0 +1,6 @@
+{
+  "flags": "",
+  "id": "NorthMarker",
+  "mesh": "marker_north.dae",
+  "type": "Static"
+}

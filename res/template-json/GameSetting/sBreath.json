@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBreath",
+  "type": "GameSetting",
+  "value": {
+    "data": "Breath",
+    "type": "String"
+  }
+}

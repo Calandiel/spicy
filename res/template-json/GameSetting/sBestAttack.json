@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBestAttack",
+  "type": "GameSetting",
+  "value": {
+    "data": "Always Use Best Attack",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDivineIntervention",
+  "type": "GameSetting",
+  "value": {
+    "data": "Divine Intervention",
+    "type": "String"
+  }
+}

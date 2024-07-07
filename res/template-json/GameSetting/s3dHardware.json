@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "s3dHardware",
+  "type": "GameSetting",
+  "value": {
+    "data": "Hardware Accelerated",
+    "type": "String"
+  }
+}

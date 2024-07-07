@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFortifyFatigue",
+  "type": "GameSetting",
+  "value": {
+    "data": "Fortify Fatigue",
+    "type": "String"
+  }
+}

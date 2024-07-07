@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage9",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your offer is refused.",
+    "type": "String"
+  }
+}

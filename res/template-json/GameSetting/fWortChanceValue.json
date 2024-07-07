@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWortChanceValue",
+  "type": "GameSetting",
+  "value": {
+    "data": 15.0,
+    "type": "Float"
+  }
+}

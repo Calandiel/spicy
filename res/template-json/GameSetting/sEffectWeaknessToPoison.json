@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectWeaknessToPoison",
+  "type": "GameSetting",
+  "value": {
+    "data": "Weakness to Poison",
+    "type": "String"
+  }
+}

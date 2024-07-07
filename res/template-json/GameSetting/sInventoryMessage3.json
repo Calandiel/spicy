@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMessage3",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot brew potions during combat.",
+    "type": "String"
+  }
+}

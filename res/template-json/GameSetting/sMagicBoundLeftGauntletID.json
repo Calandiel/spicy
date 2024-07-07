@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicBoundLeftGauntletID",
+  "type": "GameSetting",
+  "value": {
+    "data": "Bound_Gauntlet_Left",
+    "type": "String"
+  }
+}

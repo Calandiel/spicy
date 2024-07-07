@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 4,
+    "specialization": 1
+  },
+  "description": "No armor, no cry.",
+  "flags": "",
+  "skill_id": "Unarmored",
+  "type": "Skill"
+}

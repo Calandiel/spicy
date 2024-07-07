@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSpellmakingMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Spell Chance",
+    "type": "String"
+  }
+}

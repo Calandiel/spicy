@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTurnRightXbox",
+  "type": "GameSetting",
+  "value": {
+    "data": "Turn Right",
+    "type": "String"
+  }
+}

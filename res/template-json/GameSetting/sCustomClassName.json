@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCustomClassName",
+  "type": "GameSetting",
+  "value": {
+    "data": "Adventurer",
+    "type": "String"
+  }
+}

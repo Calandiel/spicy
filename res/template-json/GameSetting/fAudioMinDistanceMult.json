@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAudioMinDistanceMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 20.0,
+    "type": "Float"
+  }
+}

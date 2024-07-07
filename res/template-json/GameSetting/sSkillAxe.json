@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillAxe",
+  "type": "GameSetting",
+  "value": {
+    "data": "Axe",
+    "type": "String"
+  }
+}

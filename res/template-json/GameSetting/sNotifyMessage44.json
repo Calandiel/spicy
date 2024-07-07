@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage44",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your %s skill decreased to %d.",
+    "type": "String"
+  }
+}

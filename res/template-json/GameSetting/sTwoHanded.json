@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTwoHanded",
+  "type": "GameSetting",
+  "value": {
+    "data": "Two Handed",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sSkillBlock",
+  "type": "GameSetting",
+  "value": {
+    "data": "Block",
+    "type": "String"
+  }
+}

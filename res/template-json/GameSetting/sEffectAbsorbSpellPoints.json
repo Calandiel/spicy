@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectAbsorbSpellPoints",
+  "type": "GameSetting",
+  "value": {
+    "data": "Absorb Magicka",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLoadingMessage4",
+  "type": "GameSetting",
+  "value": {
+    "data": "Initializing Data...",
+    "type": "String"
+  }
+}

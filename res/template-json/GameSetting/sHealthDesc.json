@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sHealthDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "How alive you are.",
+    "type": "String"
+  }
+}

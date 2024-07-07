@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sClassChoiceMenu1",
+  "type": "GameSetting",
+  "value": {
+    "data": "Answer questions (Generate Class)",
+    "type": "String"
+  }
+}

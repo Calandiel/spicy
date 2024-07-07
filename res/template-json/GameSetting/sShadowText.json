@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sShadowText",
+  "type": "GameSetting",
+  "value": {
+    "data": "Real-time Shadows",
+    "type": "String"
+  }
+}

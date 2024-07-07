@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      3.0,
+      2.0,
+      1.0,
+      1.0
+    ],
+    "governing_attribute": 1,
+    "specialization": 2
+  },
+  "description": "The world is filled with doors and chests their owners don't want you to open. This skill will enable you to do exactly that. Also needed for disarming traps.",
+  "flags": "",
+  "skill_id": "Security",
+  "type": "Skill"
+}

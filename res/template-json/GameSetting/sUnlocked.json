@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUnlocked",
+  "type": "GameSetting",
+  "value": {
+    "data": "Unlocked",
+    "type": "String"
+  }
+}

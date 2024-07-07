@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNightblade",
+  "type": "GameSetting",
+  "value": {
+    "data": "Nightblade",
+    "type": "String"
+  }
+}

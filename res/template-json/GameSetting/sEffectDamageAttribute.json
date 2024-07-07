@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDamageAttribute",
+  "type": "GameSetting",
+  "value": {
+    "data": "Damage Attribute",
+    "type": "String"
+  }
+}

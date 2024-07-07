@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fSneakUseDist",
+  "type": "GameSetting",
+  "value": {
+    "data": 500.0,
+    "type": "Float"
+  }
+}

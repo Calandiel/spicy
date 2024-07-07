@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectResistFire",
+  "type": "GameSetting",
+  "value": {
+    "data": "Resist Fire",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectRestoreHealth",
+  "type": "GameSetting",
+  "value": {
+    "data": "Restore Health",
+    "type": "String"
+  }
+}

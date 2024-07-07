@@ -1,0 +1,16 @@
+{
+  "data": {
+    "actions": [
+      5.0,
+      0.1,
+      5.0,
+      0.0
+    ],
+    "governing_attribute": 1,
+    "specialization": 1
+  },
+  "description": "Add permanent magical effects to various items by using souls trapped inside a soul gem.",
+  "flags": "",
+  "skill_id": "Enchant",
+  "type": "Skill"
+}

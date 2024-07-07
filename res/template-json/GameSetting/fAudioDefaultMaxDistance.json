@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fAudioDefaultMaxDistance",
+  "type": "GameSetting",
+  "value": {
+    "data": 40.0,
+    "type": "Float"
+  }
+}

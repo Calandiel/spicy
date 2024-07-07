@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sTo",
+  "type": "GameSetting",
+  "value": {
+    "data": "to",
+    "type": "String"
+  }
+}

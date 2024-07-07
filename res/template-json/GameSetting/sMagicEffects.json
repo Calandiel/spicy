@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicEffects",
+  "type": "GameSetting",
+  "value": {
+    "data": "Magic Effects",
+    "type": "String"
+  }
+}

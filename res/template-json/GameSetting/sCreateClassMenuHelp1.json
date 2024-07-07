@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sCreateClassMenuHelp1",
+  "type": "GameSetting",
+  "value": {
+    "data": "You get +5 to all of your major and minor skills. They are also easier to improve.",
+    "type": "String"
+  }
+}

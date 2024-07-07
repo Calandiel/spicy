@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iFightTrespass",
+  "type": "GameSetting",
+  "value": {
+    "data": 25,
+    "type": "Integer"
+  }
+}

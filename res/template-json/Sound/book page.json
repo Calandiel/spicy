@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "book page",
+  "sound_path": "book_page.wav",
+  "type": "Sound"
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fFallDamageDistanceMin",
+  "type": "GameSetting",
+  "value": {
+    "data": 400.0,
+    "type": "Float"
+  }
+}

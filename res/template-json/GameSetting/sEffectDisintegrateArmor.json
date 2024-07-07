@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectDisintegrateArmor",
+  "type": "GameSetting",
+  "value": {
+    "data": "Disintegrate Armor",
+    "type": "String"
+  }
+}

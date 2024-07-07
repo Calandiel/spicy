@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iFightAttack",
+  "type": "GameSetting",
+  "value": {
+    "data": 100,
+    "type": "Integer"
+  }
+}

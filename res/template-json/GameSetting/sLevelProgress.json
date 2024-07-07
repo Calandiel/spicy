@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sLevelProgress",
+  "type": "GameSetting",
+  "value": {
+    "data": "Progress towards next level",
+    "type": "String"
+  }
+}

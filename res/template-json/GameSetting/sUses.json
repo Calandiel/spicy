@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sUses",
+  "type": "GameSetting",
+  "value": {
+    "data": "Uses",
+    "type": "String"
+  }
+}

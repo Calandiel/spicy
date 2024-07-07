@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sBarterDialog6",
+  "type": "GameSetting",
+  "value": {
+    "data": "Place the item before exiting the barter menu.",
+    "type": "String"
+  }
+}

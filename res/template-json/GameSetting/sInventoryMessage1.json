@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sInventoryMessage1",
+  "type": "GameSetting",
+  "value": {
+    "data": "This item is broken and cannot be used until it is repaired.",
+    "type": "String"
+  }
+}

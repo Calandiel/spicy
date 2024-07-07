@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage31",
+  "type": "GameSetting",
+  "value": {
+    "data": "Enchanted items cannot receive another enchantment.",
+    "type": "String"
+  }
+}

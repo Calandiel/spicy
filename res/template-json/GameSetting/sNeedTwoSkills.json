@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNeedTwoSkills",
+  "type": "GameSetting",
+  "value": {
+    "data": "Need two skills at",
+    "type": "String"
+  }
+}

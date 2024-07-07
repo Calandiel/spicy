@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEffectFrenzyHumanoid",
+  "type": "GameSetting",
+  "value": {
+    "data": "Frenzy Humanoid",
+    "type": "String"
+  }
+}

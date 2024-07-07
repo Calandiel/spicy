@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEncumbrance",
+  "type": "GameSetting",
+  "value": {
+    "data": "Encumbrance",
+    "type": "String"
+  }
+}

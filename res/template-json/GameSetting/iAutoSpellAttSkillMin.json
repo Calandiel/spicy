@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "iAutoSpellAttSkillMin",
+  "type": "GameSetting",
+  "value": {
+    "data": 70,
+    "type": "Integer"
+  }
+}

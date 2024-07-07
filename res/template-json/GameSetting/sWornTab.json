@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sWornTab",
+  "type": "GameSetting",
+  "value": {
+    "data": "Worn",
+    "type": "String"
+  }
+}

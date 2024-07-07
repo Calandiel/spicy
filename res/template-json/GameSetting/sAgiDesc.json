@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sAgiDesc",
+  "type": "GameSetting",
+  "value": {
+    "data": "Ability to move your body with elegance and efficiency. Helps you to hit targets in combat and avoid attacks. Also contributes to your maximum Fatigue.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sItemCastWhenUsed",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cast When Used",
+    "type": "String"
+  }
+}

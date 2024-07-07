@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMagicTargetResistsWeapons",
+  "type": "GameSetting",
+  "value": {
+    "data": "Your weapon has no effect.",
+    "type": "String"
+  }
+}

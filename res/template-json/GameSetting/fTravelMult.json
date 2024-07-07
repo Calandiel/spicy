@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fTravelMult",
+  "type": "GameSetting",
+  "value": {
+    "data": 4000.0,
+    "type": "Float"
+  }
+}

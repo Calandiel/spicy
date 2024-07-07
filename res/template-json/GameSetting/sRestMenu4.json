@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sRestMenu4",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot rest at this time.",
+    "type": "String"
+  }
+}

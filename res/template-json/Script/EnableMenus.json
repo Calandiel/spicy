@@ -1,0 +1,15 @@
+{
+  "bytecode": "AAAAAA==",
+  "flags": "",
+  "header": {
+    "bytecode_length": 0,
+    "num_floats": 0,
+    "num_longs": 0,
+    "num_shorts": 0,
+    "variables_length": 0
+  },
+  "id": "EnableMenus",
+  "text": "Begin EnableMenus\n\n;Enables all menus visible during normal gameplay\n\nEnableMagicMenu\nEnableInventoryMenu\nEnableMapMenu\nEnableStatsMenu\nEnableRest\nset CharGenState to -1\n\nstopscript EnableMenus\n\nEnd EnableMenus\n",
+  "type": "Script",
+  "variables": "AAAAAA=="
+}

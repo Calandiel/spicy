@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sMenu_Help_Delay",
+  "type": "GameSetting",
+  "value": {
+    "data": "Menu Help Delay",
+    "type": "String"
+  }
+}

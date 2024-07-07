@@ -1,0 +1,13 @@
+{
+  "data": {
+    "range": [
+      0,
+      0
+    ],
+    "volume": 255
+  },
+  "flags": "",
+  "id": "ashstorm",
+  "sound_path": "ash_storm.wav",
+  "type": "Sound"
+}

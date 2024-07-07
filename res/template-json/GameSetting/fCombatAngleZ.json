@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fCombatAngleZ",
+  "type": "GameSetting",
+  "value": {
+    "data": 60.0,
+    "type": "Float"
+  }
+}

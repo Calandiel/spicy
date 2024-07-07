@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sConsoleTitle",
+  "type": "GameSetting",
+  "value": {
+    "data": "Console",
+    "type": "String"
+  }
+}

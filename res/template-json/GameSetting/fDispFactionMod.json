@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fDispFactionMod",
+  "type": "GameSetting",
+  "value": {
+    "data": 3.0,
+    "type": "Float"
+  }
+}

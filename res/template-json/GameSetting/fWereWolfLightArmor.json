@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "fWereWolfLightArmor",
+  "type": "GameSetting",
+  "value": {
+    "data": 1.0,
+    "type": "Float"
+  }
+}

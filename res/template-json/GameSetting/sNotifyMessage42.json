@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage42",
+  "type": "GameSetting",
+  "value": {
+    "data": "You have been released after %d day.",
+    "type": "String"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sEnchantmentMenu8",
+  "type": "GameSetting",
+  "value": {
+    "data": "Cannot buy a spell with zero point cost.",
+    "type": "String"
+  }
+}

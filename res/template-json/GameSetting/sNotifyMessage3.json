@@ -1,0 +1,9 @@
+{
+  "flags": "",
+  "id": "sNotifyMessage3",
+  "type": "GameSetting",
+  "value": {
+    "data": "You cannot sleep while in a dream.",
+    "type": "String"
+  }
+}
