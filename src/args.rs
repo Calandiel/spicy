@@ -16,8 +16,8 @@ pub enum Commands {
 	New { path: String },
 	#[command(about = "Clears all build and cache files")]
 	Clear,
-	// #[command(about = "Runs the game with OpenMW")]
-	// Run,
+	#[command(about = "Runs the game with OpenMW")]
+	Run,
 	#[command(about = "Compiles an out.omwgame file to run the game")]
 	Compile,
 	#[command(about = "Decompiles the out.omwgame in the build directory")]

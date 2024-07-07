@@ -13,12 +13,14 @@ use serde_json::{from_str, Value};
 use std::{
 	env,
 	fs::{self, OpenOptions},
-	io::Write,
+	io::{Cursor, Write},
 	path::PathBuf,
 	process::{Command, Stdio},
+	str::FromStr,
 };
-use utils::{create_bin_file, create_empty_file, create_text_file};
+use utils::{create_bin_file, create_text_file};
 use world_gen::world::OpenmwWorld;
+use zip::ZipArchive;
 
 mod args;
 mod constants;
@@ -44,6 +46,9 @@ fn main_body() -> anyhow::Result<()> {
 	match args.command {
 		Commands::New { path } => {
 			new(path)?;
+		}
+		Commands::Run => {
+			run()?;
 		}
 		Commands::Clear => {
 			ensure_common_exists()?;
@@ -135,6 +140,69 @@ fn ensure_common_exists() -> anyhow::Result<()> {
 	Ok(())
 }
 
+fn ensure_openmw_exists() -> anyhow::Result<()> {
+	let openmw_windows = Cursor::new(include_bytes!("openmw/openmw-windows.zip").as_slice());
+	let openmw_linux = Cursor::new(include_bytes!("openmw/openmw-linux.zip").as_slice());
+
+	let archive_windows = zip::ZipArchive::new(openmw_windows).unwrap();
+	let archive_linux = zip::ZipArchive::new(openmw_linux).unwrap();
+
+	let decompress_archive = |subpath: &str, mut archive: ZipArchive<Cursor<&[u8]>>| {
+		for i in 0..archive.len() {
+			let mut file = archive.by_index(i).unwrap();
+			let outpath = match file.enclosed_name() {
+				Some(path) => {
+					let mut final_path = PathBuf::from_str(subpath).unwrap();
+					final_path.push(path);
+					final_path
+				}
+				None => continue,
+			};
+
+			{
+				let comment = file.comment();
+				if !comment.is_empty() {
+					println!("File {i} comment: {comment}");
+				}
+			}
+
+			if file.is_dir() {
+				println!("File {} extracted to \"{}\"", i, outpath.display());
+				fs::create_dir_all(&outpath).unwrap();
+			} else {
+				println!(
+					"File {} extracted to \"{}\" ({} bytes)",
+					i,
+					outpath.display(),
+					file.size()
+				);
+				if let Some(p) = outpath.parent() {
+					if !p.exists() {
+						fs::create_dir_all(p).unwrap();
+					}
+				}
+				let mut outfile = fs::File::create(&outpath).unwrap();
+				std::io::copy(&mut file, &mut outfile).unwrap();
+			}
+
+			// Get and Set permissions
+			#[cfg(unix)]
+			{
+				use std::os::unix::fs::PermissionsExt;
+
+				if let Some(mode) = file.unix_mode() {
+					fs::set_permissions(&outpath, fs::Permissions::from_mode(mode)).unwrap();
+				}
+			}
+		}
+	};
+
+	decompress_archive("cache/openmw/windows", archive_windows);
+	decompress_archive("cache/openmw/linux", archive_linux);
+
+	Ok(())
+}
+
 fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 	if !PathBuf::from("cache/tes3conv").exists() {
 		// Get raw data
@@ -177,6 +245,11 @@ fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
 		"not on linux so we're not setting permissions on {:?}",
 		linux_path
 	);
+	Ok(())
+}
+
+fn run() -> anyhow::Result<()> {
+	compile()?;
 	Ok(())
 }
 
@@ -234,6 +307,7 @@ fn compile() -> anyhow::Result<()> {
 	create_subdirectory("cache").unwrap();
 	create_subdirectory("build").unwrap();
 	ensure_tes3conv_exists().unwrap();
+	ensure_openmw_exists().unwrap();
 	dae::compile_assets()?;
 
 	let tes3conv_path = get_tes3conv_path();
