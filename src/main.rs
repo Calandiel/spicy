@@ -241,7 +241,7 @@ fn clear() -> anyhow::Result<()> {
 }
 
 fn compile() -> anyhow::Result<()> {
-	println!("Converting .obj files to .dae");
+	println!("Converting .glb files to .dae");
 	// dae::convert_obj_to_dae()?;
 	dae::compile_assets()?;
 
