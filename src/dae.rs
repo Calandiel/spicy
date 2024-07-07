@@ -33,13 +33,13 @@ fn visit_dirs(
 	cb: &dyn Fn(&fs::DirEntry, &mut HashSet<PathBuf>) -> anyhow::Result<()>,
 ) -> anyhow::Result<()> {
 	if dir.is_dir() {
-		for entry in fs::read_dir(dir)? {
-			let entry = entry?;
+		for entry in fs::read_dir(dir).unwrap() {
+			let entry = entry.unwrap();
 			let path = entry.path();
 			if path.is_dir() {
-				visit_dirs(&path, set, cb)?;
+				visit_dirs(&path, set, cb).unwrap();
 			} else {
-				cb(&entry, set)?;
+				cb(&entry, set).unwrap();
 			}
 		}
 	}
@@ -427,7 +427,7 @@ pub fn get_target_path(original: &PathBuf) -> PathBuf {
 	meshes_path.push("assets");
 
 	let mut meshes_target = env::current_dir().unwrap();
-	meshes_target.push("common/build");
+	meshes_target.push("build");
 
 	let original_str = original.to_str().unwrap();
 	return original_str
@@ -444,7 +444,7 @@ fn copy_directory(subdir: &str) -> anyhow::Result<()> {
 	let mut all_icon_paths = std::collections::hash_set::HashSet::new();
 	visit_dirs(&dir_path, &mut all_icon_paths, &|dir, _| {
 		let file_content = fs::read(dir.path())?;
-		fs::create_dir_all(get_target_path(&dir.path()).parent().unwrap())?;
+		fs::create_dir_all(get_target_path(&dir.path()).parent().unwrap()).unwrap();
 		fs::write(get_target_path(&dir.path()), file_content).unwrap();
 		Ok(())
 	})?;
@@ -462,11 +462,15 @@ pub fn compile_assets() -> anyhow::Result<()> {
 	let file_content = {
 		let mut out_script_path = std::env::current_dir()?;
 		out_script_path.push("assets/out.omwscripts");
-		fs::read(out_script_path)?
+		if let Ok(e) = fs::read(out_script_path) {
+			Some(e)
+		} else {
+			None
+		}
 	};
-	{
+	if let Some(file_content) = file_content {
 		let mut out_script_path = std::env::current_dir()?;
-		out_script_path.push("common/build/out.omwscripts");
+		out_script_path.push("build/out.omwscripts");
 		fs::create_dir_all(get_target_path(&out_script_path).parent().unwrap())?;
 		fs::write(get_target_path(&out_script_path), file_content).unwrap();
 	}

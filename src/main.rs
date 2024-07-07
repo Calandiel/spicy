@@ -1,11 +1,12 @@
 use crate::{
-	args::{Action, Args},
-	constants::{LAND_RECORD_SCALER, ORIGINAL_FILE_PATH_JSON_ATTR, SQUARES_PER_CELL},
+	args::{Args, Commands},
+	constants::{ORIGINAL_FILE_PATH_JSON_ATTR, SQUARES_PER_CELL},
+	utils::create_subdirectory,
 };
 use anyhow::{anyhow, Ok};
 use base64::Engine;
 use clap::Parser;
-use constants::TODD_UNIT;
+use colored::*;
 use dae::get_target_path;
 use records::get_record_types;
 use serde_json::{from_str, Value};
@@ -16,6 +17,7 @@ use std::{
 	path::PathBuf,
 	process::{Command, Stdio},
 };
+use utils::{create_bin_file, create_empty_file, create_text_file};
 use world_gen::world::OpenmwWorld;
 
 mod args;
@@ -23,45 +25,64 @@ mod constants;
 mod dae;
 mod record;
 mod records;
+mod utils;
 mod world_gen;
 
 fn main() -> anyhow::Result<()> {
-	println!("=== spicy (v0.0.1) ===");
+	if let Err(e) = main_body() {
+		println!("{}", "Failed".red());
+		return Err(e);
+	}
 
+	println!("{}", "Finished".green());
+	Ok(())
+}
+
+fn main_body() -> anyhow::Result<()> {
 	let args = Args::parse();
-	println!("{:?}", args);
 
-	ensure_common_exists()?;
-
-	match args.action {
-		Action::New => {
-			new()?;
+	match args.command {
+		Commands::New { path } => {
+			new(path)?;
 		}
-		Action::Clear => {
+		Commands::Clear => {
+			ensure_common_exists()?;
 			clear()?;
 		}
-		Action::Compile => {
+		Commands::Compile => {
+			ensure_common_exists()?;
 			compile()?;
 		}
-		Action::Decompile => {
-			decompile(args)?;
-		}
-		Action::WorldGen => {
-			world_gen()?;
+		Commands::Decompile { input_path } => {
+			ensure_common_exists()?;
+			decompile(input_path)?;
 		}
 	}
 
 	Ok(())
 }
 
+fn check_for_spicy_toml() -> anyhow::Result<()> {
+	let mut path = env::current_dir().unwrap();
+	path.push("spicy.toml");
+	if path.exists() {
+		Ok(())
+	} else {
+		Err(anyhow!(
+			"could not find `spicy.toml` in `{}`",
+			path.to_string_lossy()
+		))
+	}
+}
+
 fn get_tes3conv_path() -> PathBuf {
 	// Parse tes3conv path
 	let mut tes3conv_path = env::current_dir().unwrap();
-	println!("Current dir: {:?}", tes3conv_path);
+	println!("Current dir: {:.?}", tes3conv_path);
 	if cfg!(target_os = "windows") {
-		tes3conv_path.push("common/tes3conv/windows/tes3conv.exe");
+		tes3conv_path.push("cache/tes3conv/windows/tes3conv.exe");
 	} else if cfg!(target_os = "linux") {
-		tes3conv_path.push("common/tes3conv/linux/tes3conv");
+		tes3conv_path.push("cache/tes3conv/linux/tes3conv");
 	} else {
 		panic!("Unsupported OS!");
 	}
@@ -82,11 +103,11 @@ fn process_directory(mut input_path: PathBuf, outputs: &mut Vec<PathBuf>) -> any
 	}
 	let directories = fs::read_dir(input_path).unwrap();
 	for directory in directories {
-		let directory_entry = directory?;
+		let directory_entry = directory.unwrap();
 		let directory_path = directory_entry.path();
 
 		if directory_path.is_dir() {
-			process_directory(directory_path.clone(), outputs)?;
+			process_directory(directory_path.clone(), outputs).unwrap();
 		}
 
 		if directory_path.is_file() {
@@ -102,8 +123,8 @@ fn process_directory(mut input_path: PathBuf, outputs: &mut Vec<PathBuf>) -> any
 }
 
 fn ensure_common_exists() -> anyhow::Result<()> {
-	if !PathBuf::from("common/cache").exists()
-		|| !PathBuf::from("common/build").exists()
+	if !PathBuf::from("cache").exists()
+		|| !PathBuf::from("build").exists()
 		|| !PathBuf::from("common/data").exists()
 	{
 		clear()?;
@@ -115,58 +136,43 @@ fn ensure_common_exists() -> anyhow::Result<()> {
 }
 
 fn ensure_tes3conv_exists() -> anyhow::Result<()> {
-	if !PathBuf::from("common/tes3conv").exists() {
+	if !PathBuf::from("cache/tes3conv").exists() {
 		// Get raw data
 		let tes3conv_windows = include_bytes!("tes3conv/windows/tes3conv.exe");
 		let tes3conv_linux = include_bytes!("tes3conv/linux/tes3conv");
 
 		// Create dirs
 		let mut path = env::current_dir().unwrap();
-		path.push("common/tes3conv/windows");
-		fs::create_dir_all(path.clone())?;
+		path.push("cache/tes3conv/windows");
+		fs::create_dir_all(path.clone()).unwrap();
 
 		let mut path = env::current_dir().unwrap();
-		path.push("common/tes3conv/linux");
-		fs::create_dir_all(path.clone())?;
+		path.push("cache/tes3conv/linux");
+		fs::create_dir_all(path.clone()).unwrap();
 
 		// Create and write files
-		let mut windows_path = env::current_dir().unwrap();
-		windows_path.push("common/tes3conv/windows/tes3conv.exe");
-		let mut file = OpenOptions::new()
-			.write(true)
-			.create(true)
-			.truncate(true)
-			.open(windows_path.clone())?;
-		file.write_all(tes3conv_windows)?;
+		create_bin_file("cache/tes3conv/windows", "tes3conv.exe", tes3conv_windows).unwrap();
+		create_bin_file("cache/tes3conv/linux", "tes3conv", tes3conv_linux).unwrap();
 
-		let mut linux_path = env::current_dir().unwrap();
-		linux_path.push("common/tes3conv/linux/tes3conv");
-		let mut file = OpenOptions::new()
-			.write(true)
-			.create(true)
-			.truncate(true)
-			.open(linux_path.clone())?;
-		file.write_all(tes3conv_linux)?;
-
-		set_exe_permissions(linux_path.clone())?;
+		set_exe_permissions("cache/tes3conv/linux/tes3conv").unwrap();
 	}
 
 	Ok(())
 }
 
 #[cfg(target_os = "linux")]
-fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
+fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
 	use std::os::unix::fs::PermissionsExt;
-	let metadata = std::fs::metadata(linux_path.clone())?;
+	let metadata = std::fs::metadata(linux_path).unwrap();
 	let mut permissions = metadata.permissions();
 	permissions.set_mode(0o775);
-	fs::set_permissions(linux_path, permissions)?;
+	fs::set_permissions(linux_path, permissions).unwrap();
 
 	Ok(())
 }
 
 #[cfg(target_os = "windows")]
-fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
+fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
 	println!(
 		"not on linux so we're not setting permissions on {:?}",
 		linux_path
@@ -174,9 +180,21 @@ fn set_exe_permissions(linux_path: PathBuf) -> anyhow::Result<()> {
 	Ok(())
 }
 
-fn new() -> anyhow::Result<()> {
-	clear()?;
-	create_record_dirs()?;
+fn new(relative_path: String) -> anyhow::Result<()> {
+	let mut base_path = env::current_dir().unwrap();
+	base_path.push(relative_path.clone());
+	if base_path.exists() {
+		return Err(anyhow!(
+			"directory `{}` already exists",
+			base_path.to_string_lossy()
+		));
+	}
+	fs::create_dir_all(base_path.clone())?;
+	let mut spicy_toml = base_path.clone();
+	spicy_toml.push("spicy.toml");
+	fs::write(spicy_toml, "# The project was created by spicy")?;
+
+	create_record_dirs(Some(relative_path.clone()))?;
 
 	let json = r###"{
   "author": "Author",
@@ -189,60 +207,33 @@ fn new() -> anyhow::Result<()> {
 }
 "###;
 
-	let mut path = env::current_dir().unwrap();
-	path.push("common/data/Header/header.json");
-	let mut file = OpenOptions::new()
-		.write(true)
-		.create(true)
-		.truncate(true)
-		.open(path)?;
-	file.write_all(json.as_bytes())?;
+	create_text_file(
+		format!("{}/common/data/Header", relative_path).as_str(),
+		"header.json",
+		json,
+	)
+	.unwrap();
 
 	Ok(())
 }
 
 fn clear() -> anyhow::Result<()> {
-	if PathBuf::from("common/cache").exists() {
-		fs::remove_dir_all("common/cache")?;
+	check_for_spicy_toml()?;
+	if PathBuf::from("cache").exists() {
+		fs::remove_dir_all("cache").unwrap();
 	}
-	if PathBuf::from("common/build").exists() {
-		fs::remove_dir_all("common/build")?;
+	if PathBuf::from("build").exists() {
+		fs::remove_dir_all("build").unwrap();
 	}
-	if PathBuf::from("common/data").exists() {
-		fs::remove_dir_all("common/data")?;
-	}
-	if PathBuf::from("common/tes3conv").exists() {
-		fs::remove_dir_all("common/tes3conv")?;
-	}
-
-	let create_gitkeep = |subpath: &str, file: &str| -> anyhow::Result<()> {
-		let mut path = env::current_dir().unwrap();
-		path.push(subpath);
-
-		fs::create_dir_all(path.clone())?;
-
-		path.push(file);
-
-		let _ = OpenOptions::new()
-			.write(true)
-			.create(true)
-			.truncate(true)
-			.open(path.clone())?;
-
-		Ok(())
-	};
-
-	create_gitkeep("common/cache", ".gitkeep")?;
-	create_gitkeep("common/build", ".gitkeep")?;
-	create_gitkeep("common/data", ".gitkeep")?;
-	ensure_tes3conv_exists()?;
 
 	Ok(())
 }
 
 fn compile() -> anyhow::Result<()> {
-	println!("Converting .glb files to .dae");
-	// dae::convert_obj_to_dae()?;
+	check_for_spicy_toml()?;
+	create_subdirectory("cache").unwrap();
+	create_subdirectory("build").unwrap();
+	ensure_tes3conv_exists().unwrap();
 	dae::compile_assets()?;
 
 	let tes3conv_path = get_tes3conv_path();
@@ -251,9 +242,9 @@ fn compile() -> anyhow::Result<()> {
 	let mut input_path = env::current_dir().unwrap();
 	input_path.push("common/data");
 	let mut output_path = env::current_dir().unwrap();
-	output_path.push("common/build/out.esm");
+	output_path.push("build/out.esm");
 	let mut temporary_json_path = env::current_dir().unwrap();
-	temporary_json_path.push("common/cache/temp.json");
+	temporary_json_path.push("cache/temp.json");
 	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
 	println!("Output path: {}", output_path.to_string_lossy());
 	let mut final_path = output_path.clone();
@@ -268,7 +259,7 @@ fn compile() -> anyhow::Result<()> {
 	}
 
 	let mut files = vec![];
-	process_directory(input_path, &mut files)?;
+	process_directory(input_path, &mut files).unwrap();
 
 	let mut cell_reference_counter = 0;
 	let mut dialogue_info_id_counter = 0;
@@ -284,13 +275,13 @@ fn compile() -> anyhow::Result<()> {
 		);
 
 		// Validate individual records...
-		fill_in_single_record(&mut parsed_json, files.len(), &mut cell_reference_counter)?;
-		validate_single_record(&parsed_json)?;
+		fill_in_single_record(&mut parsed_json, files.len(), &mut cell_reference_counter).unwrap();
+		validate_single_record(&parsed_json).unwrap();
 
 		parsed_jsons.push(parsed_json);
 	}
 	// Validate all recorda at once
-	validate_records_together(&mut parsed_jsons)?;
+	validate_records_together(&mut parsed_jsons).unwrap();
 
 	// Write the final value
 	for (index, parsed_json) in parsed_jsons.iter_mut().enumerate() {
@@ -339,8 +330,8 @@ fn compile() -> anyhow::Result<()> {
 
 		if read_string_from_record(&parsed_json, "type").unwrap() == "Dialogue" {
 			for info in &mut infos {
-				fill_in_single_record(info, 0, &mut cell_reference_counter)?;
-				validate_single_record(info)?;
+				fill_in_single_record(info, 0, &mut cell_reference_counter).unwrap();
+				validate_single_record(info).unwrap();
 
 				json.push_str(",\n");
 				json.push_str(&info.to_string());
@@ -352,15 +343,16 @@ fn compile() -> anyhow::Result<()> {
 	}
 	json.push(']');
 
-	validate_json(&from_str(&json)?)?;
+	validate_json(&from_str(&json).unwrap()).unwrap();
 
 	println!("Saving final json...");
 	let mut file = OpenOptions::new()
 		.write(true)
 		.create(true)
 		.truncate(true)
-		.open(temporary_json_path.clone())?;
-	file.write_all(json.as_bytes())?;
+		.open(temporary_json_path.clone())
+		.unwrap();
+	file.write_all(json.as_bytes()).unwrap();
 
 	println!("Running: {:?}\n", tes3conv_path);
 	let output = Command::new(tes3conv_path)
@@ -371,25 +363,23 @@ fn compile() -> anyhow::Result<()> {
 		.output()
 		.expect("Failed to tes3conv");
 
-	let converted = fs::read(output_path.clone())?;
-	fs::write(final_path, converted)?;
-	fs::remove_file(output_path)?; // remove after copying
+	let converted = fs::read(output_path.clone()).unwrap();
+	fs::write(final_path, converted).unwrap();
+	fs::remove_file(output_path).unwrap(); // remove after copying
 
 	println!("{:?}", output);
 
 	Ok(())
 }
 
-fn decompile(args: Args) -> anyhow::Result<()> {
+fn decompile(input_path: Option<String>) -> anyhow::Result<()> {
+	check_for_spicy_toml()?;
 	let tes3conv_path = get_tes3conv_path();
 
 	// Parse paths
-	let mut input_path = PathBuf::from(
-		args.input_path
-			.unwrap_or("common/build/out.omwgame".to_string()),
-	);
+	let mut input_path = PathBuf::from(input_path.unwrap_or("build/out.omwgame".to_string()));
 	let mut output_path = env::current_dir().unwrap();
-	output_path.push("common/cache/temp.json");
+	output_path.push("cache/temp.json");
 	println!("tes3conv path: {}", tes3conv_path.to_string_lossy());
 	println!("Input path: {}", input_path.to_string_lossy());
 	println!("Output path: {}", output_path.to_string_lossy());
@@ -398,17 +388,18 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		|| input_path.extension().unwrap_or_default() == "omwaddon"
 	{
 		println!("Working with openmw... Converting extension...");
-		let data = fs::read(input_path.clone())?;
+		let data = fs::read(input_path.clone()).unwrap();
 
 		let mut new_input_path = env::current_dir().unwrap();
-		new_input_path.push("common/cache/temp.esm");
+		new_input_path.push("cache/temp.esm");
 
 		let mut file = OpenOptions::new()
 			.write(true)
 			.create(true)
 			.truncate(true)
-			.open(new_input_path.clone())?;
-		file.write_all(&data)?;
+			.open(new_input_path.clone())
+			.unwrap();
+		file.write_all(&data).unwrap();
 
 		input_path = new_input_path;
 	}
@@ -436,12 +427,12 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 
 	println!("{:?}", output);
 
-	// Read back json for validation // ??? why would we validate on DECOMPILEs?
+	// Read back json for validation // .unwrap().unwrap().unwrap() why would we validate on DECOMPILEs.unwrap()
 	let json_data = fs::read_to_string(output_path.clone()).unwrap();
 	let parsed_json: Value = from_str(&json_data).expect("Invalid JSON");
-	// validate_json(&parsed_json)?;
+	// validate_json(&parsed_json).unwrap();
 
-	create_record_dirs()?;
+	create_record_dirs(None).unwrap();
 
 	// Create files for invividual record types and fill them with json
 	println!("Creating record files...");
@@ -500,7 +491,7 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 		// .unwrap();
 		// let mut heights = vec![];
 		// use base64::prelude::*;
-		// let decoded = BASE64_STANDARD.decode(data_in_json.as_str().unwrap())?;
+		// let decoded = BASE64_STANDARD.decode(data_in_json.as_str().unwrap()).unwrap();
 		// for chunk in &decoded[4..] {
 		// heights.push(*chunk as i8);
 		// }
@@ -551,9 +542,9 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 			println!();
 			return Err(anyhow!("Failed to create a file: {:?}", file_path));
 		}
-		let stringified_record = serde_json::to_string_pretty(record)?;
+		let stringified_record = serde_json::to_string_pretty(record).unwrap();
 		let data_to_write = stringified_record.as_bytes();
-		file?.write_all(data_to_write)?;
+		file.unwrap().write_all(data_to_write).unwrap();
 	}
 
 	// At the end, delete the file as we won't need it anymore.
@@ -564,12 +555,15 @@ fn decompile(args: Args) -> anyhow::Result<()> {
 	Ok(())
 }
 
-fn create_record_dirs() -> anyhow::Result<()> {
+fn create_record_dirs(base_path: Option<String>) -> anyhow::Result<()> {
 	// Once the json is validated, we can write it to individual directories
 	// Create directories for record types
 	let record_types = get_record_types();
 	for record_type in record_types {
 		let mut base_dir = env::current_dir().unwrap();
+		if let Some(base_path) = base_path.as_ref() {
+			base_dir.push(base_path);
+		}
 		base_dir.push("common/data");
 		base_dir.push(record_type);
 		if base_dir.exists() {
@@ -604,7 +598,7 @@ fn validate_json(parsed_json: &Value) -> anyhow::Result<()> {
 			return Err(anyhow!("A record has no type!"));
 		}
 
-		validate_single_record(record)?;
+		validate_single_record(record).unwrap();
 	}
 
 	let mut all_ids = std::collections::HashSet::new();
@@ -694,7 +688,7 @@ where
 				}
 			};
 
-			closure(&mut height_offset, grid_location, &mut heights_data)?;
+			closure(&mut height_offset, grid_location, &mut heights_data).unwrap();
 
 			record
 				.get_mut("vertex_heights")
@@ -746,7 +740,8 @@ fn validate_records_together(records: &mut Vec<Value>) -> anyhow::Result<()> {
 
 			Ok(())
 		},
-	)?;
+	)
+	.unwrap();
 
 	// Read data from openmw world to landscapes
 	do_for_all_landscapes(
@@ -785,7 +780,8 @@ fn validate_records_together(records: &mut Vec<Value>) -> anyhow::Result<()> {
 
 			Ok(())
 		},
-	)?;
+	)
+	.unwrap();
 	// panic!();
 
 	// After all data is set, we can read it back into the buffers
@@ -794,15 +790,15 @@ fn validate_records_together(records: &mut Vec<Value>) -> anyhow::Result<()> {
 
 // Validates a single record upon reading
 fn validate_single_record(record: &Value) -> anyhow::Result<()> {
-	let record_type = read_string_from_record(record, "type")?;
+	let record_type = read_string_from_record(record, "type").unwrap();
 	match record_type.as_str() {
 		"Header" => {
-			let description = read_string_from_record(record, "description")?;
+			let description = read_string_from_record(record, "description").unwrap();
 			if description.len() > 256 {
 				return Err(anyhow!("Description too long! Must be under 256 bytes!"));
 			}
 
-			let author = read_string_from_record(record, "author")?;
+			let author = read_string_from_record(record, "author").unwrap();
 			if author.len() > 32 {
 				return Err(anyhow!("Author name too long! Must be under 32 bytes!"));
 			}
@@ -819,7 +815,7 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 			let record_path = read_string_from_record(record, ORIGINAL_FILE_PATH_JSON_ATTR);
 			return Err(anyhow!("Mesh not defined. Path: {:?}", record_path));
 		}
-		let mut path = std::env::current_dir()?;
+		let mut path = std::env::current_dir().unwrap();
 		path.push("assets/meshes");
 		path.push(mesh_path.clone());
 		path = get_target_path(&path);
@@ -837,7 +833,7 @@ fn validate_single_record(record: &Value) -> anyhow::Result<()> {
 			let record_path = read_string_from_record(record, ORIGINAL_FILE_PATH_JSON_ATTR);
 			return Err(anyhow!("Icon not defined. Path: {:?}", record_path));
 		}
-		let mut path = std::env::current_dir()?;
+		let mut path = std::env::current_dir().unwrap();
 		path.push("assets/icons");
 		path.push(icon_path.clone());
 		path = get_target_path(&path);
@@ -858,7 +854,7 @@ fn fill_in_single_record(
 	record_count: usize,
 	last_reference_index: &mut usize,
 ) -> anyhow::Result<()> {
-	let record_type = read_string_from_record(record, "type")?;
+	let record_type = read_string_from_record(record, "type").unwrap();
 
 	match record_type.as_str() {
 		"Header" => {
@@ -890,26 +886,10 @@ fn fill_in_single_record(
 				.as_str()
 				.unwrap();
 			if landscape_flags == "" {
-				return Err(anyhow!("A landscape has an empty landscape flags string. This indicates an error. Perhaps the tool used to edit it has an internal bug? A good default value is 'USES_VERTEX_HEIGHTS_AND_NORMALS | USES_TEXTURES'"));
+				return Err(anyhow!("A landscape has an empty landscape flags string. This indicates an error. Perhaps the tool used to edit it has an internal bug.unwrap() A good default value is 'USES_VERTEX_HEIGHTS_AND_NORMALS | USES_TEXTURES'"));
 			}
 		}
 		_ => {}
 	}
-	Ok(())
-}
-
-fn world_gen() -> anyhow::Result<()> {
-	todo!();
-
-	let mut world = world_gen::world::OpenmwWorld::new();
-
-	for u in 0..1024 {
-		for v in 0..1024 {
-			world.set_elevation([u, v], u as f32 / TODD_UNIT);
-		}
-	}
-
-	world.convert_to_json()?;
-
 	Ok(())
 }

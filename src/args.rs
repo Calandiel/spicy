@@ -1,24 +1,25 @@
-use clap::Parser;
+use clap::{command, Parser, Subcommand};
 
-/// A project management tool for OpenMW.
-#[derive(Parser, Debug)]
-#[command(version, about, long_about = None)]
+/// A fictional versioning CLI
+#[derive(Debug, Parser)] // requires `derive` feature
+#[command(name = "spicy")]
+#[command(version = "0.0.1")]
+#[command(about = "Game development tools for OpenMW", long_about = None)]
 pub struct Args {
-	/// The action to perform
-	#[arg(short, long)]
-	pub action: Action,
-
-	/// Path to the file to (de-)compile
-	#[arg(short, long)]
-	pub input_path: Option<String>,
+	#[command(subcommand)]
+	pub command: Commands,
 }
 
-#[derive(clap::ValueEnum, Clone, Default, Debug)]
-pub enum Action {
-	New,
+#[derive(Debug, Subcommand)]
+pub enum Commands {
+	#[command(about = "Creates a new spicy project")]
+	New { path: String },
+	#[command(about = "Clears all build and cache files")]
 	Clear,
-	#[default]
+	// #[command(about = "Runs the game with OpenMW")]
+	// Run,
+	#[command(about = "Compiles an out.omwgame file to run the game")]
 	Compile,
-	Decompile,
-	WorldGen,
+	#[command(about = "Decompiles the out.omwgame in the build directory")]
+	Decompile { input_path: Option<String> },
 }
