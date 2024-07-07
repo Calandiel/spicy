@@ -13,14 +13,12 @@ use serde_json::{from_str, Value};
 use std::{
 	env,
 	fs::{self, OpenOptions},
-	io::{Cursor, Read, Write},
+	io::Write,
 	path::PathBuf,
 	process::{Command, Stdio},
-	str::FromStr,
 };
 use utils::{create_bin_file, create_text_file};
 use world_gen::world::OpenmwWorld;
-use zip::ZipArchive;
 
 mod args;
 mod constants;
@@ -140,21 +138,9 @@ fn ensure_common_exists() -> anyhow::Result<()> {
 	Ok(())
 }
 
-fn ensure_openmw_exists() -> anyhow::Result<()> {
-	let openmw_windows = Cursor::new(include_bytes!("openmw/openmw-windows.zip").as_slice());
-	let openmw_linux = Cursor::new(include_bytes!("openmw/openmw-linux.zip").as_slice());
+// fn ensure_openmw_exists() -> anyhow::Result<()> {
 
-	let archive_windows = zip::ZipArchive::new(openmw_windows).unwrap();
-	let archive_linux = zip::ZipArchive::new(openmw_linux).unwrap();
-
-	let decompress_archive =
-		|subpath: &str, mut archive: ZipArchive<Cursor<&[u8]>>| archive.extract(subpath);
-
-	decompress_archive("cache/openmw/windows", archive_windows).unwrap();
-	decompress_archive("cache/openmw/linux", archive_linux).unwrap();
-
-	Ok(())
-}
+// }
 
 fn ensure_tes3conv_exists() -> anyhow::Result<()> {
 	if !PathBuf::from("cache/tes3conv").exists() {
@@ -260,7 +246,6 @@ fn compile() -> anyhow::Result<()> {
 	create_subdirectory("cache").unwrap();
 	create_subdirectory("build").unwrap();
 	ensure_tes3conv_exists().unwrap();
-	ensure_openmw_exists().unwrap();
 	dae::compile_assets()?;
 
 	let tes3conv_path = get_tes3conv_path();
