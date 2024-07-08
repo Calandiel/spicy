@@ -39,9 +39,9 @@ You will need to rely on openmw-cs for that.
 The general workflow is:
 - pull changes from other contributors with `git pull`
 - compile files with `spicy compile`
-- edit files with `openmw-cs`
-- decompile files with `spicy decompile`
-- test the game with `spicy run`
+- edit files with `openmw-cs` by using `spicy edit`
+- decompile files with `spicy decompile` (happens automatically after `openmw-cs` is closed manually when using `spicy edit`)
+- test the game with `spicy run` (alternatively, use debug profiles in `openmw-cs` when using `spicy edit`)
 - commit and push with `git add --all && git commit -m "message" && git push`
 
 ## Asset workflow
