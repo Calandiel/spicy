@@ -60,6 +60,9 @@ fn main_body() -> anyhow::Result<()> {
 			ensure_common_exists()?;
 			decompile(input_path)?;
 		}
+		Commands::Edit => {
+			edit()?;
+		}
 	}
 
 	Ok(())
@@ -99,14 +102,52 @@ fn get_tes3conv_path() -> PathBuf {
 	tes3conv_path
 }
 
-fn get_openmw_path() -> PathBuf {
+fn get_openmw_root_path() -> PathBuf {
 	// Parse openmw path
 	let mut openmw_path = env::current_dir().unwrap();
 	println!("Current dir: {:.?}", openmw_path);
 	if cfg!(target_os = "windows") {
-		openmw_path.push("bin/openmw/windows/openmw.exe");
+		openmw_path.push("bin/openmw/windows");
 	} else if cfg!(target_os = "linux") {
-		openmw_path.push("bin/openmw/linux/openmw");
+		openmw_path.push("bin/openmw/linux");
+	} else {
+		panic!("Unsupported OS!");
+	}
+	if !openmw_path.exists() {
+		panic!(
+			"openmw executable file: {} does not exist.",
+			openmw_path.to_string_lossy()
+		)
+	}
+
+	openmw_path
+}
+
+fn get_openmw_path() -> PathBuf {
+	let mut openmw_path = get_openmw_root_path();
+	if cfg!(target_os = "windows") {
+		openmw_path.push("openmw.exe");
+	} else if cfg!(target_os = "linux") {
+		openmw_path.push("openmw");
+	} else {
+		panic!("Unsupported OS!");
+	}
+	if !openmw_path.exists() {
+		panic!(
+			"openmw executable file: {} does not exist.",
+			openmw_path.to_string_lossy()
+		)
+	}
+
+	openmw_path
+}
+
+fn get_openmw_cs_path() -> PathBuf {
+	let mut openmw_path = get_openmw_root_path();
+	if cfg!(target_os = "windows") {
+		openmw_path.push("openmw-cs.exe");
+	} else if cfg!(target_os = "linux") {
+		openmw_path.push("openmw-cs");
 	} else {
 		panic!("Unsupported OS!");
 	}
@@ -198,6 +239,24 @@ fn ensure_openmw_exists(base_path: Option<String>) -> anyhow::Result<()> {
 
 fn ensure_tes3conv_exists(base_path: Option<String>) -> anyhow::Result<()> {
 	copy_dir_from_res_to_game_dir("res/tes3conv", "bin/tes3conv", true, base_path);
+	Ok(())
+}
+
+fn edit() -> anyhow::Result<()> {
+	compile()?;
+	ensure_openmw_exists(None).unwrap();
+
+	println!("\n\n\n=== launching openmw-cs ===\n\n\n");
+	let openmw_output = std::process::Command::new(get_openmw_cs_path()).output();
+	match openmw_output {
+		std::result::Result::Ok(output) => {
+			let formatted = format!("{:?}", output);
+			println!("{}", formatted.replace("\\n", "\n"));
+		}
+		Err(err) => return Err(anyhow!("{:?}", err)),
+	}
+
+	decompile(None)?;
 	Ok(())
 }
 
