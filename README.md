@@ -1,5 +1,7 @@
 # Spicy
-This repository contains spicy - a simple validator built on top of tes3conv that splits records into individual files.
+This repository contains spicy - a simple project management and validator built on top of tes3conv that splits records into individual files and handles OpenMW configuration.
+
+The goal of the project is to simplify creation of new games running on top of OpenMW.
 
 # Building spicy
 To build spicy you need to install a number of dependencies
