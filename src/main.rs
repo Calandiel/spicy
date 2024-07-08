@@ -201,35 +201,18 @@ fn ensure_tes3conv_exists(base_path: Option<String>) -> anyhow::Result<()> {
 	Ok(())
 }
 
-/*
-#[cfg(target_os = "linux")]
-fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
-	use std::os::unix::fs::PermissionsExt;
-	let metadata = std::fs::metadata(linux_path).unwrap();
-	let mut permissions = metadata.permissions();
-	permissions.set_mode(0o775);
-	fs::set_permissions(linux_path, permissions).unwrap();
-
-	Ok(())
-}
-
-#[cfg(target_os = "windows")]
-fn set_exe_permissions(linux_path: &str) -> anyhow::Result<()> {
-	println!(
-		"not on linux so we're not setting permissions on {:?}",
-		linux_path
-	);
-	Ok(())
-}
-*/
-
 fn run() -> anyhow::Result<()> {
 	compile()?;
 
 	ensure_openmw_exists(None).unwrap();
 
 	println!("\n\n\n=== launching openmw ===\n\n\n");
-	let openmw_output = std::process::Command::new(get_openmw_path()).output();
+	let openmw_output = std::process::Command::new(get_openmw_path())
+		.arg("--content")
+		.arg("out.omwgame")
+		.arg("--skip-menu")
+		.arg("--new-game")
+		.output();
 	match openmw_output {
 		std::result::Result::Ok(output) => {
 			let formatted = format!("{:?}", output);
