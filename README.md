@@ -49,7 +49,7 @@ The general workflow is:
 ## Asset workflow
 Spicy handles conversion of standard glb files into a format compatible with openmw.
 Put assets in your projects `assets/meshes` directory.
-You can also put dae files in there but it's discouraged as glb is widely adapted and more commonly used.
+You can also put dae files - they will be copied over to the build directory.
 
 The general workflow is:
 - pull changes from other contributors with `git pull`
